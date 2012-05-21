@@ -1,0 +1,323 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift
+END
+plotss.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/plotss.m
+END
+siftlocalmax.mexw64
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftlocalmax.mexw64
+END
+siftlocalmax.m
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftlocalmax.m
+END
+VERSION
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/VERSION
+END
+sift_demo2.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/sift_demo2.m
+END
+sift_demo3.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/sift_demo3.m
+END
+sift_demo4.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/sift_demo4.m
+END
+imsmooth.mexw64
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/imsmooth.mexw64
+END
+sift_demo5.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/sift_demo5.m
+END
+sift_demo6.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/sift_demo6.m
+END
+siftrefinemx.mexw64
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftrefinemx.mexw64
+END
+plotsiftdescriptor.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/plotsiftdescriptor.m
+END
+siftdescriptor.mexw64.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftdescriptor.mexw64.pdb
+END
+TIMESTAMP
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/TIMESTAMP
+END
+sift_demo.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/sift_demo.m
+END
+siftormx.mexw64
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftormx.mexw64
+END
+siftdescriptor.mexa64
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftdescriptor.mexa64
+END
+plotsiftframe.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/plotsiftframe.m
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/Makefile
+END
+plotmatches.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/plotmatches.m
+END
+siftmatch.mexw64.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftmatch.mexw64.pdb
+END
+imsmooth.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/imsmooth.c
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/LICENSE
+END
+siftlocalmax.mexw64.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftlocalmax.mexw64.pdb
+END
+tightsubplot.m
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/tightsubplot.m
+END
+siftrefinemx.c
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftrefinemx.c
+END
+siftdescriptor.c
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftdescriptor.c
+END
+imreadbw.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/imreadbw.m
+END
+siftmatch.mexa64
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftmatch.mexa64
+END
+sift_overview.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/sift_overview.m
+END
+siftlocalmax.mexa64
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftlocalmax.mexa64
+END
+mexutils.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/mexutils.c
+END
+imsmooth.mexw64.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/imsmooth.mexw64.pdb
+END
+siftormx.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftormx.c
+END
+siftread.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftread.m
+END
+siftdescriptor.mexw64
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftdescriptor.mexw64
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/README
+END
+siftrefinemx.m
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftrefinemx.m
+END
+siftdescriptor.m
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftdescriptor.m
+END
+sift.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/sift.m
+END
+siftrefinemx.mexw64.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftrefinemx.mexw64.pdb
+END
+imsmooth.mexa64
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/imsmooth.mexa64
+END
+siftmatch.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftmatch.c
+END
+siftrefinemx.mexa64
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftrefinemx.mexa64
+END
+siftlocalmax.c
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftlocalmax.c
+END
+sift_compile.m
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/sift_compile.m
+END
+siftormx.mexw64.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftormx.mexw64.pdb
+END
+diffss.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/diffss.m
+END
+sift_gendoc.css
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/sift_gendoc.css
+END
+gaussianss.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/gaussianss.m
+END
+siftmatch.mexw64
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftmatch.mexw64
+END
+siftmatch.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftmatch.m
+END
+siftormx.mexa64
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/sift/siftormx.mexa64
+END

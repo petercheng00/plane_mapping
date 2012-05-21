@@ -1,0 +1,71 @@
+function texturePlane(filenames, masks, rotations, t_cam2world, corners, K, folder, ...
+    normal, offset)
+
+addpath('sift');
+addpath('ransac');
+
+% This is the top corner of the plane
+p = plane();
+p.base = corners(:,3);
+p.down = corners(:,4)-p.base;
+p.side = corners(:,2)-p.base;
+p.normal = normal';
+p.d = offset;
+
+% Visualize the plane in 3D space
+plot3(0,0,0,'kx')
+patch(corners(1,:), corners(2,:), corners(3,:),'r');
+
+% I'm not handling the case when the plane has more than 4 corners
+four_corners = (size(corners,2) == 4);
+if(~four_corners)
+    fprintf('plane does not have four corners\n');
+    return
+end
+
+% Ratio is the number of pixels per centemeter or something. I'm not entirely sure. Just make
+% it larger if you want higher-resolution planes
+p.ratio = 0.10;
+
+% Width and height of the plane in pixels
+p.width = round(p.ratio*norm(p.side));
+p.height = round(p.ratio*norm(p.down));
+p.maxshift = round(p.ratio * 400); % 400 mm shift
+p.blendpx = round(p.ratio * 400); % 400cm blending
+
+p = p.load_images(filenames, masks, rotations, t_cam2world, K);
+p = p.sort_images();
+p.outimg = zeros(p.height, p.width, 3);
+
+p = p.set_tiles();
+p = p.set_tiles_on_plane();
+%p = p.print_images();
+%imshow(uint8(p.outimg));
+%drawnow
+%figure
+
+%imshow(uint8(p.outimg));
+%keyboard
+
+p = p.set_sift();
+p = p.fix_locations();
+p = p.set_tiles_on_plane();
+%p = p.print_images();
+%p = p.print_greedy();
+p = p.set_overlap(size(p.images,2));
+p = p.print_dynprog();
+
+
+%imshow(uint8(p.outimg));
+%keyboard
+
+%outimg = uint8(p.outimg);
+%imshow(outimg)
+%keyboard
+% Print final image
+cd(folder);
+imwrite(uint8(p.outimg), 'blended.jpg');
+cd ('../../../..')
+end
+
+

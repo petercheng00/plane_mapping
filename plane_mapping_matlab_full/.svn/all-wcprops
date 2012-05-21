@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/main.m
+END
+do_sift.m
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/do_sift.m
+END
+aug252011_set3_right_cLoop2_v2.map
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/aug252011_set3_right_cLoop2_v2.map
+END
+nov222011_set1_leftRight_kims_v2.map
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/nov222011_set1_leftRight_kims_v2.map
+END
+plane_img.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/plane_img.m
+END
+tile.m
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/tile.m
+END
+plane.m
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/plane.m
+END
+loadPlane.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/loadPlane.m
+END
+outputPath.ps
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/outputPath.ps
+END
+matlab_workspace.mat
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/matlab_workspace.mat
+END
+rectify_image.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/rectify_image.m
+END
+get_match_and_shift.m
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/get_match_and_shift.m
+END
+texturePlane.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/texturePlane.m
+END
+box_overlap.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/box_overlap.m
+END
+quat2rot.m
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/quat2rot.m
+END
+planesize.png
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/p/pcplanefitting/code/!svn/ver/21/plane_mapping_matlab_full/planesize.png
+END
