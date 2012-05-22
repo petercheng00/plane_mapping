@@ -51,7 +51,7 @@ warning on
 %write num planes into rpinput file
 
 %planesToTexture = 15:str2double(modelNumPlanes);
-planesToTexture = 21;
+planesToTexture = 16;
 fid = fopen(mapFile, 'w');
 fprintf(fid, strcat(num2str(modelNumPlanes), '\n'));
 fclose(fid);

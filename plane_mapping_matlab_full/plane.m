@@ -289,17 +289,16 @@ classdef plane
                 end
             end
             obj.outimg = zeros(obj.height,obj.width,3);
-            keyboard
             % remove the fake begin and end nodes
+            
             obj.images = obj.images(2:size(obj.images,2)-1);
             valid_img = valid_img(2:size(valid_img,2)-1);
-            %Print standard dynprog output first
+            % blend tiles only where we have holes.
             max_iter = max(valid_img);
             for iter = 1:max_iter
                 for idx = 1:size(obj.images,2)
-                    if(valid_img(idx == iter)
+                    if(valid_img(idx) == iter)
                         obj = obj.blend_minimum_tile(obj.images(idx).mytile_on_plane);
-                        keyboard
                     end
                 end
             end
@@ -599,18 +598,146 @@ classdef plane
             end
         end
         
+        
         function obj = blend_minimum_tile(obj, t)
             box = t.box;
-            ii = 1;
+            
+            % Find largest (rectangular) hole within this box - this is
+            % what we want to blend over
+            % later need to check for multiple holes within this box
+            
+            
+            % work with a local copy so we can track boxes and not deal
+            % with 3 channels
+            pixelGrid = sum(obj.outimg,3);
+            
+            foundHoles = [];
+            
+            currHole = box();
+            currHole.row_min = 0;
+            currHole.row_max = 0;
+            currHole.col_min = 0;
+            currHole.col_max = 0;
+            
             for i=box.row_min:box.row_max
-                jj = 1;
                 for j = box.col_min:box.col_max
-                    if(sum(obj.outimg(i,j,:),3) == 0)
-                        obj.outimg(i,j,:) = t.data(ii,jj,:);
+                    % we found an empty pixel, no col_min set yet
+                    if((currHole.col_min == 0) && (pixelGrid(i,j) == 0))
+                        currHole.row_min = i;
+                        currHole.col_min = j;
                     end
-                    jj = jj+1;
+                    % we found a filled pixel on the same row and we have col_min
+                    % or we are at end of row without finding col_max
+                    if ((currHole.col_min ~= 0) && (i == currHole.row_min) && ...
+                            ((pixelGrid(i,j)~= 0) || (j == box.col_max)))
+                        if pixelGrid(i,j)~=0
+                            currHole.col_max = j-1;
+                        else
+                            currHole.col_max = j;
+                        end
+                        
+                        
+                        % Now see how many rows down this set up empty
+                        % pixels goes
+                        for ii = currHole.row_min:box.row_max
+                            if (sum(pixelGrid(ii,currHole.col_min:currHole.col_max) ~= 0) ...
+                                    || (ii == box.row_max))
+                                if (sum(pixelGrid(ii,currHole.col_min:currHole.col_max) ~= 0))
+                                    currHole.row_max = ii-1;
+                                else
+                                    currHole.row_max = ii;
+                                end
+                                break;
+                            end
+                        end
+                        
+                        % sanity check
+                        if (currHole.row_min == 0 || currHole.row_max == 0 ...
+                                || currHole.col_min == 0 || currHole.col_max == 0)
+                            keyboard;
+                        end
+                        
+                        % save hole, set up next one
+                        pixelGrid(currHole.row_min:currHole.row_max,currHole.col_min:currHole.col_max) = ...
+                            ones(currHole.row_max-currHole.row_min+1,currHole.col_max-currHole.col_min+1);
+                        foundHoles = [foundHoles currHole];
+                        currHole = box();
+                        currHole.row_min = 0;
+                        currHole.row_max = 0;
+                        currHole.col_min = 0;
+                        currHole.col_max = 0;
+                    end
                 end
-                ii = ii+1;
+            end
+            
+            patches = [];
+            %here we expand the hole size to accomodate blending
+            for h = 1:size(foundHoles,2)
+                newPatch = box();
+                newPatch.row_min = max(box.row_min,foundHoles(h).row_min-obj.blendpx);
+                newPatch.row_max = min(box.row_max,foundHoles(h).row_max+obj.blendpx);
+                newPatch.col_min = max(box.col_min,foundHoles(h).col_min-obj.blendpx);
+                newPatch.col_max = min(box.col_max,foundHoles(h).col_max+obj.blendpx);
+                patches = [patches newPatch];
+            end
+            % paste and blend now
+            for h = 1:size(patches,2)
+                patch = patches(h);
+                hole = foundHoles(h);
+                xLeft = hole.col_min - patch.col_min;
+                xRight = patch.col_max - hole.col_max;
+                yBottom = patch.row_max - hole.row_max;
+                yTop = hole.row_min - patch.row_min;
+                ii = patch.row_min-box.row_min+1;
+                for i=patch.row_min:patch.row_max
+                    jj = patch.col_min-box.col_min+1;
+                    for j=patch.col_min:patch.col_max
+                        if(sum(obj.outimg(i,j,:),3)~=0)
+                            alphaX = -1;
+                            alphaY = -1;
+                            if xLeft>0 && j <= hole.col_min
+                                xDist = hole.col_min - j;
+                                alphaX = 1 - (xDist/xLeft);
+                                xMax = xLeft;
+                            elseif xRight>0 && j >= hole.col_max
+                                xDist = j - hole.col_max;
+                                alphaX = 1 - (xDist/xRight);
+                                xMax = xRight;
+                            end
+                            if yTop>0 && i <= hole.row_min
+                                yDist = hole.row_min - i;
+                                alphaY = 1 - (yDist/yTop);
+                                yMax = yTop;
+                            elseif yBottom>0 && i >= hole.row_max
+                                yDist = i - hole.row_max;
+                                alphaY = 1 - (yDist/yBottom);
+                                yMax = yBottom;
+                            end
+                            if (alphaX == -1 && alphaY == -1)
+                                %a previous hole from this same image
+                                %already filled this pixel, no problem
+                            else
+                                if (alphaX == -1)
+                                    alpha = alphaY;
+                                elseif (alphaY == -1)
+                                    alpha = alphaX;
+                                else
+                                    diagMax = min([xMax,yMax]);
+                                    diagDist = min([diagMax,sqrt(xDist^2 + yDist^2)]);
+                                    alpha = 1 - diagDist/diagMax;
+                                end
+                                obj.outimg(i,j,:) = ...
+                                    t.data(ii,jj,:)*alpha+...
+                                    obj.outimg(i,j,:)*(1-alpha);
+                            end
+                        else
+                            obj.outimg(i,j,:) = t.data(ii,jj,:);
+                        end
+                        jj = jj+1;
+                    end
+                    ii = ii+1;
+                end
+                keyboard
             end
         end
         
