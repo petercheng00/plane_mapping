@@ -306,12 +306,11 @@ classdef plane
             %    for idx = 1:size(obj.images,2)
             %        if(valid_img(idx) == iter)
             %            % Painter's algo
-            %            obj = obj.blend_tile(obj.images(idx).mytile_on_plane);
+            %            obj = obj.blend_tile_painter(obj.images(idx).mytile_on_plane);
             %            keyboard
             %        end
             %    end
             %end
-            keyboard
             if 1
                 % use portions of chosen images that were previously cropped out
                 % due to not being rectangular.
@@ -326,7 +325,6 @@ classdef plane
                     end
                 end
             end
-            keyboard
             if 1
                 % same as above, but use non-chosen images.
                 if sum(sum(grid)) ~= (size(grid,1) * size(grid,2))
@@ -338,7 +336,6 @@ classdef plane
                 end
             end
             imshow(uint8(obj.outimg));
-            keyboard
         end
         
         function obj = fill_holes(obj)
@@ -576,6 +573,31 @@ classdef plane
                     
         
         function obj = blend_tile(obj, t)
+            box = t.box;
+            ii = 1;
+            for i=box.row_min:box.row_max
+                jj = 1;
+                for j=box.col_min:box.col_max
+                    if(sum(obj.outimg(i,j,:),3)~=0)
+                        mindist = min([ii,box.row_max-i,...
+                            jj,box.col_max-j,...
+                            obj.blendpx]);
+                        alpha = mindist/obj.blendpx;
+                        obj.outimg(i,j,:) = ...
+                            t.data(ii,jj,:)*alpha +...
+                            obj.outimg(i,j,:)*(1-alpha);
+                    else
+                        obj.outimg(i,j,:) = t.data(ii,jj,:);
+                    end
+                    jj = jj+1;
+                end
+                ii = ii+1;
+            end
+        end
+        
+        %placeholder, if we do this route in the future, simply don't do
+        %blending if the edge goes to the edge of the plane.
+        function obj = blend_tile_painter(obj, t)
             box = t.box;
             ii = 1;
             for i=box.row_min:box.row_max

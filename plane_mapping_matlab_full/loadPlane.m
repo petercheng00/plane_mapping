@@ -1,4 +1,4 @@
-function loadPlane(plane_num)
+function newPlane = loadPlane(plane_num)
 
   % This function basically reads the input files
   % that specify which images are used for this plane

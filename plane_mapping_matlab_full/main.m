@@ -32,7 +32,12 @@ imgPath = 'E:\projects\indoormapping\data\20111122-1\images';
 prePath = 'C:\\Users\\pcheng\\Documents\\modeling_MA\\plane_mapping_matlab_full';
 
 textureStyle = 'dynprog';
-fillHoles = 0;
+
+%texture extrapolation
+fillHoles = 1;
+
+%0 for all
+planesToTexture = 0;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -49,13 +54,15 @@ mkdir(outputPath);
 warning on
 
 %write num planes into rpinput file
+if planesToTexture == 0
+    planesToTexture = 15:str2double(modelNumPlanes);
+end
 
-%planesToTexture = 15:str2double(modelNumPlanes);
-planesToTexture = 16;
 fid = fopen(mapFile, 'w');
 fprintf(fid, strcat(num2str(modelNumPlanes), '\n'));
 fclose(fid);
 prevLoaded = 0;
+loadedPlanes = [];
 for planeInd = 1:size(planesToTexture, 2)
     if (planesToTexture(planeInd) ~= prevLoaded + 1)
         fid = fopen(mapFile, 'a');
@@ -63,7 +70,8 @@ for planeInd = 1:size(planesToTexture, 2)
         fclose(fid);
     end
     disp(['loading plane ', num2str(planesToTexture(planeInd))])
-    loadPlane(planesToTexture(planeInd))
+    newPlane = loadPlane(planesToTexture(planeInd));
+    loadedPlanes = [loadedPlanes newPlane];
     prevLoaded = planesToTexture(planeInd);
 end
 if size(planesToTexture) < str2num(modelNumPlanes)

@@ -20,14 +20,8 @@ p = plane();
 p.base = corners(:,3);
 p.down = corners(:,4)-p.base;
 p.side = corners(:,2)-p.base;
-%p.base = corners(:,2);
-%p.down = corners(:,1)-p.base;
-%p.side = corners(:,3)-p.base;
 p.normal = normal';
 p.d = offset;
-% Visualize the plane in 3D space
-%plot3(0,0,0,'kx')
-%patch(corners(1,:), corners(2,:), corners(3,:),'r');
 
 % I'm not handling the case when the plane has more than 4 corners
 four_corners = (size(corners,2) == 4);
@@ -83,7 +77,9 @@ end
 % this is necessary when we throw out images from Stewart that we don't
 % want. This should be re-written to be more general though
 if fillHoles
+    keyboard
     p = p.fill_holes();
+    keyboard
 end
 p.outimg(:,:,1) = fliplr(p.outimg(:,:,1));
 p.outimg(:,:,2) = fliplr(p.outimg(:,:,2));
