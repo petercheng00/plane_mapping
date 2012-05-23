@@ -34,10 +34,10 @@ prePath = 'C:\\Users\\pcheng\\Documents\\modeling_MA\\plane_mapping_matlab_full'
 textureStyle = 'dynprog';
 
 %texture extrapolation
-fillHoles = 1;
+fillHoles = 0;
 
 %0 for all
-planesToTexture = 0;
+planesToTexture = 16;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -55,28 +55,31 @@ warning on
 
 %write num planes into rpinput file
 if planesToTexture == 0
-    planesToTexture = 15:str2double(modelNumPlanes);
+    planesToTexture = 1:str2double(modelNumPlanes);
 end
 
 fid = fopen(mapFile, 'w');
 fprintf(fid, strcat(num2str(modelNumPlanes), '\n'));
 fclose(fid);
-prevLoaded = 0;
-loadedPlanes = [];
-for planeInd = 1:size(planesToTexture, 2)
-    if (planesToTexture(planeInd) ~= prevLoaded + 1)
-        fid = fopen(mapFile, 'a');
-        fprintf(fid, ['SKIP_TO ', num2str(planesToTexture(planeInd) - 1), '\n']);
-        fclose(fid);
-    end
-    disp(['loading plane ', num2str(planesToTexture(planeInd))])
-    newPlane = loadPlane(planesToTexture(planeInd));
-    loadedPlanes = [loadedPlanes newPlane];
-    prevLoaded = planesToTexture(planeInd);
-end
+%prevLoaded = 0;
+%for planeInd = 1:str2double(modelNumPlanes)
+%    if planeInd ~= prevLoaded + 1
+%        fid = fopen(mapFile, 'a');
+%        fprintf(fid, ['SKIP_TO ', num2str(planeInd - 1), '\n']);
+%        fclose(fid);
+%    end
+%    disp(['loading plane ', num2str(planeInd)])
+%    prevLoaded = planeInd;
+%end
+
+planes = loadPlanes(planesToTexture);
 if size(planesToTexture) < str2num(modelNumPlanes)
     fid = fopen(mapFile, 'a');
     fprintf(fid, 'SKIP_TO END\n');
     fclose(fid);
 end
-%25 to 72
+for planeInd = 1:size(planesToTexture, 2)
+    planeNum = planesToTexture(planeInd);
+    %checkOcclusion(planes, planeNum);
+    texturePlane(planes(planeNum),planeNum);
+end

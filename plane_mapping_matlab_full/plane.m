@@ -1,4 +1,4 @@
-classdef plane
+classdef plane < handle
     %Plane Summary of this class goes here
     %   Detailed explanation goes here
     
@@ -335,7 +335,6 @@ classdef plane
                     end
                 end
             end
-            imshow(uint8(obj.outimg));
         end
         
         function obj = fill_holes(obj)
@@ -418,9 +417,10 @@ classdef plane
             npoints = prod(size(ii));
             ivec = reshape(ii, [1,npoints]);
             jvec = reshape(jj, [1,npoints]);
-            % we swap i and j which is a diagonal flip, but we want a 
-            % rotation instead, so flip left-right
-            % jvec = fliplr(jvec);
+            % we swap i and j which is a diagonal flip. This is why the
+            % image is reversed. This should be fixed at some point, but
+            % there are other hardcoded places that make this more
+            % complicated to fix.
             plane_pts = [ivec ; jvec];
         end
         
@@ -759,7 +759,6 @@ classdef plane
                     end
                     ii = ii+1;
                 end
-                keyboard
             end
         end
         
