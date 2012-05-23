@@ -66,16 +66,16 @@
     yVect = bbRestored(2,:) - bbRestored(1,:);
     crossVect = cross(xVect, yVect);
     crossVect = crossVect / norm(crossVect);
-    %if (dot(crossVect, normal) ~= 1)
-    %    flipHoriz = true;
-    %    fprintf('Flipping Horizontal\n');
-    %    temp = bbRestored(1,:);
-    %    bbRestored(1,:) = bbRestored(4,:);
-    %    bbRestored(4,:) = temp;
-    %    temp = bbRestored(2,:);
-    %    bbRestored(2,:) = bbRestored(3,:);
-    %    bbRestored(3,:) = temp;
-    %end
+    if (dot(crossVect, normal) ~= 1)
+        flipHoriz = true;
+        fprintf('Flipping Horizontal\n');
+        temp = bbRestored(1,:);
+        bbRestored(1,:) = bbRestored(4,:);
+        bbRestored(4,:) = temp;
+        temp = bbRestored(2,:);
+        bbRestored(2,:) = bbRestored(3,:);
+        bbRestored(3,:) = temp;
+    end
     bbCorners = bbRestored;
 
 

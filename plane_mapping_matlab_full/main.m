@@ -80,6 +80,10 @@ if size(planesToTexture) < str2num(modelNumPlanes)
 end
 for planeInd = 1:size(planesToTexture, 2)
     planeNum = planesToTexture(planeInd);
-    %checkOcclusion(planes, planeNum);
+    planes(planeNum) = planes(planeNum).set_tiles();
+    planes(planeNum) = planes(planeNum).set_tiles_on_plane();
+    planes(planeNum) = planes(planeNum).filter_useless();
+    %planes(planeNum) = planes(planeNum).sort_images2();
+    checkOcclusion(planes, planeNum);
     texturePlane(planes(planeNum),planeNum);
 end

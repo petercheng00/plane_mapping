@@ -38,11 +38,10 @@ addpath('ransac');
 %p = p.load_images(filenames, masks, rotations, t_cam2world, K);
 %p = p.sort_images();
 %p.outimg = zeros(p.height, p.width, 3);
-
-p = p.set_tiles();
-p = p.set_tiles_on_plane();
-p = p.filter_useless();
-p = p.sort_images2();
+%p = p.set_tiles();
+%p = p.set_tiles_on_plane();
+%p = p.filter_useless();
+%p = p.sort_images2();
 
 p = p.set_sift();
 p = p.fix_locations();
@@ -65,9 +64,9 @@ if fillHoles
     p = p.fill_holes();
 end
 imshow(uint8(p.outimg));
-p.outimg(:,:,1) = fliplr(p.outimg(:,:,1));
-p.outimg(:,:,2) = fliplr(p.outimg(:,:,2));
-p.outimg(:,:,3) = fliplr(p.outimg(:,:,3));
+%p.outimg(:,:,1) = fliplr(p.outimg(:,:,1));
+%p.outimg(:,:,2) = fliplr(p.outimg(:,:,2));
+%p.outimg(:,:,3) = fliplr(p.outimg(:,:,3));
 imshow(uint8(p.outimg))
 drawnow
 % Print final image

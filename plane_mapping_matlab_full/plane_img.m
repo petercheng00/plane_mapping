@@ -84,7 +84,6 @@
                obj.mytile.box = box;
                obj.mytile.origbox = uncroppedbox;
                [h w c] = size(obj.img);
-               
                plane_pts = p.get_plane_pts(box);
                world_pts = p.get_world_pts(plane_pts);
                im_pts = obj.get_image_pts(world_pts);

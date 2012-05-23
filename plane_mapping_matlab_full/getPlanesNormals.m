@@ -48,17 +48,19 @@ for cplane=1:1:tot_planes
         %plot the delimited plane
         %patch('vertices',[0 6 0; 0 9 0; 1 9 0; 0 6 1; 0 9 1; 1 9 1],'faces',[1 2 5 4; 2 3 6 5],'facecolor',[.5 .5 .5])
         %view(3)
-        vert=[planes.p(cplane).x', planes.p(cplane).y',planes.p(cplane).z']; 
-        fac=[1:1:planes.p(cplane).npoints];
-        patch('vertices', vert,'faces',fac,'facecolor',[(cplane/tot_planes*.9) 0.5 (cplane/tot_planes*.7)]); hold on;
-                %patch('vertices', vert,'faces',fac,'facecolor',[0 .8 0]); hold on;
-        normal1 = [mean(vert(:,1)), mean(vert(:,2)), mean(vert(:,3))];
-        normal2 = [normal1(1,1) + planes.p(cplane).eq(1), normal1(1,2) + planes.p(cplane).eq(2), normal1(1,3) + planes.p(cplane).eq(3) ];
-        line([normal1(1), normal2(1)], [normal1(2), normal2(2)], [normal1(3), normal2(3)], 'linewidth', 5)
-                
-        view(3); 
-        daspect([1 1 1]);
-        axis('tight');
+        if counter > 14
+            vert=[planes.p(cplane).x', planes.p(cplane).y',planes.p(cplane).z']; 
+            fac=[1:1:planes.p(cplane).npoints];
+            patch('vertices', vert,'faces',fac,'facecolor',[(cplane/tot_planes*.9) 0.5 (cplane/tot_planes*.7)]); hold on;
+                    %patch('vertices', vert,'faces',fac,'facecolor',[0 .8 0]); hold on;
+            normal1 = [mean(vert(:,1)), mean(vert(:,2)), mean(vert(:,3))];
+            normal2 = [normal1(1,1) + planes.p(cplane).eq(1), normal1(1,2) + planes.p(cplane).eq(2), normal1(1,3) + planes.p(cplane).eq(3) ];
+            line([normal1(1), normal2(1)], [normal1(2), normal2(2)], [normal1(3), normal2(3)], 'linewidth', 5)
+
+            view(3); 
+            daspect([1 1 1]);
+            axis('tight');
+        end
         disp(counter);
 		counter = counter + 1;
         pause    

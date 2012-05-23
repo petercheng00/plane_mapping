@@ -417,10 +417,6 @@ classdef plane < handle
             npoints = prod(size(ii));
             ivec = reshape(ii, [1,npoints]);
             jvec = reshape(jj, [1,npoints]);
-            % we swap i and j which is a diagonal flip. This is why the
-            % image is reversed. This should be fixed at some point, but
-            % there are other hardcoded places that make this more
-            % complicated to fix.
             plane_pts = [ivec ; jvec];
         end
         
