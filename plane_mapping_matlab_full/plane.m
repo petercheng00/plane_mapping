@@ -5,6 +5,8 @@ classdef plane < handle
     properties
         height;
         width;
+        vertices;
+        bbCorners;
         base;
         side;
         down;
