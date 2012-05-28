@@ -1,41 +1,51 @@
 function checkOcclusion(planes, plane_index)
   target_plane = planes(plane_index);
   images = target_plane.images;
-%  for i = 1:size(images,2)
-  for i = 21:21
+  for i = 1:size(images,2)
       camera_pt_world = images(i).t;
       
-      % sections are in plane coordinates
-      sections = [];
-      sectionsX = 10;
-      sectionsY = 10;
       curr_box = images(i).mytile_on_plane.box;
-      gridStepY = (curr_box.row_max - curr_box.row_min + 1)/sectionsY;
-      gridStepX = (curr_box.col_max - curr_box.col_min + 1)/sectionsX;
-      for j = 1:sectionsY
-          for k = 1:sectionsX
-              %not integers but should be ok
-              section.row_min = curr_box.row_min + round((j-1) * gridStepY);
-              section.row_max = curr_box.row_min + round(j * gridStepY);
-              section.col_min = curr_box.col_min + round((k-1) * gridStepX);
-              section.col_max = curr_box.col_min + round(k * gridStepX);
-              section.center = [(section.row_max+section.row_min)/2; (section.col_max+section.col_min)/2];
-              sections = [sections section];
+      gridStepY = 40;
+      gridStepX = 40;
+      numSectionsY = ceil((curr_box.row_max - curr_box.row_min + 1)/gridStepY);
+      numSectionsX = ceil((curr_box.col_max - curr_box.col_min + 1)/gridStepX);
+      for j = 1:numSectionsY
+          for k = 1:numSectionsX
+              row_min = curr_box.row_min + (j-1) * gridStepY;
+              row_max = min(curr_box.row_min + (j * gridStepY), curr_box.row_max);
+              col_min = curr_box.col_min + (k-1) * gridStepX;
+              col_max = min(curr_box.col_min + (k * gridStepX), curr_box.col_max);
+              
+              center_pt_plane = [(row_max+row_min)/2; (col_max+col_min)/2];      
+              center_pt_world = target_plane.get_world_pts(center_pt_plane);
+              
+              if isoccluded(center_pt_world, camera_pt_world, planes, plane_index)
+                  %empty_patch = zeros(row_max-row_min+1,col_max-col_min+1,3);
+                  %target_plane.images(i).mytile_on_plane.data(row_min-curr_box.row_min+1:row_max-curr_box.row_min+1, ... 
+                  %    col_min-curr_box.col_min+1:col_max-curr_box.col_min+1,:) = empty_patch;
+                  
+                  %orig_box = images(i).mytile_on_plane.origbox;
+                  %target_plane.images(i).mytile_on_plane.origdata(row_min-orig_box.row_min+1:row_max-orig_box.row_min+1, ... 
+                  %    col_min-orig_box.col_min+1:col_max-orig_box.col_min+1,:) = empty_patch;
+                  empty_patch = zeros(row_max-row_min+1,col_max-col_min+1);
+                  target_plane.images(i).mytile_on_plane.isvalid(row_min-curr_box.row_min+1:row_max-curr_box.row_min+1, ... 
+                      col_min-curr_box.col_min+1:col_max-curr_box.col_min+1) = empty_patch;
+                  
+                  % right now haven't handled cropping of origdata, not
+                  % sure if it will be useful
+                  orig_box = images(i).mytile_on_plane.origbox;
+                  target_plane.images(i).mytile_on_plane.origisvalid(row_min-orig_box.row_min+1:row_max-orig_box.row_min+1, ... 
+                      col_min-orig_box.col_min+1:col_max-orig_box.col_min+1) = empty_patch;
+
+              end
           end
       end
-      keyboard
-      for j = 1:size(sections,2)
-          section = sections(j);
-          center_pt_plane = section.center;
-          center_pt_world = target_plane.get_world_pts(center_pt_plane);
-          if isoccluded(center_pt_world, camera_pt_world, planes, plane_index)
-              empty_patch = zeros(section.row_max-section.row_min+1,section.col_max-section.col_min+1);
-              empty_patch = repmat(empty_patch, [1,1,3]);
-              target_plane.images(i).mytile_on_plane.data(section.row_min-curr_box.row_min+1:section.row_max-curr_box.row_min+1, ... 
-                  section.col_min-curr_box.col_min+1:section.col_max-curr_box.col_min+1,:) = empty_patch;
-          end
+      if sum(sum(target_plane.images(i).mytile_on_plane.isvalid)) > 0
+          target_plane.images(i).mytile_on_plane = target_plane.images(i).mytile_on_plane.crop();
+          target_plane.images(i).mytile_on_plane = target_plane.images(i).mytile_on_plane.set_border_mask(target_plane.blendpx);
+      else
+          target_plane.images(i).useful = false;
       end
-      keyboard
   end
 
 
@@ -46,10 +56,15 @@ end
 function occluded = isoccluded(dest, source, planes, plane_to_ignore)
     occluded = false;
     dir = dest - source;
-    for i = 15:size(planes,2)
-        p = planes(i);
+    for i = 1:size(planes,2)
         if i == plane_to_ignore
             % don't test occlusion with self
+            continue;
+        end
+        p = planes(i);
+        if sum(p.normal == [0;0;1])==3 || sum(p.normal == [0;0;-1])==3
+            % don't do intersection test with floors/ceilings, since often
+            % we have weird cases with multiple ceilings
             continue;
         end
         % find intersection between line and unbounded plane

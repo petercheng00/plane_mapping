@@ -70,12 +70,16 @@
                box = p.get_camera_box(obj.t, 5000);
                uncroppedbox = p.get_camera_box(obj.t, 5000);
                obj = obj.set_tile(box, uncroppedbox, p);
-               obj.mytile = obj.mytile.crop();
-               obj = obj.set_tile_on_plane(p);
-               if(obj.useful)
-                   angle = rectify_image(uint8(obj.mytile_on_plane.data));
-                   obj.mytile = obj.mytile.rotate(angle);
+               if sum(sum(obj.isvalid)) ~= 0
                    obj.mytile = obj.mytile.crop();
+                   obj = obj.set_tile_on_plane(p);
+                   if(obj.useful)
+                       angle = rectify_image(uint8(obj.mytile_on_plane.data));
+                       obj.mytile = obj.mytile.rotate(angle);
+                       obj.mytile = obj.mytile.crop();
+                   end
+               else
+                   obj.useful = false;
                end
            end
       

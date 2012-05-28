@@ -37,7 +37,7 @@ textureStyle = 'dynprog';
 fillHoles = 0;
 
 %0 for all
-planesToTexture = 16;
+planesToTexture = 13;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -72,18 +72,17 @@ fclose(fid);
 %    prevLoaded = planeInd;
 %end
 
-planes = loadPlanes(planesToTexture);
-if size(planesToTexture) < str2num(modelNumPlanes)
+planes = loadPlanes();
+if size(planesToTexture) < str2double(modelNumPlanes)
     fid = fopen(mapFile, 'a');
     fprintf(fid, 'SKIP_TO END\n');
     fclose(fid);
 end
 for planeInd = 1:size(planesToTexture, 2)
     planeNum = planesToTexture(planeInd);
-    planes(planeNum) = planes(planeNum).set_tiles();
-    planes(planeNum) = planes(planeNum).set_tiles_on_plane();
-    planes(planeNum) = planes(planeNum).filter_useless();
-    %planes(planeNum) = planes(planeNum).sort_images2();
-    checkOcclusion(planes, planeNum);
-    texturePlane(planes(planeNum),planeNum);
+    disp(['texturing plane ', num2str(planeNum)]);
+    planes(planeNum) = planes(planeNum).load_images();
+    planes(planeNum) = planes(planeNum).sort_images();
+    planes(planeNum).outimg = zeros(planes(planeNum).height, planes(planeNum).width, 3);
+    texturePlane(planes,planeNum);
 end

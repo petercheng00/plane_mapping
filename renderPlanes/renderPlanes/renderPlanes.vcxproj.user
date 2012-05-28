@@ -5,7 +5,7 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LocalDebuggerCommandArguments>C:\Users\pcheng\Documents\modeling_MA\nov222011_set1_leftRight_kims_v2_onlyWalls.rpinput</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full\nov222011_set1_leftRight_kims_v2.rpinput</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

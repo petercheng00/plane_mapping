@@ -1,8 +1,514 @@
 84
-SKIP_TO 4
 4
-C:\Users\pcheng\Documents\modeling_MA\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_onlyWalls/output/textures5/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures15/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures16/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures17/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures18/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures19/dynprog.jpg
+0 0
+0 1
+1 1
+1 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures20/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures21/dynprog.jpg
+0 0
+0 1
+1 1
+1 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures22/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures23/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures24/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures25/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures26/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures27/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures28/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures29/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures30/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+12
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures31/dynprog.jpg
+0 0.004927
+0.3849 0
+0.3858 0.3087
+0.3948 0.6991
+0.5442 0.9558
+0.8381 1
+0.9997 0.9388
+1 0.9873
+1 0.9873
+0.2905 0.9964
+0.005373 1
+0.001762 0.3313
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures32/dynprog.jpg
 1 0
 1 1
 0 1
 0 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures33/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures34/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures35/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures36/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures37/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures38/dynprog.jpg
+1 0
+1 1
+0 1
+0 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures39/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures40/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures41/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures42/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures43/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures44/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures45/dynprog.jpg
+1 0
+1 1
+0 1
+0 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures46/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures47/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures48/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures49/dynprog.jpg
+1 0
+1 1
+0 1
+0 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures50/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures51/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures52/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures53/dynprog.jpg
+1 0
+1 1
+0 1
+0 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures54/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures55/dynprog.jpg
+1 0
+1 1
+0 1
+0 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures56/dynprog.jpg
+0 0
+0 1
+1 1
+1 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures57/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures58/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures59/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures60/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures61/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures62/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures63/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures64/dynprog.jpg
+0 0
+0 1
+1 1
+1 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures65/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures66/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures67/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures68/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures69/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures70/dynprog.jpg
+1 0
+1 1
+0 1
+0 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures71/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures72/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures73/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures74/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures75/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures76/dynprog.jpg
+1 0
+1 1
+0 1
+0 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures77/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures78/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures79/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures80/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures81/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures82/dynprog.jpg
+0 0
+0 1
+1 1
+1 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures83/dynprog.jpg
+0 0
+0 1
+1 1
+1 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures84/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures85/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures86/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures87/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures88/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures89/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures90/dynprog.jpg
+1 0
+1 1
+0 1
+0 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures91/dynprog.jpg
+1 0
+1 1
+0 1
+0 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures92/dynprog.jpg
+1 0
+1 1
+0 1
+0 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures93/dynprog.jpg
+0 1
+0 0
+1 0
+1 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures94/dynprog.jpg
+1 0
+1 1
+0 1
+0 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures95/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures96/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures97/dynprog.jpg
+1 0
+1 1
+0 1
+0 0
+4
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/output/textures98/dynprog.jpg
+1 1
+1 0
+0 0
+0 1
+SKIP_TO END

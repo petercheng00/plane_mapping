@@ -1,4 +1,4 @@
-function loadedPlanes = loadPlanes(planesToTexture)
+function loadedPlanes = loadPlanes()
 
   % This function basically reads the input files
   % that specify which images are used for this plane
@@ -121,12 +121,11 @@ function loadedPlanes = loadPlanes(planesToTexture)
     newPlane.height = round(newPlane.ratio*norm(newPlane.down));
     newPlane.maxshift = round(newPlane.ratio * 400); % 400 mm shift
     newPlane.blendpx = round(newPlane.ratio * 400); % 400cm blending
-    load_images = ~isempty(find(planesToTexture==pnum,1));
-    if load_images
-        newPlane = newPlane.load_images(my_filenames, my_masks, rotations, my_t_cam2world, K);
-        newPlane = newPlane.sort_images();
-        newPlane.outimg = zeros(newPlane.height, newPlane.width, 3);
-    end
+    newPlane.image_filenames = my_filenames;
+    newPlane.image_masks = my_masks;
+    newPlane.image_rotations = rotations;
+    newPlane.t_cam2world = my_t_cam2world;
+    newPlane.K = K;
     
     
     

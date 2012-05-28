@@ -58,12 +58,16 @@ classdef tile
         end
         
         function obj = crop(obj)
+            if sum(sum(obj.isvalid)) == 0
+                return
+            end
             % Determine where to crop
             binary_image = obj.isvalid;
             col_min = min(find(sum(binary_image,1)>0));
             col_max = max(find(sum(binary_image,1)>0));
             row_min = min(find(sum(binary_image,2)>0));
             row_max = max(find(sum(binary_image,2)>0));
+            %FAILED HERE BECAUSE EMPTY IMAGE
             while(1)
                 dbstop if error
                 if(row_max-row_min <= 0 || col_max-col_min <= 0)
@@ -92,6 +96,7 @@ classdef tile
             obj.box = newbox;
             
         end
+       
         
         function obj = rotate(obj, angle)
             obj.data = imrotate(obj.data, angle,'bilinear','crop');

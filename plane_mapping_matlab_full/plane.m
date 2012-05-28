@@ -15,23 +15,23 @@ classdef plane < handle
         ratio;
         outimg;
         images = [];
+        image_filenames;
+        image_masks;
+        image_rotations;
+        t_cam2world;
+        K;
         maxshift = 100;
         blendpx = 100;
         sortVertical = false;
     end
     
     methods
-        function obj = load_images(obj, filenames, masks, rotations, t_cam2world, K)
+        function obj = load_images(obj)
             n = 1;
-            for imgnum = 1:size(filenames,1)
+            for imgnum = 1:size(obj.image_filenames,1)
                 fprintf('Loading img number %d\tn=%d\n', imgnum,n);
-                r = rotations{imgnum};
-                t = t_cam2world(imgnum,:)';
-                %cam_vec = [[0;0;0] r ...
-                %    * [0;0;1000]] + repmat(t,1,2);
-                %cam_vec = cam_vec(:,2) - cam_vec(:,1);
-                %cam_vec = cam_vec / norm(cam_vec);
-                %if(abs(cam_vec'*obj.normal) < 0.5)
+                r = obj.image_rotations{imgnum};
+                t = obj.t_cam2world(imgnum,:)';
                 plane_to_cam = t - obj.base;
                 if(plane_to_cam' * obj.normal) < 0.5
                     fprintf('Ignoring Bad Image\n');
@@ -40,17 +40,17 @@ classdef plane < handle
                 
                 obj.images = [obj.images plane_img()];
                 
-                % Load the image and remove the part under the mask
-                obj.images(n).img = imread(filenames{imgnum});
-                obj.images(n).mask = imread(masks{imgnum}) > 0;
+                % Load the image and mask
+                obj.images(n).img = imread(obj.image_filenames{imgnum});
+                obj.images(n).mask = imread(obj.image_masks{imgnum}) > 0;
                 % w is actually height, h is width, but the input images are sideways
-                [w h chan] = size(obj.images(n).img);
+                chan = size(obj.images(n).img,3);
                 assert(chan==3)
                 
                 % Get the extrinsic matrix
                 obj.images(n).r = r;
                 obj.images(n).t = t;
-                obj.images(n).K = K;
+                obj.images(n).K = obj.K;
                 n = n + 1;
             end
         end
@@ -295,24 +295,30 @@ classdef plane < handle
             
             obj.images = obj.images(2:size(obj.images,2)-1);
             valid_img = valid_img(2:size(valid_img,2)-1);
+            
             % blend tiles only where we have holes.
-            max_iter = max(valid_img);
-            for iter = 1:max_iter
-                for idx = 1:size(obj.images,2)
-                    if(valid_img(idx) == iter)
-                        obj = obj.blend_minimum_tile(obj.images(idx).mytile_on_plane);
-                    end
-                end
-            end
-            %for iter = max_iter:-1:1
+                        
+            
+            %max_iter = max(valid_img);
+            %for iter = 1:max_iter
             %    for idx = 1:size(obj.images,2)
             %        if(valid_img(idx) == iter)
-            %            % Painter's algo
-            %            obj = obj.blend_tile_painter(obj.images(idx).mytile_on_plane);
+            %            obj = obj.blend_minimum_tile(obj.images(idx).mytile_on_plane);
             %            keyboard
             %        end
             %    end
             %end
+            keyboard
+            for iter = max_iter:-1:1
+                for idx = 1:size(obj.images,2)
+                    if(valid_img(idx) == iter)
+                        % Painter's algo
+                        %obj = obj.blend_tile_painter(obj.images(idx).mytile_on_plane);
+                        obj = obj.blend_uncropped_tile(obj.images(idx).mytile_on_plane, grid);
+                        keyboard
+                    end
+                end
+            end
             if 1
                 % use portions of chosen images that were previously cropped out
                 % due to not being rectangular.
@@ -327,6 +333,7 @@ classdef plane < handle
                     end
                 end
             end
+            keyboard
             if 1
                 % same as above, but use non-chosen images.
                 if sum(sum(grid)) ~= (size(grid,1) * size(grid,2))
@@ -337,6 +344,7 @@ classdef plane < handle
                     end
                 end
             end
+            keyboard
         end
         
         function obj = fill_holes(obj)
@@ -543,25 +551,20 @@ classdef plane < handle
             box = t.origbox;
             ii = 1;
             for i=box.row_min:box.row_max
-                jj =1;
+                jj = 1;
                 for j=box.col_min:box.col_max
-                    if(sum(obj.outimg(i,j,:),3)==0 && ...
-                       sum(t.origdata(ii,jj,:))~=0);
-                       newVal = t.origdata(ii,jj,:);
-                       count = 1;
-                       % blend with surrounding pixels
-                       for ix=i-5:i+5
-                           for jx=j-5:j+5
-                               if (ix >= box.row_min && ix <= box.row_max && jx >= box.col_min && jx <= box.col_max && sum(obj.outimg(ix,jx,:),3)~=0)
-                                   newVal = newVal + obj.outimg(ix,jx,:);
-                                   count = count + 1;
-                               end
-                           end
-                       end
-                       newVal = newVal / count;
-                       obj.outimg(i,j,:) = newVal;
-                       grid(i,j) = 1;
-              
+                    if sum(t.origdata(ii,jj,:),3) ~= 0
+                        if(sum(obj.outimg(i,j,:),3)~=0)
+                            mindist = min([ii,box.row_max-i,...
+                                jj,box.col_max-j,...
+                                obj.blendpx]);
+                            alpha = mindist/obj.blendpx;
+                            obj.outimg(i,j,:) = ...
+                                t.origdata(ii,jj,:)*alpha +...
+                                obj.outimg(i,j,:)*(1-alpha);
+                        else
+                            obj.outimg(i,j,:) = t.origdata(ii,jj,:);
+                        end
                     end
                     jj = jj+1;
                 end
