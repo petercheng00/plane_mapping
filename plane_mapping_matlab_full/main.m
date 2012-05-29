@@ -37,7 +37,7 @@ textureStyle = 'dynprog';
 fillHoles = 0;
 
 %0 for all
-planesToTexture = 13;
+planesToTexture = 16;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

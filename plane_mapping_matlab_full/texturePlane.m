@@ -36,9 +36,16 @@ elseif (strcmp(textureStyle,'greedy_area'))
 elseif (strcmp(textureStyle,'greedy_cost'))
     p = p.print_greedy_cost();
 elseif (strcmp(textureStyle, 'dynprog'))
-    p = p.setup_DAG();
-    p = p.set_overlap(size(p.images,2));
-    p = p.print_dynprog();
+    images = p.repeated_shortest_path();
+    keyboard
+    % images always go in order of best to worst
+    %p = p.painters_algorithm(images);
+    %p = p.minimum_blending(images);
+    
+    %this method is best because it doesn't worry about cropping
+    %however, shortest path uses cropping, so should use another image
+    %selection method
+    p = p.native_blending(images);
 end
 
 % this is necessary when we throw out images from Stewart that we don't

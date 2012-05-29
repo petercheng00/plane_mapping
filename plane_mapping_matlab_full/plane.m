@@ -193,7 +193,11 @@ classdef plane < handle
             fprintf('cost: %f\n', cost);
         end
         
-        function obj = print_dynprog(obj)
+        function images = repeated_shortest_path(obj)
+            images = [];
+            obj = obj.setup_DAG();
+            obj = obj.set_overlap(size(obj.images,2));
+            
             % Generate cost DAG
             edge_cost = sparse(eye(size(obj.images,2)));
             node_total_cost = zeros(1,size(obj.images,2));
@@ -280,6 +284,11 @@ classdef plane < handle
                                 change_made = true;
                                 grid = newgrid;
                                 valid_img(node) = iter;
+                                %adjust for "fake" nodes created by
+                                %setup_DAG()
+                                if (node ~= 1 && node ~= size(obj.images,2))
+                                    images = [images, node-1];
+                                end
                             end
                         end
                         next_node = path(node);
@@ -290,62 +299,55 @@ classdef plane < handle
                     end
                 end
             end
-            obj.outimg = zeros(obj.height,obj.width,3);
-            % remove the fake begin and end nodes
-            
             obj.images = obj.images(2:size(obj.images,2)-1);
-            valid_img = valid_img(2:size(valid_img,2)-1);
-            
-            % blend tiles only where we have holes.
-                        
-            
-            %max_iter = max(valid_img);
-            %for iter = 1:max_iter
-            %    for idx = 1:size(obj.images,2)
-            %        if(valid_img(idx) == iter)
-            %            obj = obj.blend_minimum_tile(obj.images(idx).mytile_on_plane);
-            %            keyboard
-            %        end
-            %    end
-            %end
-            keyboard
-            for iter = max_iter:-1:1
-                for idx = 1:size(obj.images,2)
-                    if(valid_img(idx) == iter)
-                        % Painter's algo
-                        %obj = obj.blend_tile_painter(obj.images(idx).mytile_on_plane);
-                        obj = obj.blend_uncropped_tile(obj.images(idx).mytile_on_plane, grid);
-                        keyboard
-                    end
-                end
-            end
-            if 1
-                % use portions of chosen images that were previously cropped out
-                % due to not being rectangular.
-                for iter = 1:max_iter
-                    if sum(sum(grid)) == (size(grid,1) * size(grid,2))
-                        break;
-                    end
-                    for idx = 1:size(obj.images,2)
-                        if (valid_img(idx) == iter)
-                            obj = obj.blend_uncropped_tile(obj.images(idx).mytile_on_plane, grid);
-                        end
-                    end
-                end
-            end
-            keyboard
-            if 1
-                % same as above, but use non-chosen images.
-                if sum(sum(grid)) ~= (size(grid,1) * size(grid,2))
-                    for idx = 1:size(obj.images,2)
-                        if(~valid_img(idx))
-                            obj = obj.blend_uncropped_tile(obj.images(idx).mytile_on_plane, grid);
-                        end
-                    end
-                end
-            end
-            keyboard
+            obj.outimg = zeros(obj.height,obj.width,3);
         end
+        
+        function obj = native_blending(obj, images)
+            keyboard
+            for i = 1:size(images,2)
+                idx = images(i);
+                A = obj.outimg;
+                B = obj.outimg;
+                B(obj.images(idx).mytile_on_plane.origbox.row_min:obj.images(idx).mytile_on_plane.origbox.row_max, ...
+                    obj.images(idx).mytile_on_plane.origbox.col_min:obj.images(idx).mytile_on_plane.origbox.col_max, :) = ...
+                    obj.images(idx).mytile_on_plane.origdata;
+                O = zeros(size(A,1),size(A,2));
+                O(sum(A,3) == 0) = 1;
+                O(logical((sum(A,3) ~= 0) .* (sum(B,3) ~= 0))) = (1 / (idx+1));
+                H = vision.AlphaBlender('Operation', 'Blend', 'Opacity', O);
+                obj.outimg = step(H, A, B);
+                keyboard
+            end     
+        end
+        
+        function obj = painters_algorithm(obj, images)
+            for i = size(images):-1:1
+                idx = images(i);
+                obj = obj.blend_tile_painter(obj.images(idx).mytile_on_plane);
+            end
+            obj = obj.blend_uncropped_pieces(images);
+        end
+        
+        function obj = minimum_blending(obj, images)
+            for i = 1:size(images)
+                idx = images(i);
+                 obj = obj.blend_minimum_tile(obj.images(idx).mytile_on_plane);
+            end
+            obj = obj.blend_uncropped_pieces(images);
+        end
+            
+        
+        % use portions of chosen images that were previously cropped out
+        % due to not being rectangular.
+        function obj = blend_uncropped_pieces(obj, images)
+            for i = 1:size(images)
+                idx = images(i);
+                obj = obj.blend_uncropped_tile(obj.images(idx).mytile_on_plane);
+            end
+        end
+        
+        
         
         function obj = fill_holes(obj)
             for i = round(size(obj.outimg,1)/2):-1:2
@@ -547,7 +549,7 @@ classdef plane < handle
         end
         
         
-        function obj = blend_uncropped_tile(obj, t, grid)
+        function obj = blend_uncropped_tile(obj, t)
             box = t.origbox;
             ii = 1;
             for i=box.row_min:box.row_max
