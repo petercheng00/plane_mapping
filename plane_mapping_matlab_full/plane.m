@@ -43,6 +43,8 @@ classdef plane < handle
                 % Load the image and mask
                 obj.images(n).img = imread(obj.image_filenames{imgnum});
                 obj.images(n).mask = imread(obj.image_masks{imgnum}) > 0;
+                m = repmat(obj.images(n).mask,[1,1,3]);
+                obj.images(n).img(m==0) = 0;
                 % w is actually height, h is width, but the input images are sideways
                 chan = size(obj.images(n).img,3);
                 assert(chan==3)
@@ -59,7 +61,7 @@ classdef plane < handle
             for idx = 1:size(obj.images,2)
                 fprintf('Projecting image %d\n', idx);
                 obj.images(idx) = obj.images(idx).set_tile_and_rotate(obj);
-                imshow(uint8(obj.images(idx).mytile.data));
+                imshow(uint8(obj.images(idx).mytile.orig_data));
                 drawnow
             end
         end
@@ -304,20 +306,18 @@ classdef plane < handle
         end
         
         function obj = native_blending(obj, images)
-            keyboard
             for i = 1:size(images,2)
                 idx = images(i);
                 A = obj.outimg;
                 B = obj.outimg;
-                B(obj.images(idx).mytile_on_plane.origbox.row_min:obj.images(idx).mytile_on_plane.origbox.row_max, ...
-                    obj.images(idx).mytile_on_plane.origbox.col_min:obj.images(idx).mytile_on_plane.origbox.col_max, :) = ...
-                    obj.images(idx).mytile_on_plane.origdata;
+                B(obj.images(idx).mytile_on_plane.orig_box.row_min:obj.images(idx).mytile_on_plane.orig_box.row_max, ...
+                    obj.images(idx).mytile_on_plane.orig_box.col_min:obj.images(idx).mytile_on_plane.orig_box.col_max, :) = ...
+                    obj.images(idx).mytile_on_plane.orig_data;
                 O = zeros(size(A,1),size(A,2));
                 O(sum(A,3) == 0) = 1;
                 O(logical((sum(A,3) ~= 0) .* (sum(B,3) ~= 0))) = (1 / (idx+1));
                 H = vision.AlphaBlender('Operation', 'Blend', 'Opacity', O);
                 obj.outimg = step(H, A, B);
-                keyboard
             end     
         end
         
@@ -326,11 +326,10 @@ classdef plane < handle
                 idx = images(i);
                 obj = obj.blend_tile_painter(obj.images(idx).mytile_on_plane);
             end
-            obj = obj.blend_uncropped_pieces(images);
         end
         
         function obj = minimum_blending(obj, images)
-            for i = 1:size(images)
+            for i = 1:size(images,2)
                 idx = images(i);
                  obj = obj.blend_minimum_tile(obj.images(idx).mytile_on_plane);
             end
@@ -341,7 +340,7 @@ classdef plane < handle
         % use portions of chosen images that were previously cropped out
         % due to not being rectangular.
         function obj = blend_uncropped_pieces(obj, images)
-            for i = 1:size(images)
+            for i = 1:size(images,2)
                 idx = images(i);
                 obj = obj.blend_uncropped_tile(obj.images(idx).mytile_on_plane);
             end
@@ -476,8 +475,8 @@ classdef plane < handle
             left = zeros(1,size(obj.images,2));
             top = zeros(1,size(obj.images,2));
             for idx = 1:size(obj.images,2)
-                left(idx) = obj.images(idx).mytile_on_plane.box.col_min;
-                top(idx) = obj.images(idx).mytile_on_plane.box.row_min;
+                left(idx) = obj.images(idx).mytile_on_plane.orig_box.col_min;
+                top(idx) = obj.images(idx).mytile_on_plane.orig_box.row_min;
             end
             hrange = max(left) - min(left);
             vrange = max(top) - min(top);
@@ -502,30 +501,30 @@ classdef plane < handle
         
         function cost = cost_of_tile(obj, t)
             [h w c] = size(obj.outimg);
-            box = t.box;
+            box = t.orig_box;
             existing_tile = obj.outimg(box.row_min:box.row_max,...
                                         box.col_min:box.col_max,:);
             existing_mask = sum(existing_tile,3) > 0;
-            added_tile = t.data;
-            added_mask = t.border_mask;
+            added_tile = t.orig_data;
+            %added_mask = t.border_mask;
             ssd = 0;
             for chan = 1:c
                 ssd = ssd + sum(sum((existing_tile(:,:,chan) - ...
                                     added_tile(:,:,chan)).^2 .* ...
-                                    added_mask .* existing_mask));
+                                    existing_mask));
             end
             cost = ssd;
         end
         
         function obj = print_tile(obj, t)
-            box = t.box;
+            box = t.orig_box;
             [h w c] = size(obj.outimg);
             for chan = 1:c
                 tmp_outimg = obj.outimg(box.row_min:box.row_max, ...
                     box.col_min:box.col_max,chan);
-                tmp_tile = t.data(:,:,chan);
-                tmp_outimg(t.isvalid) = ...
-                    tmp_tile(t.isvalid);
+                tmp_tile = t.orig_data(:,:,chan);
+                tmp_outimg(t.orig_valid) = ...
+                    tmp_tile(t.orig_valid);
                 obj.outimg(box.row_min:box.row_max, ...
                     box.col_min:box.col_max,chan) = tmp_outimg;
             end
@@ -550,22 +549,22 @@ classdef plane < handle
         
         
         function obj = blend_uncropped_tile(obj, t)
-            box = t.origbox;
+            box = t.orig_box;
             ii = 1;
             for i=box.row_min:box.row_max
                 jj = 1;
                 for j=box.col_min:box.col_max
-                    if sum(t.origdata(ii,jj,:),3) ~= 0
+                    if sum(t.orig_data(ii,jj,:),3) ~= 0
                         if(sum(obj.outimg(i,j,:),3)~=0)
                             mindist = min([ii,box.row_max-i,...
                                 jj,box.col_max-j,...
                                 obj.blendpx]);
                             alpha = mindist/obj.blendpx;
                             obj.outimg(i,j,:) = ...
-                                t.origdata(ii,jj,:)*alpha +...
+                                t.orig_data(ii,jj,:)*alpha +...
                                 obj.outimg(i,j,:)*(1-alpha);
                         else
-                            obj.outimg(i,j,:) = t.origdata(ii,jj,:);
+                            obj.outimg(i,j,:) = t.orig_data(ii,jj,:);
                         end
                     end
                     jj = jj+1;
@@ -625,11 +624,7 @@ classdef plane < handle
         
         
         function obj = blend_minimum_tile(obj, t)
-            box = t.box;
-            
-            % Find largest (rectangular) hole within this box - this is
-            % what we want to blend over
-            % later need to check for multiple holes within this box
+            box = t.cropped_box;
             
             
             % work with a local copy so we can track boxes and not deal
@@ -717,6 +712,9 @@ classdef plane < handle
                 for i=patch.row_min:patch.row_max
                     jj = patch.col_min-box.col_min+1;
                     for j=patch.col_min:patch.col_max
+                        if(sum(t.cropped_data(ii,jj,:),3)==0)
+                            continue
+                        end
                         if(sum(obj.outimg(i,j,:),3)~=0)
                             alphaX = -1;
                             alphaY = -1;
@@ -752,11 +750,11 @@ classdef plane < handle
                                     alpha = 1 - diagDist/diagMax;
                                 end
                                 obj.outimg(i,j,:) = ...
-                                    t.data(ii,jj,:)*alpha+...
+                                    t.cropped_data(ii,jj,:)*alpha+...
                                     obj.outimg(i,j,:)*(1-alpha);
                             end
                         else
-                            obj.outimg(i,j,:) = t.data(ii,jj,:);
+                            obj.outimg(i,j,:) = t.cropped_data(ii,jj,:);
                         end
                         jj = jj+1;
                     end
@@ -777,23 +775,39 @@ classdef plane < handle
             start_node = plane_img();
             end_node = plane_img();
             if obj.sortVertical
-                start_node.mytile_on_plane.box.col_min = 1;
-                start_node.mytile_on_plane.box.col_max = obj.width;
-                start_node.mytile_on_plane.box.row_min = 1;
-                start_node.mytile_on_plane.box.row_max = 2;
-                end_node.mytile_on_plane.box.col_min = 1;
-                end_node.mytile_on_plane.box.col_max = obj.width;
-                end_node.mytile_on_plane.box.row_min = obj.height-1;
-                end_node.mytile_on_plane.box.row_max = obj.height;
+                start_node.mytile_on_plane.cropped_box.col_min = 1;
+                start_node.mytile_on_plane.cropped_box.col_max = obj.width;
+                start_node.mytile_on_plane.cropped_box.row_min = 1;
+                start_node.mytile_on_plane.cropped_box.row_max = 2;
+                end_node.mytile_on_plane.cropped_box.col_min = 1;
+                end_node.mytile_on_plane.cropped_box.col_max = obj.width;
+                end_node.mytile_on_plane.cropped_box.row_min = obj.height-1;
+                end_node.mytile_on_plane.cropped_box.row_max = obj.height;
+                start_node.mytile_on_plane.orig_box = ...
+                    start_node.mytile_on_plane.cropped_box;
+                end_node.mytile_on_plane.orig_box = ...
+                    end_node.mytile_on_plane.cropped_box;
+                start_node.mytile_on_plane.cropped_data = zeros(2,obj.width,3);
+                end_node.mytile_on_plane.cropped_data = zeros(2,obj.width,3);
+                start_node.mytile_on_plane.orig_data = zeros(2,obj.width,3);
+                end_node.mytile_on_plane.orig_data = zeros(2,obj.width,3);
             else
-                start_node.mytile_on_plane.box.col_min = 1;
-                start_node.mytile_on_plane.box.col_max = 2;
-                start_node.mytile_on_plane.box.row_min = 1;
-                start_node.mytile_on_plane.box.row_max = obj.height;
-                end_node.mytile_on_plane.box.col_min = obj.width - 1;
-                end_node.mytile_on_plane.box.col_max = obj.width;
-                end_node.mytile_on_plane.box.row_min = 1;
-                end_node.mytile_on_plane.box.row_max = obj.height;
+                start_node.mytile_on_plane.cropped_box.col_min = 1;
+                start_node.mytile_on_plane.cropped_box.col_max = 2;
+                start_node.mytile_on_plane.cropped_box.row_min = 1;
+                start_node.mytile_on_plane.cropped_box.row_max = obj.height;
+                end_node.mytile_on_plane.cropped_box.col_min = obj.width - 1;
+                end_node.mytile_on_plane.cropped_box.col_max = obj.width;
+                end_node.mytile_on_plane.cropped_box.row_min = 1;
+                end_node.mytile_on_plane.cropped_box.row_max = obj.height;
+                start_node.mytile_on_plane.orig_box = ...
+                    start_node.mytile_on_plane.cropped_box;
+                end_node.mytile_on_plane.orig_box = ...
+                    end_node.mytile_on_plane.cropped_box;
+                start_node.mytile_on_plane.cropped_data = zeros(obj.height,2,3);
+                end_node.mytile_on_plane.cropped_data = zeros(obj.height,2,3);
+                start_node.mytile_on_plane.orig_data = zeros(obj.height,2,3);
+                end_node.mytile_on_plane.orig_data = zeros(obj.height,2,3);
             end
             obj.images = [start_node obj.images end_node];
         end
@@ -808,8 +822,8 @@ classdef plane < handle
                     if idx1 == 1 || idx2 == size(obj.images,2);
                         blend = 1;
                     end
-                    b1 = obj.images(idx1).mytile_on_plane.box;
-                    b2 = obj.images(idx2).mytile_on_plane.box;
+                    b1 = obj.images(idx1).mytile_on_plane.cropped_box;
+                    b2 = obj.images(idx2).mytile_on_plane.cropped_box;
                     if(box_overlap(b1, b2, blend))
                         obj.images(idx1).overlap = [obj.images(idx1).overlap ...
                             idx2];
@@ -837,8 +851,8 @@ classdef plane < handle
                     [row_shift col_shift] = get_match_and_shift(s1.mytile_on_plane, s2.mytile_on_plane);
                     matches = true;
                     if(row_shift == 0 && col_shift == 0) matches = false; end
-                    old_row_shift = s2.mytile_on_plane.box.row_min - s1.mytile_on_plane.box.row_min;
-                    old_col_shift = s2.mytile_on_plane.box.col_min - s1.mytile_on_plane.box.col_min;
+                    old_row_shift = s2.mytile_on_plane.cropped_box.row_min - s1.mytile_on_plane.cropped_box.row_min;
+                    old_col_shift = s2.mytile_on_plane.cropped_box.col_min - s1.mytile_on_plane.cropped_box.col_min;
                     diff = abs(row_shift-old_row_shift) + abs(col_shift-old_col_shift);
                     if(diff < obj.maxshift && matches)
                         fprintf('row_shift: %f\told_row_shift: %f\n', row_shift, old_row_shift);
@@ -860,14 +874,14 @@ classdef plane < handle
                 xmat(end,idx1) = 1;
                 ymat(end,idx1) = 1;
                 xmat(end+1,:) = 0; ymat(end+1,:) = 0;
-                xobs(end) = s1.mytile_on_plane.box.col_min;  xobs(end+1) = 0;
-                yobs(end) = s1.mytile_on_plane.box.row_min;  yobs(end+1) = 0;
+                xobs(end) = s1.mytile_on_plane.cropped_box.col_min;  xobs(end+1) = 0;
+                yobs(end) = s1.mytile_on_plane.cropped_box.row_min;  yobs(end+1) = 0;
                 w(end) = 0.01; w(end+1) = 0;
             end
             
             xmat(end,1) = 1; ymat(end,1) = 1;
-            xobs(end) = obj.images(1).mytile_on_plane.box.col_min;
-            yobs(end) = obj.images(1).mytile_on_plane.box.row_min;
+            xobs(end) = obj.images(1).mytile_on_plane.cropped_box.col_min;
+            yobs(end) = obj.images(1).mytile_on_plane.cropped_box.row_min;
             w(end) = 0;
             
             % Solve using weighted least squares
@@ -875,17 +889,17 @@ classdef plane < handle
             new_row_mins = lscov(ymat,yobs',w');
             
             for idx = 1:size(obj.images,2)
-                diff_col = round(new_col_mins(idx) - obj.images(idx).mytile_on_plane.box.col_min);
-                diff_row = round(new_row_mins(idx) - obj.images(idx).mytile_on_plane.box.row_min);
-                obj.images(idx).mytile.box.col_min = obj.images(idx).mytile.box.col_min + diff_col;
-                obj.images(idx).mytile.box.col_max = obj.images(idx).mytile.box.col_max + diff_col;
-                obj.images(idx).mytile.box.row_min = obj.images(idx).mytile.box.row_min + diff_row;
-                obj.images(idx).mytile.box.row_max = obj.images(idx).mytile.box.row_max + diff_row;
+                diff_col = round(new_col_mins(idx) - obj.images(idx).mytile_on_plane.cropped_box.col_min);
+                diff_row = round(new_row_mins(idx) - obj.images(idx).mytile_on_plane.cropped_box.row_min);
+                obj.images(idx).mytile.cropped_box.col_min = obj.images(idx).mytile.cropped_box.col_min + diff_col;
+                obj.images(idx).mytile.cropped_box.col_max = obj.images(idx).mytile.cropped_box.col_max + diff_col;
+                obj.images(idx).mytile.cropped_box.row_min = obj.images(idx).mytile.cropped_box.row_min + diff_row;
+                obj.images(idx).mytile.cropped_box.row_max = obj.images(idx).mytile.cropped_box.row_max + diff_row;
                 
-                obj.images(idx).mytile.origbox.col_min = obj.images(idx).mytile.origbox.col_min + diff_col;
-                obj.images(idx).mytile.origbox.col_max = obj.images(idx).mytile.origbox.col_max + diff_col;
-                obj.images(idx).mytile.origbox.row_min = obj.images(idx).mytile.origbox.row_min + diff_row;
-                obj.images(idx).mytile.origbox.row_max = obj.images(idx).mytile.origbox.row_max + diff_row;
+                obj.images(idx).mytile.orig_box.col_min = obj.images(idx).mytile.orig_box.col_min + diff_col;
+                obj.images(idx).mytile.orig_box.col_max = obj.images(idx).mytile.orig_box.col_max + diff_col;
+                obj.images(idx).mytile.orig_box.row_min = obj.images(idx).mytile.orig_box.row_min + diff_row;
+                obj.images(idx).mytile.orig_box.row_max = obj.images(idx).mytile.orig_box.row_max + diff_row;
             end
             obj = obj.set_tiles_on_plane();
         end

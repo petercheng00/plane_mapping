@@ -68,55 +68,54 @@
            
            function obj = set_tile_and_rotate(obj, p)
                box = p.get_camera_box(obj.t, 5000);
-               uncroppedbox = p.get_camera_box(obj.t, 5000);
-               obj = obj.set_tile(box, uncroppedbox, p);
-               if sum(sum(obj.isvalid)) ~= 0
+               obj = obj.set_tile(box, p);
+               if sum(sum(obj.mytile.orig_valid)) ~= 0
+                   obj.useful = true;
                    obj.mytile = obj.mytile.crop();
                    obj = obj.set_tile_on_plane(p);
-                   if(obj.useful)
-                       angle = rectify_image(uint8(obj.mytile_on_plane.data));
+                   if(obj.useful && (prod(size(obj.mytile_on_plane.cropped_data)) ~= 0))
+                       angle = rectify_image(uint8(obj.mytile_on_plane.cropped_data));
                        obj.mytile = obj.mytile.rotate(angle);
                        obj.mytile = obj.mytile.crop();
                    end
+                   obj = obj.set_tile_on_plane(p);
                else
                    obj.useful = false;
                end
            end
       
-           function obj = set_tile(obj, box, uncroppedbox, p)
+           function obj = set_tile(obj, box, p)
                obj.mytile = tile();
-               obj.mytile.box = box;
-               obj.mytile.origbox = uncroppedbox;
+               obj.mytile.orig_box = box;
                [h w c] = size(obj.img);
                plane_pts = p.get_plane_pts(box);
                world_pts = p.get_world_pts(plane_pts);
                im_pts = obj.get_image_pts(world_pts);
-               obj.mytile.isvalid = logical(obj.contains_point(im_pts));
+               obj.mytile.orig_valid = logical(obj.contains_point(im_pts));
                im_pts_linear = obj.linearize_pts(im_pts);
-               im_pts_linear = im_pts_linear(obj.mytile.isvalid);
-               obj.mytile.data = zeros(box.row_max-box.row_min+1,...
+               im_pts_linear = im_pts_linear(obj.mytile.orig_valid);
+               obj.mytile.orig_data = zeros(box.row_max-box.row_min+1,...
                                        box.col_max-box.col_min+1,...
                                        c);
-               obj.mytile.isvalid = reshape(obj.mytile.isvalid, ...
-                                 size(obj.mytile.data(:,:,1)));
+               obj.mytile.orig_valid = reshape(obj.mytile.orig_valid, ...
+                                 size(obj.mytile.orig_data(:,:,1)));
                for chan = 1:c
                    tmp_img = obj.img(:,:,chan);
-                   tmp_tile = obj.mytile.data(:,:,chan);
-                   tmp_tile(obj.mytile.isvalid) = tmp_img(im_pts_linear);
-                   obj.mytile.data(:,:,chan) = tmp_tile;
+                   tmp_tile = obj.mytile.orig_data(:,:,chan);
+                   tmp_tile(obj.mytile.orig_valid) = tmp_img(im_pts_linear);
+                   obj.mytile.orig_data(:,:,chan) = tmp_tile;
                end
-               obj.mytile.origdata = obj.mytile.data;
-               obj.mytile.origisvalid = obj.mytile.isvalid;
            end
 
            function obj = set_tile_on_plane(obj, p)
                obj.mytile_on_plane = obj.mytile.get_tile_on_plane(p);
-               b = obj.mytile_on_plane.box;
+               b = obj.mytile_on_plane.orig_box;
                if(b.row_max-b.row_min < 1 || b.col_max-b.col_min < 1)
                    obj.useful = false;
                end
-               obj.mytile_on_plane = ...
-                   obj.mytile_on_plane.set_border_mask(p.blendpx);
+               % don't think this is needed anymore
+               %obj.mytile_on_plane = ...
+               %    obj.mytile_on_plane.set_border_mask(p.blendpx);
            end
            
            function contribution = get_contribution(obj, grid)
@@ -146,10 +145,11 @@
            end
            
            function grid = update_logical(obj, grid)
-               % My grid is 1 where it is filled
-               % Their grid is 1 where it is filled
-               box = obj.mytile_on_plane.box;
-               grid(box.row_min:box.row_max,box.col_min:box.col_max) = true;                            
+               temp = grid * 0;
+               temp(obj.mytile_on_plane.orig_box.row_min:obj.mytile_on_plane.orig_box.row_max, ...
+                    obj.mytile_on_plane.orig_box.col_min:obj.mytile_on_plane.orig_box.col_max) = ...
+                    (sum(obj.mytile_on_plane.orig_data,3) ~= 0);
+               grid = grid | temp;
            end
            
            function grid = update_uncropped_logical(obj, grid)

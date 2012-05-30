@@ -1,4 +1,4 @@
-﻿Build started 5/28/2012 11:01:15 AM.
+﻿Build started 5/29/2012 3:08:08 PM.
      1>Project "C:\Users\pcheng\Documents\plane_mapping\renderPlanes\renderPlanes\renderPlanes.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "x64\Release\renderPlanes.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -14,4 +14,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.06
+Time Elapsed 00:00:00.14

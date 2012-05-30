@@ -4,7 +4,7 @@ function checkOcclusion(planes, plane_index)
   for i = 1:size(images,2)
       camera_pt_world = images(i).t;
       
-      curr_box = images(i).mytile_on_plane.box;
+      curr_box = images(i).mytile_on_plane.orig_box;
       gridStepY = 40;
       gridStepX = 40;
       numSectionsY = ceil((curr_box.row_max - curr_box.row_min + 1)/gridStepY);
@@ -28,19 +28,27 @@ function checkOcclusion(planes, plane_index)
                   %target_plane.images(i).mytile_on_plane.origdata(row_min-orig_box.row_min+1:row_max-orig_box.row_min+1, ... 
                   %    col_min-orig_box.col_min+1:col_max-orig_box.col_min+1,:) = empty_patch;
                   empty_patch = zeros(row_max-row_min+1,col_max-col_min+1);
-                  target_plane.images(i).mytile_on_plane.isvalid(row_min-curr_box.row_min+1:row_max-curr_box.row_min+1, ... 
+                  target_plane.images(i).mytile_on_plane.orig_valid(row_min-curr_box.row_min+1:row_max-curr_box.row_min+1, ... 
                       col_min-curr_box.col_min+1:col_max-curr_box.col_min+1) = empty_patch;
+                  target_plane.images(i).mytile_on_plane.orig_data(row_min-curr_box.row_min+1:row_max-curr_box.row_min+1, ... 
+                      col_min-curr_box.col_min+1:col_max-curr_box.col_min+1,:) = repmat(empty_patch,[1,1,3]);
                   
-                  % right now haven't handled cropping of origdata, not
-                  % sure if it will be useful
-                  orig_box = images(i).mytile_on_plane.origbox;
-                  target_plane.images(i).mytile_on_plane.origisvalid(row_min-orig_box.row_min+1:row_max-orig_box.row_min+1, ... 
-                      col_min-orig_box.col_min+1:col_max-orig_box.col_min+1) = empty_patch;
-
+                  % right now haven't handled cropping of cropped_data,
+                  % doesn't seem useful
+                  cropped_box = images(i).mytile_on_plane.cropped_box;
+                  cropped_row_min = max(1, row_min - cropped_box.row_min+1);
+                  cropped_row_max = max(1, row_max - cropped_box.row_min+1);
+                  cropped_col_min = max(1, col_min - cropped_box.col_min+1);
+                  cropped_col_max = max(1, col_max - cropped_box.col_min+1);
+                  empty_patch = zeros(cropped_row_max-cropped_row_min+1,cropped_col_max-cropped_col_min+1);
+                  target_plane.images(i).mytile_on_plane.cropped_valid(cropped_row_min:cropped_row_max, ... 
+                      cropped_col_min:cropped_col_max) = empty_patch;
+                  target_plane.images(i).mytile_on_plane.cropped_data(cropped_row_min:cropped_row_max, ... 
+                      cropped_col_min:cropped_col_max,:) = repmat(empty_patch,[1,1,3]);
               end
           end
       end
-      if sum(sum(target_plane.images(i).mytile_on_plane.isvalid)) > 0
+      if sum(sum(target_plane.images(i).mytile_on_plane.orig_valid)) > 0
           target_plane.images(i).mytile_on_plane = target_plane.images(i).mytile_on_plane.crop();
           target_plane.images(i).mytile_on_plane = target_plane.images(i).mytile_on_plane.set_border_mask(target_plane.blendpx);
       else

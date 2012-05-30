@@ -16,8 +16,9 @@ addpath('ransac');
 
 p = planes(pnum);
 p = p.set_tiles();
-p = p.set_tiles_on_plane();
 p = p.filter_useless();
+
+% not really useful anymore
 p = p.sort_images2();
 % if we do the following occlusion check, downside is that we may
 % prematurely crop areas that won't be cropped after shifting.
@@ -37,7 +38,6 @@ elseif (strcmp(textureStyle,'greedy_cost'))
     p = p.print_greedy_cost();
 elseif (strcmp(textureStyle, 'dynprog'))
     images = p.repeated_shortest_path();
-    keyboard
     % images always go in order of best to worst
     %p = p.painters_algorithm(images);
     %p = p.minimum_blending(images);
@@ -45,7 +45,10 @@ elseif (strcmp(textureStyle, 'dynprog'))
     %this method is best because it doesn't worry about cropping
     %however, shortest path uses cropping, so should use another image
     %selection method
-    p = p.native_blending(images);
+    
+    p = p.minimum_blending(images);
+    p = p.minimum_blending(1:size(p.images,2));
+    %p = p.native_blending(images);
 end
 
 % this is necessary when we throw out images from Stewart that we don't
