@@ -1,3 +1,6 @@
+#ifndef UTILITIES_H
+#define UTILITIES_H
+
 #include <string>
 #include <vector>
 
@@ -22,3 +25,5 @@ bool sameSide( Vec2 p1, Vec2 p2, Vec2 a, Vec2 b );
 bool vertexInsidePolygon( Vec2 testPoint, Vec2Array* vertices );
 bool verticesInTriangle( int a, int b, int c, Vec2Array* vertices, vector<int>& valid );
 Vec3 calculateBaryCentricCoords(Vec2& in, Vec2& v1, Vec2& v2, Vec2& v3);
+
+#endif

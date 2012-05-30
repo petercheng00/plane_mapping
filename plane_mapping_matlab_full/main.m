@@ -29,7 +29,7 @@ modelName = 'nov222011_set1_leftRight_kims_v2';
 %imgPath = 'E:\projects\indoormapping\data\2011825-3\images';
 imgPath = 'E:\projects\indoormapping\data\20111122-1\images';
 
-prePath = 'C:\\Users\\pcheng\\Documents\\modeling_MA\\plane_mapping_matlab_full';
+prePath = 'C:\\Users\\pcheng\\Documents\\plane_mapping\\plane_mapping_matlab_full';
 
 textureStyle = 'dynprog';
 

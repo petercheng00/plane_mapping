@@ -1,10 +1,12 @@
 #include "utilities.h"
+#include "RPEventHandler.h"
 #include <osgDB/WriteFile>
 
 string modelFile = "";
 string mapFile = "";
 string iveFile = "";
 string outputFile = "";
+
 void doEarClipping( Geometry* planeGeometry, Vec2Array* planeVertices )
 {
 	vector<DrawElementsUInt*> triangles;
@@ -279,6 +281,17 @@ void parseModelFile(Group* root) {
 		//read in the plane equation, which is comprised of the normal vector (nx,ny,nz) and d such that nx*x+ny*y+nz*z + d = 0
 		double nx,ny,nz,d; 
 		inFile >> nx >> ny >> nz >> d; 
+		//if normal up or down, floor or ceiling, so set a mask
+		if (nz == 1.0) {
+			planeGeode->setNodeMask(0x00000001);
+		}
+		else if (nz == -1.0) {
+			planeGeode->setNodeMask(0x00000002);
+		}
+		else {
+			planeGeode->setNodeMask(0x00000004);
+		}
+
 		for(int j = 0; j!= numDelimitingPoints; ++j) {
 			double vx,vy,vz; 
 			inFile >> vx >> vy >> vz; 
@@ -313,6 +326,36 @@ void parseModelFile(Group* root) {
 	
 	}
 	inFile.close(); 
+}
+
+
+bool RPEventHandler::handle(const osgGA::GUIEventAdapter& ea,osgGA::GUIActionAdapter& aa)
+    {
+    switch(ea.getEventType())
+    {
+    case(osgGA::GUIEventAdapter::KEYDOWN):
+        {
+            switch(ea.getKey())
+            {			
+			case 'f':
+				camera->setCullMask(camera->getCullMask() ^ 0x00000001);
+				return false;
+				break;
+			case 'c':
+				camera->setCullMask(camera->getCullMask() ^ 0x00000002);
+				return false;
+				break;
+            case 'w':
+				camera->setCullMask(camera->getCullMask() ^ 0x00000004);
+				return false;
+				break;
+			default:
+				return false;
+            } 
+        }
+    default:
+        return false;
+    }
 }
 
 int main(int argc, char** argv)
@@ -380,6 +423,10 @@ int main(int argc, char** argv)
 		osgDB::writeNodeFile(*root, outputFile.c_str());
 	}
 	else {
+
+		RPEventHandler * myRPEventHandler = new RPEventHandler(viewer.getCamera());
+		viewer.addEventHandler(myRPEventHandler);
+
 	 	viewer.setUpViewOnSingleScreen(0);
 		viewer.setSceneData( root );
 		viewer.setCameraManipulator(new osgGA::OrbitManipulator());
