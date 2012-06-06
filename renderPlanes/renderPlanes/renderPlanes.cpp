@@ -170,7 +170,7 @@ void addLighting(Group* root) {
 	statelightON_OVRD->setAttribute(light, StateAttribute::ON);
 }
 
-void applyColors(Group* root){
+void applyColors(Group* root, bool showTriangles){
 	int numPlanes = root->getNumChildren();
 	for (int i = 0; i < numPlanes; i++){
 		osg::Vec4Array* colors = new osg::Vec4Array;
@@ -182,8 +182,12 @@ void applyColors(Group* root){
 			colors->push_back(osg::Vec4(color/(numPlanes+numPrimitives), color/(numPlanes+numPrimitives), color/(numPlanes+numPrimitives), 1.0f));
 		}
 		currGeometry->setColorArray(colors);
-		currGeometry->setColorBinding(osg::Geometry::BIND_PER_PRIMITIVE_SET);
-		//currGeometry->setColorBinding(osg::Geometry::BIND_OVERALL);
+		if (showTriangles) {
+			currGeometry->setColorBinding(osg::Geometry::BIND_PER_PRIMITIVE_SET);
+		}
+		else {
+			currGeometry->setColorBinding(osg::Geometry::BIND_OVERALL);
+		}
 	}
 }
 
@@ -362,6 +366,7 @@ int main(int argc, char** argv)
 {
 	bool noTexture = false;
 	bool noSave = false;
+	bool showTriangles = false;
 	if (argc > 1){
 		ifstream inputFile(argv[1]);
 		outputFile = string(argv[1]);
@@ -392,6 +397,9 @@ int main(int argc, char** argv)
 			else if (fileName == "noSave") {
 				noSave = true;
 			}
+			else if (fileName == "showTriangles") {
+				showTriangles = true;
+			}
 			getline(inputFile, fileName);
 		}
 	}
@@ -406,7 +414,7 @@ int main(int argc, char** argv)
     parseMapFile(mapFile, planeToImageFile, planeToImageCoords);
     parseModelFile(root);
 	if (noTexture){
-		applyColors(root);
+		applyColors(root, showTriangles);
 	}
 	else{
 	    applyTextures(root, planeToImageFile, planeToImageCoords);
