@@ -50,7 +50,8 @@ for cplane=1:1:tot_planes
         vert=[planes.p(cplane).x', planes.p(cplane).y',planes.p(cplane).z']; 
         fac=[1:1:planes.p(cplane).npoints];
         if (counter > 0)
-            patch('vertices', vert,'faces',fac,'facecolor',[(cplane/tot_planes*.9) 0.5 (cplane/tot_planes*.7)]); hold on;
+            patch('vertices', vert,'faces',fac,'facecolor',rand(1,3)); hold on;
+            %patch('vertices', vert,'faces',fac,'facecolor',[(cplane/tot_planes*.9) 0.5 (cplane/tot_planes*.7)]); hold on;
                 %patch('vertices', vert,'faces',fac,'facecolor',[0 .8 0]); hold on;
         end
         view(3); 

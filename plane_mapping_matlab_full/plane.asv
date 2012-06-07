@@ -28,7 +28,8 @@ classdef plane < handle
     methods
         function obj = load_images(obj)
             n = 1;
-            for imgnum = 1:size(obj.image_filenames,1)
+            %for imgnum = 1:size(obj.image_filenames,1)/50
+            for imgnum = 30:50
                 fprintf('Loading img number %d\tn=%d\n', imgnum,n);
                 if size(strfind(obj.image_filenames{imgnum}, 'down'),1) == 0
                     fprintf('Ignoring non-down camera\n');
@@ -373,9 +374,11 @@ classdef plane < handle
         % use portions of chosen images that were previously cropped out
         % due to not being rectangular.
         function obj = blend_uncropped_pieces(obj, images)
+            keyboard
             for i = 1:size(images,2)
                 idx = images(i);
                 obj = obj.blend_uncropped_tile(obj.images(idx).mytile_on_plane);
+                keyboard
             end
         end
         
@@ -595,9 +598,9 @@ classdef plane < handle
                             mask_row = mask(ii,:);
                             mask_col = mask(:,jj);
                             left_dist = (jj - find(mask_row(1:jj)));
-                            right_dist = find(mask_row(jj:end));
+                            right_dist = (find(mask_row(jj:end)) - jj);
                             up_dist = (ii - find(mask_col(1:ii)));
-                            down_dist = find(mask_col(ii:end));
+                            down_dist = (find(mask_col(ii:end)) - i);
                             mindist = min([left_dist, right_dist, rot90(up_dist), rot90(down_dist), obj.blendpx]);
                             %mindist = min([ii,box.row_max-i,...
                             %    jj,box.col_max-j,...

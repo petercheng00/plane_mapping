@@ -5,9 +5,10 @@ function checkOcclusion(planes, plane_index)
       curr_box = images(i).mytile_on_plane.orig_box;
       gridStepY = 400;
       gridStepX = 400;
-      maxSubDivs = 6;
+      maxSubDivs = 4;
       numSectionsY = ceil((curr_box.row_max - curr_box.row_min + 1)/gridStepY);
       numSectionsX = ceil((curr_box.col_max - curr_box.col_min + 1)/gridStepX);
+      keyboard
       for j = 1:numSectionsY
           for k = 1:numSectionsX
               row_min = curr_box.row_min + (j-1) * gridStepY;
@@ -18,6 +19,7 @@ function checkOcclusion(planes, plane_index)
                   row_min, row_max, col_min, col_max);
           end
       end
+      keyboard
       if sum(sum(target_plane.images(i).mytile_on_plane.orig_valid)) > 0
           target_plane.images(i).mytile_on_plane = target_plane.images(i).mytile_on_plane.crop();
           target_plane.images(i).mytile_on_plane = target_plane.images(i).mytile_on_plane.set_border_mask(target_plane.blendpx);
@@ -157,8 +159,8 @@ end
 
 function occludeTriangle(corner, target_plane, imgnum, row_min, row_max, col_min, col_max)
   curr_box = target_plane.images(imgnum).mytile_on_plane.orig_box;
-  % first create a patch with lower-right occluded, then flip as needed
-  patch = ones(row_max-row_min+1,col_max-col_min+1);
+  % first create a patch with upper-left occluded, then flip as needed
+  patch = zeros(row_max-row_min+1,col_max-col_min+1);
   
   h = round(size(patch,1)/2);
   w = round(size(patch,2)/2);
@@ -176,15 +178,15 @@ function occludeTriangle(corner, target_plane, imgnum, row_min, row_max, col_min
   
   for ww = 1:w
       depth = round(h - ((h-1)/w) * ww);
-      patch(1:depth,ww) = 0;
+      patch(1:depth,ww) = 1;
   end
-  % what we have done is the LR case
-  if strcmp(corner, 'LL')
+  % what we have done is the UL case
+  if strcmp(corner, 'UR')
       patch = fliplr(patch);
-  elseif strcmp(corner, 'UL')
+  elseif strcmp(corner, 'LR')
       patch = fliplr(patch);
       patch = flipud(patch);
-  elseif strcmp(corner, 'UR')
+  elseif strcmp(corner, 'LL')
       patch = flipud(patch);
   end
   

@@ -24,7 +24,7 @@ global fillHoles
 %MODIFY THESE VALUES%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-modelName = 'nov222011_set1_leftRight_kims_v2';
+modelName = 'nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit';
 %name of folder in E drive
 %imgPath = 'E:\projects\indoormapping\data\2011825-3\images';
 imgPath = 'E:\projects\indoormapping\data\20111122-1\images';
@@ -37,7 +37,7 @@ textureStyle = 'dynprog';
 fillHoles = 0;
 
 %0 for all
-planesToTexture = 2:14;
+planesToTexture = 1:20;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -82,7 +82,7 @@ for planeInd = 1:size(planesToTexture, 2)
     planeNum = planesToTexture(planeInd);
     disp(['texturing plane ', num2str(planeNum)]);
     planes(planeNum) = planes(planeNum).load_images();
-    planes(planeNum) = planes(planeNum).sort_images();
+    %planes(planeNum) = planes(planeNum).sort_images();
     planes(planeNum).outimg = zeros(planes(planeNum).height, planes(planeNum).width, 3);
     texturePlane(planes,planeNum);
 end

@@ -59,7 +59,6 @@ function loadedPlanes = loadPlanes()
     for i=1:size(my_R_cam2world,1)
       rotations{i} = quat2rot(my_R_cam2world(i,:));
     end
-    
 	numcorners = model(linenum,1);
     normal = model(linenum+1,1:3);
     normal = normal/norm(normal);
