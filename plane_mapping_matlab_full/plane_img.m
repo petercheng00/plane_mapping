@@ -69,16 +69,17 @@
            function obj = set_tile_and_rotate(obj, p)
                box = p.get_camera_box(obj.t, 5000);
                obj = obj.set_tile(box, p);
-               if sum(sum(obj.mytile.orig_valid)) ~= 0
+               if (sum(sum(obj.mytile.orig_valid)) > 0)
                    obj.useful = true;
                    obj.mytile = obj.mytile.crop();
                    obj = obj.set_tile_on_plane(p);
-                   if(obj.useful && (prod(size(obj.mytile_on_plane.cropped_data)) ~= 0))
+                   if  (numel(obj.mytile_on_plane.cropped_valid) > 0) 
                        angle = rectify_image(uint8(obj.mytile_on_plane.cropped_data));
                        obj.mytile = obj.mytile.rotate(angle);
                        obj.mytile = obj.mytile.crop();
+                       obj = obj.set_tile_on_plane(p);
+                       obj.useful = (numel(obj.mytile_on_plane.cropped_valid) > 0);
                    end
-                   obj = obj.set_tile_on_plane(p);
                else
                    obj.useful = false;
                end

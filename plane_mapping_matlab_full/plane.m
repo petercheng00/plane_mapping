@@ -104,12 +104,17 @@ classdef plane < handle
                 obj.images(i).mytile_on_plane.orig_data(mask) = 0;
             end
         end
-        
+        % i'm not confident that the flag is set on all cases we care
+        % about, so do more checking here. Obviously needs to be improved.
         function obj = filter_useless(obj)
             useful = [];
             for idx = 1:size(obj.images,2)
                 if obj.images(idx).useful
-                    useful = [useful obj.images(idx)];
+                  b = obj.images(idx).mytile_on_plane.cropped_box;
+                  if numel(obj.images(idx).mytile_on_plane.orig_valid) > 0 && ...
+                      (b.row_max-b.row_min > 0 && b.col_max-b.col_min > 0)
+                      useful = [useful obj.images(idx)];
+                  end
                 end
             end
             obj.images = useful;

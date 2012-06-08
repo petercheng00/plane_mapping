@@ -2,12 +2,14 @@ function checkOcclusion(planes, plane_index)
   target_plane = planes(plane_index);
   images = target_plane.images;
   for i = 1:size(images,2)
+      disp(['Checking occlusion for image ', num2str(i)]);
       curr_box = images(i).mytile_on_plane.orig_box;
       gridStepY = 400;
       gridStepX = 400;
       maxSubDivs = 6;
       numSectionsY = ceil((curr_box.row_max - curr_box.row_min + 1)/gridStepY);
       numSectionsX = ceil((curr_box.col_max - curr_box.col_min + 1)/gridStepX);
+      
       for j = 1:numSectionsY
           for k = 1:numSectionsX
               row_min = curr_box.row_min + (j-1) * gridStepY;
@@ -18,7 +20,7 @@ function checkOcclusion(planes, plane_index)
                   row_min, row_max, col_min, col_max);
           end
       end
-      if sum(sum(target_plane.images(i).mytile_on_plane.orig_valid)) > 0
+      if (sum(sum(target_plane.images(i).mytile_on_plane.orig_valid)) > 0) && (numel(target_plane.images(i).mytile_on_plane.orig_valid) > 0)
           target_plane.images(i).mytile_on_plane = target_plane.images(i).mytile_on_plane.crop();
           target_plane.images(i).mytile_on_plane = target_plane.images(i).mytile_on_plane.set_border_mask(target_plane.blendpx);
       else
@@ -36,8 +38,9 @@ function subdivideForOcclusion(planes, plane_index, imgnum, depth, maxDepth, ...
   %end    
   box = target_plane.images(imgnum).mytile_on_plane.orig_box;
   data = target_plane.images(imgnum).mytile_on_plane.orig_data;
-  if sum(sum(sum(data(row_min-box.row_min+1:row_max-box.row_min+1,...
-          col_min-box.col_min+1:col_max-box.col_min+1,:)))) == 0
+  data_in_section = data(row_min-box.row_min+1:row_max-box.row_min+1,...
+          col_min-box.col_min+1:col_max-box.col_min+1,:);
+  if sum(sum(sum(data_in_section))) == 0
       return;
   end
   
@@ -60,7 +63,6 @@ function subdivideForOcclusion(planes, plane_index, imgnum, depth, maxDepth, ...
   UL_result = occludedOrOffPlane(planes, plane_index, UL_pt_world, camera_pt_world);
   UR_result = occludedOrOffPlane(planes, plane_index, UR_pt_world, camera_pt_world);
   LR_result = occludedOrOffPlane(planes, plane_index, LR_pt_world, camera_pt_world);
-  
   if LL_result && UL_result && UR_result && LR_result
       occludeRectangle(target_plane, imgnum, row_min, row_max, col_min, col_max);
       return
@@ -70,50 +72,101 @@ function subdivideForOcclusion(planes, plane_index, imgnum, depth, maxDepth, ...
       return
   end
   if 1
-      if depth == maxDepth  
-        %if sum([LL_result, UL_result, UR_result, LR_result]) == 1
-        %    keyboard
-        %    if LL_result
-        %        occludeTriangle('LL', target_plane, imgnum, row_min, row_max, col_min, col_max);
-        %    end
-        %    if UL_result
-        %        occludeTriangle('UL', target_plane, imgnum, row_min, row_max, col_min, col_max);
-        %    end
-        %%    if UR_result
-        %        occludeTriangle('UR', target_plane, imgnum, row_min, row_max, col_min, col_max);
-        %    end
-        %    if LR_result
-        %        occludeTriangle('LR', target_plane, imgnum, row_min, row_max, col_min, col_max);
-        %    end
-        %    keyboard
-        if sum([LL_result, UL_result, UR_result, LR_result]) == 2
-            if LL_result && UL_result
-                occludeRectangle(target_plane, imgnum, row_min, row_max, col_min, round((col_min+col_max)/2));
+      if depth == maxDepth
+          if 0
+              [rows columns, channels] = size(data_in_section);
+              rChannel = data_in_section(:,:,1);
+              gChannel = data_in_section(:,:,2);
+              bChannel = data_in_section(:,:,3);
+              LL_data = squeeze(data_in_section(rows-1,2,:));
+              UL_data = squeeze(data_in_section(2,2,:));
+              UR_data = squeeze(data_in_section(2,columns-1,:));
+              LR_data = squeeze(data_in_section(rows-1,columns-1,:));
+              val = [0;0;0];
+              numVals = 0;
+              if LL_result && sum(LL_data)>0
+                  val  = val + LL_data;
+                  numVals = numVals+1;
+              end
+              if UL_result && sum(UL_data)>0
+                  val  = val + UL_data;
+                  numVals = numVals+1;
+              end
+              if UR_result && sum(UR_data)>0
+                  val  = val + UR_data;
+                  numVals = numVals+1;
+              end
+              if LR_result && sum(LR_data)>0
+                  val  = val + LR_data;
+                  numVals = numVals+1;
+              end
+              if numVals == 0
+                  return
+              end
+              avgVal = val / numVals;
+
+              rMean = avgVal(1);
+              gMean = avgVal(2);
+              bMean = avgVal(3);
+              rStandard = rMean * ones(rows, columns);
+              gStandard = gMean * ones(rows, columns);
+              bStandard = bMean * ones(rows, columns);    
+              deltar = rChannel - rStandard;
+              deltag = gChannel - gStandard;
+              deltab = bChannel - bStandard;      
+              deltaE = sqrt(deltar .^ 2 + deltag .^ 2 + deltab .^ 2);   
+              binaryImage = deltaE <= 30;
+              binaryImage = repmat(binaryImage, [1,1,3]);
+              data_in_section(binaryImage) = 0;
+              %target_plane.images(imgnum).mytile_on_plane.orig_data(row_min-box.row_min+1:row_max-box.row_min+1, ... 
+          %col_min-box.col_min+1:col_max-box.col_min+1,:) = data_in_section;
+              fillRectangleWithData(target_plane, imgnum, row_min, row_max, col_min, col_max, data_in_section);
+          end
+          if 1
+            %if sum([LL_result, UL_result, UR_result, LR_result]) == 1
+            %    keyboard
+            %    if LL_result
+            %        occludeTriangle('LL', target_plane, imgnum, row_min, row_max, col_min, col_max);
+            %    end
+            %    if UL_result
+            %        occludeTriangle('UL', target_plane, imgnum, row_min, row_max, col_min, col_max);
+            %    end
+            %%    if UR_result
+            %        occludeTriangle('UR', target_plane, imgnum, row_min, row_max, col_min, col_max);
+            %    end
+            %    if LR_result
+            %        occludeTriangle('LR', target_plane, imgnum, row_min, row_max, col_min, col_max);
+            %    end
+            %    keyboard
+            if sum([LL_result, UL_result, UR_result, LR_result]) == 2
+                %if LL_result && UL_result
+                %    occludeRectangle(target_plane, imgnum, row_min, row_max, col_min, round((col_min+col_max)/2));
+                %end
+                %if UL_result && UR_result
+                %    occludeRectangle(target_plane, imgnum, row_min, round((row_min+row_max)/2), col_min, col_max);
+                %end
+                %if UR_result && LR_result
+                %    occludeRectangle(target_plane, imgnum, round((row_min+row_max)/2), row_max, round((col_min+col_max)/2), col_max);
+                %end
+                %if LR_result && LL_result
+                %    occludeRectangle(target_plane, imgnum, round((row_min+row_max)/2), row_max, col_min, col_max);
+                %end
+            elseif sum([LL_result, UL_result, UR_result, LR_result]) == 3
+                if ~LL_result
+                    occludeTriangle('UR', target_plane, imgnum, row_min, row_max, col_min, col_max);
+                end
+                if ~UL_result
+                    occludeTriangle('LR', target_plane, imgnum, row_min, row_max, col_min, col_max);
+                end
+                if ~UR_result
+                    occludeTriangle('LL', target_plane, imgnum, row_min, row_max, col_min, col_max);
+                end
+                if ~LR_result
+                    occludeTriangle('UL', target_plane, imgnum, row_min, row_max, col_min, col_max);
+                end
             end
-            if UL_result && UR_result
-                occludeRectangle(target_plane, imgnum, row_min, round((row_min+row_max)/2), col_min, col_max);
-            end
-            if UR_result && LR_result
-                occludeRectangle(target_plane, imgnum, round((row_min+row_max)/2), row_max, round((col_min+col_max)/2), col_max);
-            end
-            if LR_result && LL_result
-                occludeRectangle(target_plane, imgnum, round((row_min+row_max)/2), row_max, col_min, col_max);
-            end
-        elseif sum([LL_result, UL_result, UR_result, LR_result]) == 3
-            if ~LL_result
-                occludeTriangle('UR', target_plane, imgnum, row_min, row_max, col_min, col_max);
-            end
-            if ~UL_result
-                occludeTriangle('LR', target_plane, imgnum, row_min, row_max, col_min, col_max);
-            end
-            if ~UR_result
-                occludeTriangle('LL', target_plane, imgnum, row_min, row_max, col_min, col_max);
-            end
-            if ~LR_result
-                occludeTriangle('UL', target_plane, imgnum, row_min, row_max, col_min, col_max);
-            end
-        end
-        return
+          return
+          end
       end
   end
   subdivideForOcclusion(planes, plane_index, imgnum, depth+1, maxDepth, ...
@@ -154,14 +207,41 @@ function occludeRectangle(target_plane, imgnum, row_min, row_max, col_min, col_m
       cropped_col_min:cropped_col_max,:) = repmat(empty_patch,[1,1,3]);
 end
 
+function fillRectangleWithData(target_plane, imgnum, row_min, row_max, col_min, col_max, data)
+  curr_box = target_plane.images(imgnum).mytile_on_plane.orig_box;
+  orig_row_min = row_min-curr_box.row_min+1;
+  orig_row_max = row_max-curr_box.row_min+1;
+  orig_col_min = col_min-curr_box.col_min+1;
+  orig_col_max = col_max-curr_box.col_min+1;
+  target_plane.images(imgnum).mytile_on_plane.orig_valid(orig_row_min:orig_row_max, ... 
+      orig_col_min:orig_col_max) = (sum(data,3)~=0);
+  target_plane.images(imgnum).mytile_on_plane.orig_data(orig_row_min:orig_row_max, ... 
+      orig_col_min:orig_col_max,:) = data;
+
+
+  %cropped_box = target_plane.images(imgnum).mytile_on_plane.cropped_box;
+  %cropped_row_min = min(max(1, row_min - cropped_box.row_min+1),cropped_box.row_max-cropped_box.row_min+1);
+  %cropped_row_max = min(max(1, row_max - cropped_box.row_min+1),cropped_box.row_max-cropped_box.row_min+1);
+  %cropped_col_min = min(max(1, col_min - cropped_box.col_min+1),cropped_box.col_max-cropped_box.col_min+1);
+  %cropped_col_max = min(max(1, col_max - cropped_box.col_min+1),cropped_box.col_max-cropped_box.col_min+1);
+  %cropped_data = data(cropped_row_min-orig_row_min+1:end-(orig_row_max-cropped_row_max),...
+  %    cropped_col_min-orig_col_min+1:end-(orig_col_max-cropped_col_max));
+  %
+  %target_plane.images(imgnum).mytile_on_plane.cropped_valid(cropped_row_min:cropped_row_max, ... 
+  %    cropped_col_min:cropped_col_max) = (sum(cropped_data,3)~=0);
+  %target_plane.images(imgnum).mytile_on_plane.cropped_data(cropped_row_min:cropped_row_max, ... 
+  %    cropped_col_min:cropped_col_max,:) = cropped_data;
+end
+
+
 
 function occludeTriangle(corner, target_plane, imgnum, row_min, row_max, col_min, col_max)
   curr_box = target_plane.images(imgnum).mytile_on_plane.orig_box;
   % first create a patch with lower-right occluded, then flip as needed
   patch = ones(row_max-row_min+1,col_max-col_min+1);
   
-  h = round(size(patch,1)/2);
-  w = round(size(patch,2)/2);
+  h = round(size(patch,1)/1);
+  w = round(size(patch,2)/1);
   
   % this method is fancier, but probably slower
   %x = 1:w;

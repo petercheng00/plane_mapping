@@ -13,7 +13,6 @@ function texturePlane(planes,pnum)
 
 addpath('sift');
 addpath('ransac');
-
 p = planes(pnum);
 p = p.set_tiles();
 p = p.filter_useless();
@@ -31,6 +30,7 @@ p = p.remove_border_pixels();
 % checkOcclusion(planes, planeNum);
 p = p.set_sift();
 p = p.fix_locations();
+p = p.filter_useless();
 disp('occlusion checking...')
 checkOcclusion(planes,pnum);
 p = p.filter_useless();
@@ -46,7 +46,7 @@ elseif (strcmp(textureStyle, 'dynprog'))
     % images always go in order of best to worst
     %p = p.painters_algorithm(images);
     
-
+    disp('doing minimum blending')
     p = p.minimum_blending(images);
     p = p.minimum_blending(1:size(p.images,2));
     %disp('texturing with native blending...')
@@ -56,9 +56,10 @@ end
 % this is necessary when we throw out images from Stewart that we don't
 % want. This should be re-written to be more general though
 if fillHoles
+    disp('Doing texture extrapolation to fill holes...')
     p = p.fill_holes();
 end
-
+disp('Writing Image...')
 imshow(uint8(p.outimg))
 drawnow
 % Print final image
@@ -69,6 +70,7 @@ warning on
 cd(folder);
 imwrite(uint8(p.outimg), [textureStyle, '.jpg']);
 cd ('../../../..')
+disp('Done!')
 end
 
 
