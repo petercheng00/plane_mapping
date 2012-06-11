@@ -28,12 +28,9 @@ classdef plane < handle
     methods
         function obj = load_images(obj)
             n = 1;
-            for imgnum = 1:size(obj.image_filenames,1)
+            %for imgnum = 1:size(obj.image_filenames,1)
+            for imgnum = 1:100:size(obj.image_filenames,1)
                 fprintf('Loading img number %d\tn=%d\n', imgnum,n);
-                if size(strfind(obj.image_filenames{imgnum}, 'down'),1) == 0
-                    fprintf('Ignoring non-down camera\n');
-                    continue
-                end
                 r = obj.image_rotations{imgnum};
                 t = obj.t_cam2world(imgnum,:)';
                 plane_to_cam = t - obj.base;

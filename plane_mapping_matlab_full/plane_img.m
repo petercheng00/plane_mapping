@@ -7,6 +7,8 @@
            r;
            t;
            K;
+           cam_dist;
+           cam_angle;
            mytile;
            mytile_on_plane;
 		   overlap = [];
@@ -31,17 +33,31 @@
                end
            end
            
-           function im_pts = get_image_pts(obj, plane_pts)
-               npoints = size(plane_pts,2);
-               camera_pts = obj.r'*(plane_pts - repmat(obj.t, [1, npoints]));
-               im_pts = obj.K*camera_pts;
-               im_pts(1,:) = round(im_pts(1,:) ./ im_pts(3,:));
-               im_pts(2,:) = round(im_pts(2,:) ./ im_pts(3,:));
-               im_pts = im_pts(1:2,:);
+           function camera_pts = get_camera_pts(obj, world_pts)
+               npoints = size(world_pts,2);
+               camera_pts = obj.r'*(world_pts - repmat(obj.t, [1, npoints]));
+               camera_pts = obj.K*camera_pts;
+               %im_pts(1,:) = round(im_pts(1,:) ./ im_pts(3,:));
+               %im_pts(2,:) = round(im_pts(2,:) ./ im_pts(3,:));
+               %im_pts = im_pts(1:2,:);
+               
+               %curImgRotationInv = obj.r';
+               %curImgTranslationInv = (-(curImgRotationInv*obj.t));
+               %camera_pts = repmat(curImgRotationInv,[1,npoints])*plane_pts + ...
+               %    repmat(curImgTranslationInv,[1,npoints]);
+               %camera_pts = obj.K * camera_pts;
            end
            
-           function does_contain_point = contains_point(obj,im_pts)
-               does_contain_point(1:size(im_pts,2)) = true;
+           function im_pts = get_image_pts(obj, camera_pts)
+               im_pts(1,:) = round(camera_pts(1,:) ./ camera_pts(3,:));
+               im_pts(2,:) = round(camera_pts(2,:) ./ camera_pts(3,:));
+           end
+           
+           function does_contain_point = contains_point(obj,camera_pts)
+               im_pts = obj.get_image_pts(camera_pts);
+               %does_contain_point(1:size(im_pts,2)) = true;
+               % don't allow point to be behind the camera
+               does_contain_point = logical(camera_pts(3,:) > 0.001);
                [h w c] = size(obj.img);
                does_contain_point = does_contain_point .* (im_pts(1,:) >= 1);
                does_contain_point = does_contain_point .* (im_pts(1,:) <= w);
@@ -91,8 +107,9 @@
                [h w c] = size(obj.img);
                plane_pts = p.get_plane_pts(box);
                world_pts = p.get_world_pts(plane_pts);
-               im_pts = obj.get_image_pts(world_pts);
-               obj.mytile.orig_valid = logical(obj.contains_point(im_pts));
+               camera_pts = obj.get_camera_pts(world_pts);
+               obj.mytile.orig_valid = logical(obj.contains_point(camera_pts));
+               im_pts = obj.get_image_pts(camera_pts);
                im_pts_linear = obj.linearize_pts(im_pts);
                im_pts_linear = im_pts_linear(obj.mytile.orig_valid);
                obj.mytile.orig_data = zeros(box.row_max-box.row_min+1,...
@@ -106,6 +123,11 @@
                    tmp_tile(obj.mytile.orig_valid) = tmp_img(im_pts_linear);
                    obj.mytile.orig_data(:,:,chan) = tmp_tile;
                end
+               plane_center_world = p.get_world_pts([(box.row_max+box.row_min)/2;(box.col_max+box.col_min)/2]);
+               obj.cam_dist = norm(obj.t - plane_center_world);
+               rotNorm = obj.r * p.normal;
+               obj.cam_angle = acos(dot(rotNorm,p.normal)/(norm(rotNorm)*norm(p.normal)));
+               obj.cam_angle = (180/pi) * obj.cam_angle;
            end
 
            function obj = set_tile_on_plane(obj, p)
@@ -113,6 +135,7 @@
                b = obj.mytile_on_plane.orig_box;
                if(b.row_max-b.row_min < 1 || b.col_max-b.col_min < 1)
                    obj.useful = false;
+                   return
                end
                % don't think this is needed anymore
                %obj.mytile_on_plane = ...

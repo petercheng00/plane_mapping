@@ -16,6 +16,7 @@ addpath('ransac');
 p = planes(pnum);
 p = p.set_tiles();
 p = p.filter_useless();
+
 % not sure why, but images with diagonal sections get antialiased, which
 % messes up our blending. We need to remove these antialiased pixels
 p = p.remove_border_pixels();
@@ -28,6 +29,9 @@ p = p.remove_border_pixels();
 % upside is that we make sure not to search for sift features in the bad areas
 % for now not doing just to save time, haven't really tested
 % checkOcclusion(planes, planeNum);
+
+% we don't want sift to pick up unused parts of our rectangular images as
+% features, so give it cropped, filled rectangles to work on.
 p = p.set_sift();
 p = p.fix_locations();
 p = p.filter_useless();
@@ -45,9 +49,11 @@ elseif (strcmp(textureStyle, 'dynprog'))
     images = p.repeated_shortest_path();
     % images always go in order of best to worst
     %p = p.painters_algorithm(images);
+    keyboard
     
     disp('doing minimum blending')
     p = p.minimum_blending(images);
+    keyboard
     p = p.minimum_blending(1:size(p.images,2));
     %disp('texturing with native blending...')
     %p = p.native_blending(images);

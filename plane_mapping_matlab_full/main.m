@@ -37,7 +37,7 @@ textureStyle = 'dynprog';
 fillHoles = 0;
 
 %0 for all
-planesToTexture = 1:20;
+planesToTexture = 1;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -85,4 +85,6 @@ for planeInd = 1:size(planesToTexture, 2)
     %planes(planeNum) = planes(planeNum).sort_images();
     planes(planeNum).outimg = zeros(planes(planeNum).height, planes(planeNum).width, 3);
     texturePlane(planes,planeNum);
+    %hopefully matlab frees this memory
+    planes(planeNum).images = [];
 end

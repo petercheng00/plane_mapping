@@ -6,7 +6,7 @@ function checkOcclusion(planes, plane_index)
       curr_box = images(i).mytile_on_plane.orig_box;
       gridStepY = 400;
       gridStepX = 400;
-      maxSubDivs = 6;
+      maxSubDivs = 4;
       numSectionsY = ceil((curr_box.row_max - curr_box.row_min + 1)/gridStepY);
       numSectionsX = ceil((curr_box.col_max - curr_box.col_min + 1)/gridStepX);
       
