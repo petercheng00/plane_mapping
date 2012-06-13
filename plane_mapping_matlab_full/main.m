@@ -24,7 +24,7 @@ global fillHoles
 %MODIFY THESE VALUES%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-modelName = 'nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit';
+modelName = 'nov222011_set1_leftRight_kims_v2';
 %name of folder in E drive
 %imgPath = 'E:\projects\indoormapping\data\2011825-3\images';
 imgPath = 'E:\projects\indoormapping\data\20111122-1\images';
@@ -37,7 +37,7 @@ textureStyle = 'dynprog';
 fillHoles = 0;
 
 %0 for all
-planesToTexture = 1;
+planesToTexture = 5;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

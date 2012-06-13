@@ -16,7 +16,7 @@ addpath('ransac');
 p = planes(pnum);
 p = p.set_tiles();
 p = p.filter_useless();
-
+disp(['tiles set, num planes = ', num2str(size(p.images,2))]);
 % not sure why, but images with diagonal sections get antialiased, which
 % messes up our blending. We need to remove these antialiased pixels
 p = p.remove_border_pixels();
@@ -35,9 +35,10 @@ p = p.remove_border_pixels();
 p = p.set_sift();
 p = p.fix_locations();
 p = p.filter_useless();
-disp('occlusion checking...')
+disp(['sift adjustment done, num planes = ', num2str(size(p.images,2))]);
 checkOcclusion(planes,pnum);
 p = p.filter_useless();
+disp(['occlusion checks complete, num planes = ', num2str(size(p.images,2))]);
 if (strcmp(textureStyle, 'naive'))
     p = p.print_images();
 elseif (strcmp(textureStyle,'greedy_area'))
@@ -47,16 +48,22 @@ elseif (strcmp(textureStyle,'greedy_cost'))
 elseif (strcmp(textureStyle, 'dynprog'))
     disp('dynprog image selection...')
     images = p.repeated_shortest_path();
+    %images = p.greedy_overlap_camera_cost();
     % images always go in order of best to worst
-    %p = p.painters_algorithm(images);
-    keyboard
-    
     disp('doing minimum blending')
     p = p.minimum_blending(images);
-    keyboard
     p = p.minimum_blending(1:size(p.images,2));
-    %disp('texturing with native blending...')
-    %p = p.native_blending(images);
+elseif (strcmp(textureStyle, 'split_plane'))
+    disp('texturing using split_plane method (stewarts)')
+    p = p.split_plane_texturing();
+elseif (strcmp(textureStyle, 'painter'))
+    disp('texturing with painters algorithm')
+    images = p.repeated_shortest_path();
+    p = p.painters_algorithm(images);
+elseif (strcmp(textureStyle, 'native'))
+    disp('texturing with native blending...')
+    images = p.repeated_shortest_path();
+    p = p.native_blending(images);
 end
 
 % this is necessary when we throw out images from Stewart that we don't

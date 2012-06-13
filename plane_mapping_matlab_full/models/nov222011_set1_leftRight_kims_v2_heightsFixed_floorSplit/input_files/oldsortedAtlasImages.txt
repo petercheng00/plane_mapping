@@ -1,0 +1,4404 @@
+leftCameraPostProcessed/left/Camera_110732781_Image004368.jpg for plane 0
+| 9142.02 1884.66 426.037 |
+| -0.593075 0.377436 0.580379 0.411053 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/left/Camera_110732781_Image004528.jpg for plane 0
+| 6750.28 2521.61 426.598 |
+| -0.715913 -0.0441255 0.696399 -0.0234564 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/left/Camera_110732781_Image004531.jpg for plane 0
+| 6687.94 2767 431.967 |
+| -0.707868 0.126413 0.681185 0.137587 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/left/Camera_110732781_Image004534.jpg for plane 0
+| 6640.72 3074.09 438.47 |
+| -0.658264 0.279818 0.641125 0.278118 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/left/Camera_110732781_Image004601.jpg for plane 0
+| 7430.48 3625 419.528 |
+| -0.429825 -0.573198 0.378859 -0.585798 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/left/Camera_110732781_Image004728.jpg for plane 0
+| 6603.88 3281.76 412.291 |
+| -0.440496 -0.584047 0.386602 -0.561597 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/left/Camera_110732781_Image006406.jpg for plane 0
+| -3821.12 -3356.42 434.645 |
+| -0.421616 -0.565788 0.411283 -0.577036 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/left/Camera_110732781_Image006409.jpg for plane 0
+| -4200.52 -3461.47 438.797 |
+| -0.422949 -0.549161 0.410374 -0.592562 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/left/Camera_110732781_Image006421.jpg for plane 0
+| -5669.74 -3925.55 419.037 |
+| -0.400828 -0.593492 0.351231 -0.603109 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/left/Camera_110732781_Image006424.jpg for plane 0
+| -6024.26 -4025.02 431.159 |
+| -0.33235 -0.623542 0.315499 -0.633403 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/left/Camera_110732781_Image006660.jpg for plane 0
+| -3169.6 -6877.06 433.358 |
+| -0.715526 -0.119938 0.67636 -0.127181 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000010.jpg for plane 0
+| -191.603 -215.891 409.435 |
+| 0.0999901 -0.419271 -0.881985 0.190568 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000045.jpg for plane 0
+| 162.21 88.7645 427.394 |
+| 0.0972067 -0.390721 -0.88781 0.222892 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000054.jpg for plane 0
+| 961.34 1067.31 414.453 |
+| 0.116405 -0.411166 -0.882923 0.194526 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000056.jpg for plane 0
+| 1209.31 1351.63 429.577 |
+| 0.121854 -0.455299 -0.855107 0.215977 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000059.jpg for plane 0
+| 1578.6 1659.37 421.471 |
+| 0.129861 -0.493782 -0.837113 0.196362 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000061.jpg for plane 0
+| 1860.04 1874.54 428.314 |
+| 0.145438 -0.515491 -0.820241 0.200803 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000064.jpg for plane 0
+| 2264.92 2131.38 428.288 |
+| 0.143756 -0.548943 -0.798935 0.199246 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000067.jpg for plane 0
+| 2684.68 2313.89 429.165 |
+| 0.15226 -0.562561 -0.788663 0.195839 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000070.jpg for plane 0
+| 3077.78 2491.67 424.507 |
+| 0.148549 -0.575015 -0.782231 0.188163 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000073.jpg for plane 0
+| 3467.85 2616.85 418.504 |
+| 0.147974 -0.575004 -0.78485 0.177437 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000076.jpg for plane 0
+| 3882.43 2742.66 424.34 |
+| 0.145287 -0.564377 -0.790059 0.190203 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000079.jpg for plane 0
+| 4259.94 2890.41 418.531 |
+| 0.134489 -0.579303 -0.782498 0.18444 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000082.jpg for plane 0
+| 4645.07 3061.52 423.99 |
+| 0.143211 -0.56605 -0.789165 0.190517 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000085.jpg for plane 0
+| 5004.61 3263.25 429.374 |
+| 0.164989 -0.600997 -0.759432 0.186666 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000089.jpg for plane 0
+| 5385.68 3433.13 424.162 |
+| 0.181719 -0.670834 -0.701011 0.159823 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000093.jpg for plane 0
+| 5747.54 3516.49 421.313 |
+| 0.211426 -0.786739 -0.568583 0.114259 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000101.jpg for plane 0
+| 6482.76 3423.15 422.212 |
+| 0.228977 -0.937096 -0.257524 0.0556921 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000122.jpg for plane 0
+| 7069.3 2474.48 419.182 |
+| 0.234529 -0.955001 -0.180703 0.0177685 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000141.jpg for plane 0
+| 7397.82 1746.66 445.219 |
+| 0.280035 -0.94879 -0.145082 0.0181186 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000148.jpg for plane 0
+| 7466.2 1363.79 438.637 |
+| -0.267156 0.96124 -0.0491014 0.0472687 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000159.jpg for plane 0
+| 7145.14 577.491 440.903 |
+| -0.214473 0.767163 -0.583424 0.158361 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000166.jpg for plane 0
+| 6330.51 288.063 426.475 |
+| -0.179034 0.736872 -0.630804 0.16448 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000169.jpg for plane 0
+| 5940.04 195.357 423.328 |
+| -0.173126 0.720772 -0.651394 0.16187 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000172.jpg for plane 0
+| 5570.94 138.461 415.687 |
+| -0.170069 0.734113 -0.641182 0.145055 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000175.jpg for plane 0
+| 5188.33 94.67 425.41 |
+| -0.192349 0.777811 -0.580922 0.143324 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000179.jpg for plane 0
+| 4762.99 43.2298 428.819 |
+| -0.214729 0.850966 -0.463977 0.120309 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000183.jpg for plane 0
+| 4388.59 -135.654 426.147 |
+| -0.226395 0.91529 -0.321972 0.0855802 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000187.jpg for plane 0
+| 4050.63 -418.423 424.3 |
+| -0.235549 0.961068 -0.13993 0.035842 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000194.jpg for plane 0
+| 3785.49 -1166.83 424.766 |
+| 0.238828 -0.969531 -0.0533339 0.0112633 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000210.jpg for plane 0
+| 3870 -2845.34 431.893 |
+| 0.255532 -0.953951 -0.156105 0.0176617 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000229.jpg for plane 0
+| 4109.68 -3499.49 409.007 |
+| 0.216182 -0.968579 -0.122563 0.00991825 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000244.jpg for plane 0
+| 4434.25 -4197.56 419.595 |
+| 0.232401 -0.95738 -0.169905 0.0233489 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000248.jpg for plane 0
+| 4590.65 -4530.98 422.919 |
+| 0.238344 -0.964657 -0.111752 0.0118215 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000417.jpg for plane 0
+| 2776.4 -6406.39 413.332 |
+| 0.219462 -0.975067 -0.0312798 0.0100818 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000420.jpg for plane 0
+| 2642.53 -6572.76 407.821 |
+| 0.207547 -0.944876 -0.249001 0.0461716 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000424.jpg for plane 0
+| 2602.78 -6987.75 414.887 |
+| 0.183339 -0.785649 -0.576928 0.127659 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000427.jpg for plane 0
+| 2813.99 -7187.94 420.56 |
+| 0.160873 -0.658206 -0.716025 0.167907 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000431.jpg for plane 0
+| 3184.07 -7204.97 419.994 |
+| 0.134209 -0.568921 -0.789352 0.187722 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000435.jpg for plane 0
+| 3626.82 -7099.8 418.423 |
+| 0.129873 -0.529789 -0.816561 0.188905 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000438.jpg for plane 0
+| 4048.47 -6976.72 431.195 |
+| 0.101003 -0.399243 -0.882234 0.228183 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000441.jpg for plane 0
+| 4428.72 -6822.97 422.33 |
+| 0.0634938 -0.2214 -0.946094 0.227723 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000444.jpg for plane 0
+| 4703.87 -6601.49 418.063 |
+| 0.0106631 -0.048459 -0.972542 0.227376 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000448.jpg for plane 0
+| 4873.17 -6246.3 412.218 |
+| 0.00155548 0.105682 -0.96889 0.223791 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000452.jpg for plane 0
+| 4859.05 -5818.74 423.293 |
+| -0.0277228 0.161205 -0.957685 0.23682 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000457.jpg for plane 0
+| 4799.29 -5398.74 421.981 |
+| -0.0184376 0.198195 -0.949971 0.240693 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000463.jpg for plane 0
+| 4696.73 -5059.41 403.724 |
+| -0.00319267 0.242651 -0.944802 0.220137 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000469.jpg for plane 0
+| 4531.13 -4711.53 412.112 |
+| -0.0100874 0.255717 -0.938202 0.23299 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000479.jpg for plane 0
+| 4288.03 -4407.99 423.41 |
+| -0.0251682 0.159661 -0.957769 0.237809 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000490.jpg for plane 0
+| 4172.7 -4037.33 431.539 |
+| -0.0197009 0.156866 -0.954145 0.254189 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000497.jpg for plane 0
+| 4076.06 -3665.06 432.595 |
+| 0.0238672 0.0147752 -0.965882 0.257457 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000504.jpg for plane 0
+| 4079.27 -3057.13 432.669 |
+| 0.12996 -0.384845 -0.885805 0.224399 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000508.jpg for plane 0
+| 4278.87 -2710.88 426.946 |
+| 0.144766 -0.517935 -0.819402 0.198412 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000513.jpg for plane 0
+| 4620.42 -2495.85 417.735 |
+| 0.166509 -0.597559 -0.766896 0.164528 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000516.jpg for plane 0
+| 4807.16 -2295.37 417.497 |
+| 0.186799 -0.737519 -0.634747 0.135163 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000519.jpg for plane 0
+| 5076.25 -2289.1 419.911 |
+| 0.21831 -0.863665 -0.44579 0.087723 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000530.jpg for plane 0
+| 5612.11 -2544.78 428.439 |
+| 0.24371 -0.945369 -0.212423 0.0419383 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000564.jpg for plane 0
+| 6546.31 -4722.99 427.496 |
+| 0.243712 -0.951369 -0.185447 0.0333363 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000567.jpg for plane 0
+| 6644.11 -5064.87 427.053 |
+| 0.236057 -0.942289 -0.230504 0.0568838 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000571.jpg for plane 0
+| 6756.07 -5443.82 428.946 |
+| 0.232079 -0.90122 -0.356082 0.0845471 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000575.jpg for plane 0
+| 6918.89 -5806.57 435.777 |
+| 0.210593 -0.796191 -0.547519 0.148166 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000579.jpg for plane 0
+| 7158.83 -6059.09 434.97 |
+| 0.187757 -0.653234 -0.711213 0.179467 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000582.jpg for plane 0
+| 7347.23 -6253.46 421.743 |
+| 0.132183 -0.488868 -0.839653 0.196262 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000586.jpg for plane 0
+| 7542.31 -6301 424.395 |
+| 0.0935319 -0.311959 -0.918907 0.222583 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000590.jpg for plane 0
+| 7775.76 -6224.85 425.978 |
+| 0.0246547 -0.0929401 -0.966041 0.239834 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000593.jpg for plane 0
+| 7939.29 -6110.79 424.629 |
+| -0.016459 0.0959948 -0.966075 0.239193 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000597.jpg for plane 0
+| 8022.1 -5822.84 429.155 |
+| -0.070918 0.267418 -0.931684 0.235423 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000603.jpg for plane 0
+| 7908.75 -5437.69 425.413 |
+| -0.0755149 0.340146 -0.908822 0.229437 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000733.jpg for plane 0
+| 7319.63 -4676.9 414.395 |
+| -0.0952017 0.454577 -0.862232 0.202119 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000749.jpg for plane 0
+| 7058.47 -4434.62 427.9 |
+| -0.106678 0.478044 -0.842745 0.223326 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000755.jpg for plane 0
+| 6721.87 -4273.99 422.571 |
+| -0.0862467 0.44011 -0.865146 0.224471 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000781.jpg for plane 0
+| 5944.83 -3552.64 434.715 |
+| -0.04318 0.142995 -0.956233 0.251609 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000788.jpg for plane 0
+| 5822.71 -3198.88 441.708 |
+| -0.0346733 0.0902023 -0.959344 0.26518 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000792.jpg for plane 0
+| 5793.04 -2914.89 443.189 |
+| 0.0635292 -0.127287 -0.95222 0.270256 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000795.jpg for plane 0
+| 5724.29 -2689.24 437.682 |
+| 0.101071 -0.310884 -0.912876 0.244529 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000799.jpg for plane 0
+| 5886.64 -2338.7 428.106 |
+| 0.127553 -0.493078 -0.834772 0.209187 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000802.jpg for plane 0
+| 6157.25 -2065.95 434.933 |
+| 0.147896 -0.551449 -0.793751 0.20974 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000806.jpg for plane 0
+| 6590.19 -1903.48 423.935 |
+| 0.156362 -0.576068 -0.781156 0.18301 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000809.jpg for plane 0
+| 6939.01 -1791.34 429.68 |
+| 0.160083 -0.565857 -0.785519 0.192714 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000813.jpg for plane 0
+| 7351.71 -1644.28 421.081 |
+| 0.158866 -0.585359 -0.775399 0.175707 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000816.jpg for plane 0
+| 7712.88 -1522.25 424.253 |
+| 0.14997 -0.562661 -0.790978 0.187817 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000819.jpg for plane 0
+| 8074.16 -1411.5 421.265 |
+| 0.153531 -0.564716 -0.790539 0.180478 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000822.jpg for plane 0
+| 8447.3 -1300.86 423.838 |
+| 0.143239 -0.575891 -0.782211 0.189681 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000825.jpg for plane 0
+| 8825.62 -1179.82 428.72 |
+| 0.149967 -0.582312 -0.774867 0.194946 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000829.jpg for plane 0
+| 9194.92 -1044.33 422.625 |
+| 0.150572 -0.60955 -0.756882 0.181404 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000858.jpg for plane 0
+| 10645.6 -1270.95 428.122 |
+| 0.248177 -0.960193 -0.127559 0.012901 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000868.jpg for plane 0
+| 10740.1 -1632.02 424.642 |
+| -0.239087 0.970535 -0.0275823 0.0117603 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000871.jpg for plane 0
+| 10842.4 -1869.77 421.914 |
+| -0.226774 0.946698 -0.217564 0.0707299 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000881.jpg for plane 0
+| 10278.8 -2600.33 437.145 |
+| -0.244901 0.914488 -0.308191 0.0935606 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000894.jpg for plane 0
+| 9760.35 -3878.49 426.266 |
+| 0.237999 -0.956198 -0.165505 0.0406142 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000907.jpg for plane 0
+| 10154.4 -5129.94 429.049 |
+| 0.161326 -0.641296 -0.726834 0.185542 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000911.jpg for plane 0
+| 10366.8 -5298.91 431.256 |
+| 0.124248 -0.46389 -0.849691 0.2177 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000914.jpg for plane 0
+| 10561.8 -5387.64 435.492 |
+| 0.0744045 -0.289682 -0.921977 0.245982 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000918.jpg for plane 0
+| 10772.3 -5495.38 428.963 |
+| 0.0476776 -0.10999 -0.962015 0.245269 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000926.jpg for plane 0
+| 10951.5 -5197.4 430.76 |
+| 0.00684709 0.0554974 -0.965749 0.253381 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000930.jpg for plane 0
+| 10991 -4784.8 432.639 |
+| 0.00485452 0.0473766 -0.965587 0.255683 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000934.jpg for plane 0
+| 11011.6 -4328.67 436.826 |
+| -0.00436414 0.0676502 -0.962591 0.262343 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000938.jpg for plane 0
+| 10990.6 -3953.66 419.506 |
+| -0.00337112 0.0897454 -0.96819 0.233544 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000941.jpg for plane 0
+| 10937.1 -3601.51 420.275 |
+| -0.0156963 0.0945595 -0.968006 0.231898 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000944.jpg for plane 0
+| 10864.3 -3233.62 423.807 |
+| -0.0160229 0.10854 -0.964923 0.238508 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000947.jpg for plane 0
+| 10777.2 -2881.92 434.116 |
+| -0.0137695 0.0807465 -0.963245 0.255832 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000952.jpg for plane 0
+| 10731.6 -2466.24 435.527 |
+| -0.00590685 0.0915472 -0.960925 0.261167 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000964.jpg for plane 0
+| 10746.1 -2106.36 431.651 |
+| -0.00816403 0.157944 -0.952868 0.258903 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000972.jpg for plane 0
+| 10655 -1701.11 434.699 |
+| 0.027719 0.000203256 -0.964991 0.260815 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image000975.jpg for plane 0
+| 10548.9 -1498.35 431.049 |
+| 0.0797074 -0.214159 -0.942994 0.241961 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001103.jpg for plane 0
+| 10599.1 -723.109 393.212 |
+| 0.135802 -0.615389 -0.764264 0.136948 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001114.jpg for plane 0
+| 10963.4 -734.359 434.196 |
+| 0.189304 -0.688174 -0.678617 0.173377 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001118.jpg for plane 0
+| 11350.7 -809.171 427.173 |
+| 0.204195 -0.739499 -0.625769 0.140918 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001121.jpg for plane 0
+| 11763.6 -878.337 428.101 |
+| 0.205884 -0.773693 -0.583346 0.136819 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001124.jpg for plane 0
+| 12186.9 -1013.08 428.203 |
+| 0.203655 -0.77207 -0.585667 0.13938 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001127.jpg for plane 0
+| 12603.5 -1144.75 427.781 |
+| 0.197817 -0.785617 -0.568578 0.142807 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001130.jpg for plane 0
+| 12974.8 -1360.04 429.935 |
+| 0.209866 -0.748945 -0.612543 0.140816 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001133.jpg for plane 0
+| 13346.4 -1554.82 420.235 |
+| 0.184755 -0.698171 -0.675905 0.146887 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001136.jpg for plane 0
+| 13763.8 -1706.65 422.429 |
+| 0.17719 -0.624788 -0.742442 0.164388 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001139.jpg for plane 0
+| 14193.1 -1712.97 425.76 |
+| 0.174297 -0.608431 -0.754419 0.174026 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001141.jpg for plane 0
+| 14550.3 -1689.5 428.088 |
+| 0.163371 -0.597228 -0.763058 0.185395 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001144.jpg for plane 0
+| 15060.6 -1633.11 429.19 |
+| 0.174426 -0.57436 -0.778319 0.184133 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001146.jpg for plane 0
+| 15397.3 -1518.57 440.789 |
+| 0.184587 -0.57734 -0.769489 0.201229 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001148.jpg for plane 0
+| 15774.5 -1429.22 443.929 |
+| 0.175282 -0.576375 -0.769452 0.21216 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001150.jpg for plane 0
+| 16142.9 -1364.27 441.66 |
+| 0.177431 -0.56588 -0.777954 0.20757 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001152.jpg for plane 0
+| 16493.9 -1265.61 438.171 |
+| 0.187214 -0.563593 -0.780152 0.196664 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001154.jpg for plane 0
+| 16854.4 -1136.32 435.822 |
+| 0.172357 -0.564582 -0.782348 0.198675 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001156.jpg for plane 0
+| 17226.1 -1005.67 439.846 |
+| 0.168689 -0.554843 -0.787376 0.209123 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001158.jpg for plane 0
+| 17584.2 -880.68 434.11 |
+| 0.161018 -0.564406 -0.784345 0.200802 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001160.jpg for plane 0
+| 17978.5 -755.997 440.755 |
+| 0.174327 -0.571091 -0.775067 0.20673 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001162.jpg for plane 0
+| 18355.1 -626.927 443.278 |
+| 0.168273 -0.564306 -0.779018 0.215345 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001164.jpg for plane 0
+| 18704.8 -501.486 437.236 |
+| 0.161553 -0.571125 -0.777967 0.206117 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001167.jpg for plane 0
+| 19149.8 -347.249 434.271 |
+| 0.16601 -0.577105 -0.774824 0.197582 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001169.jpg for plane 0
+| 19562.9 -266.678 433.117 |
+| 0.160693 -0.550243 -0.794551 0.200248 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001171.jpg for plane 0
+| 19994.7 -162.014 424.946 |
+| 0.158577 -0.545885 -0.801298 0.186504 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001173.jpg for plane 0
+| 20448.2 -5.26662 435.072 |
+| 0.173383 -0.560527 -0.785405 0.197198 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001175.jpg for plane 0
+| 20840 79.2676 433.113 |
+| 0.162379 -0.558852 -0.788564 0.198708 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001179.jpg for plane 0
+| 21643.5 288.084 437.949 |
+| 0.174789 -0.551787 -0.789786 0.203024 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001181.jpg for plane 0
+| 22022.9 402.026 426.868 |
+| 0.146353 -0.548805 -0.799518 0.195359 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image001193.jpg for plane 0
+| 24377.8 1168.48 434.368 |
+| 0.160343 -0.555233 -0.790604 0.202365 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image003849.jpg for plane 0
+| 17696.6 -754.751 431.109 |
+| -0.112717 0.52762 -0.809596 0.23123 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image003852.jpg for plane 0
+| 17434.5 -863.17 435.962 |
+| -0.0763502 0.329173 -0.907587 0.249202 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image003869.jpg for plane 0
+| 16546.7 1110.34 430.477 |
+| -0.0186161 0.155336 -0.954862 0.252514 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image003998.jpg for plane 0
+| 16143 2844.01 418.303 |
+| -0.0387909 0.208548 -0.950608 0.226598 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004015.jpg for plane 0
+| 15941.1 3654.63 436.883 |
+| -0.026427 0.1343 -0.955785 0.260271 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004017.jpg for plane 0
+| 15874.2 4016.03 447.764 |
+| -0.0356321 0.150464 -0.947692 0.279231 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004020.jpg for plane 0
+| 15775.6 4539.61 441.399 |
+| -0.0246024 0.151364 -0.950389 0.270636 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004022.jpg for plane 0
+| 15692.4 4897.62 436.061 |
+| -0.0247956 0.145847 -0.95421 0.259996 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004025.jpg for plane 0
+| 15535.1 5378.56 422.134 |
+| -0.0208063 0.141445 -0.961185 0.235973 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004027.jpg for plane 0
+| 15445.2 5756.93 429.155 |
+| -0.0308481 0.161101 -0.955243 0.246181 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004030.jpg for plane 0
+| 15305.8 6232.13 419.235 |
+| -0.0411319 0.181057 -0.956233 0.226155 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004033.jpg for plane 0
+| 15137.3 6703.33 427.525 |
+| -0.0469358 0.205844 -0.947606 0.239725 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004036.jpg for plane 0
+| 15014.9 7146.36 430.845 |
+| -0.0858496 0.36804 -0.895296 0.235843 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004039.jpg for plane 0
+| 14817.5 7529.88 439.132 |
+| -0.13084 0.511157 -0.817264 0.231686 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004043.jpg for plane 0
+| 14549.9 7857.36 436.391 |
+| -0.17281 0.673539 -0.691397 0.196092 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004047.jpg for plane 0
+| 14175.6 7984.6 427.795 |
+| -0.182981 0.747258 -0.61748 0.163836 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004051.jpg for plane 0
+| 13750.6 8020.07 425.98 |
+| -0.181819 0.777631 -0.57854 0.165901 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004054.jpg for plane 0
+| 13385.1 7994.07 437.275 |
+| -0.214747 0.81297 -0.519687 0.15129 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004057.jpg for plane 0
+| 13044.9 7991.1 438.057 |
+| -0.236204 0.88295 -0.387744 0.11942 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004070.jpg for plane 0
+| 12462.7 6954.44 437.689 |
+| 0.262711 -0.948602 -0.173681 0.0311802 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004073.jpg for plane 0
+| 12537.3 6574.18 426.402 |
+| 0.246095 -0.955029 -0.164433 0.0178321 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004076.jpg for plane 0
+| 12659.7 6100.32 429.853 |
+| 0.246303 -0.953491 -0.170069 0.0355711 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004079.jpg for plane 0
+| 12781.5 5633.82 428.734 |
+| 0.247208 -0.950477 -0.185933 0.0301741 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004082.jpg for plane 0
+| 12916.1 5195.53 426.608 |
+| 0.243198 -0.949208 -0.196997 0.0324303 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004085.jpg for plane 0
+| 13032.4 4764.83 432.426 |
+| 0.251187 -0.93626 -0.241181 0.046408 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004088.jpg for plane 0
+| 13124.9 4385.43 432.403 |
+| 0.242831 -0.910883 -0.32525 0.0744143 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004092.jpg for plane 0
+| 13207.3 3971.33 436.267 |
+| 0.226968 -0.817927 -0.512793 0.128548 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004095.jpg for plane 0
+| 13303.9 3707.65 431.345 |
+| 0.194145 -0.708215 -0.659243 0.16167 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004100.jpg for plane 0
+| 13629.7 3599.24 431.695 |
+| 0.161382 -0.574966 -0.778005 0.195138 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004104.jpg for plane 0
+| 14012.1 3626.36 435.876 |
+| 0.166103 -0.548804 -0.793689 0.203181 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004108.jpg for plane 0
+| 14445 3748.44 441.59 |
+| 0.162667 -0.547911 -0.791645 0.215943 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004112.jpg for plane 0
+| 14858.7 3887.3 447.219 |
+| 0.209059 -0.641656 -0.712132 0.193494 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004136.jpg for plane 0
+| 16091.2 2394.91 436.132 |
+| 0.261455 -0.955289 -0.136758 0.0190249 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004142.jpg for plane 0
+| 16320.9 1448.75 429.563 |
+| 0.248413 -0.960009 -0.127519 0.0203197 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004145.jpg for plane 0
+| 16480.5 997.103 429.656 |
+| 0.251078 -0.955996 -0.150753 0.0174667 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004210.jpg for plane 0
+| 11854.6 1626.98 437.878 |
+| -0.0504487 0.201152 -0.943784 0.25742 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004214.jpg for plane 0
+| 11827.9 2044.88 441.073 |
+| -0.0980621 0.375029 -0.887239 0.250089 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004216.jpg for plane 0
+| 11789.4 2231.11 448.588 |
+| -0.15252 0.525816 -0.802524 0.237087 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004230.jpg for plane 0
+| 10564.5 2316.52 432.453 |
+| -0.193311 0.769516 -0.585574 0.166072 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004233.jpg for plane 0
+| 10188 2263.52 433.768 |
+| -0.210774 0.807558 -0.531861 0.143347 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004238.jpg for plane 0
+| 9821.18 2305.72 427.512 |
+| -0.215703 0.87387 -0.419456 0.117815 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004241.jpg for plane 0
+| 9631.4 2414.89 425.355 |
+| -0.23425 0.949441 -0.201713 0.0547834 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004368.jpg for plane 0
+| 9142.02 1884.66 426.037 |
+| 0.152975 -0.536225 -0.807636 0.191796 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004383.jpg for plane 0
+| 9570.11 1958.6 447.897 |
+| 0.181023 -0.549406 -0.78542 0.220224 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004386.jpg for plane 0
+| 9924.28 2066.92 452.948 |
+| 0.183166 -0.537518 -0.790033 0.231025 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004390.jpg for plane 0
+| 10307.9 2194.83 438.799 |
+| 0.178047 -0.557583 -0.785084 0.202591 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004402.jpg for plane 0
+| 11211.8 2687.21 434.023 |
+| 0.23634 -0.858381 -0.44343 0.103421 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004406.jpg for plane 0
+| 11351.3 2692.29 435.834 |
+| 0.256082 -0.927017 -0.268511 0.054431 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004415.jpg for plane 0
+| 11624.1 2383.64 434.756 |
+| 0.256152 -0.956489 -0.136967 0.0274765 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004418.jpg for plane 0
+| 11717.3 2037.43 428.964 |
+| 0.250223 -0.955141 -0.157414 0.0177562 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004424.jpg for plane 0
+| 11954.4 1277.2 424.451 |
+| 0.243672 -0.957751 -0.152267 0.0123194 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004431.jpg for plane 0
+| 12174.4 524.662 429.63 |
+| -0.251695 0.966923 -0.0205414 0.0358912 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004434.jpg for plane 0
+| 12202.8 356.055 440.441 |
+| -0.257346 0.935014 -0.231003 0.0784891 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004455.jpg for plane 0
+| 10104.5 -870.014 430.204 |
+| -0.190077 0.77085 -0.58546 0.164003 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004460.jpg for plane 0
+| 9292.8 -1136.6 434.82 |
+| -0.193068 0.758482 -0.597855 0.173205 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004464.jpg for plane 0
+| 8909.61 -1280.53 432.871 |
+| -0.16088 0.671057 -0.695061 0.201718 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004469.jpg for plane 0
+| 8493.88 -1470.81 439.775 |
+| -0.0937338 0.338674 -0.902828 0.247823 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004480.jpg for plane 0
+| 8150.46 -1130.15 455.797 |
+| -0.0455603 0.134499 -0.945949 0.291573 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004484.jpg for plane 0
+| 8061.92 -774.54 432.707 |
+| -0.0173553 0.158805 -0.953013 0.257382 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004487.jpg for plane 0
+| 7860.25 -410.246 434.024 |
+| -0.0218001 0.117846 -0.959359 0.255476 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004490.jpg for plane 0
+| 7766 -8.79122 437.867 |
+| -0.0136313 0.131506 -0.954819 0.266161 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004493.jpg for plane 0
+| 7651.65 335.514 435.956 |
+| -0.0276172 0.118614 -0.958607 0.257372 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004497.jpg for plane 0
+| 7532.28 738.518 435.236 |
+| -0.0184108 0.104997 -0.960261 0.257944 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004502.jpg for plane 0
+| 7432.75 1141.82 439.22 |
+| -0.0257398 0.144431 -0.952872 0.265541 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004511.jpg for plane 0
+| 7292.14 1485.91 446.257 |
+| -0.0351415 0.130231 -0.951863 0.275249 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004518.jpg for plane 0
+| 7167.94 1856.56 443.291 |
+| -0.0509922 0.217647 -0.936903 0.26878 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004523.jpg for plane 0
+| 7016.63 2194.51 435.862 |
+| -0.0509937 0.233556 -0.936868 0.255205 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004528.jpg for plane 0
+| 6750.28 2521.61 426.598 |
+| 0.000959706 0.0497305 -0.96841 0.244354 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004531.jpg for plane 0
+| 6687.94 2767 431.967 |
+| 0.0665405 -0.175432 -0.950786 0.246582 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004534.jpg for plane 0
+| 6640.72 3074.09 438.47 |
+| 0.113816 -0.377941 -0.887188 0.238966 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004537.jpg for plane 0
+| 6803.93 3360.02 435.803 |
+| 0.144148 -0.543866 -0.798606 0.21368 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004540.jpg for plane 0
+| 7193.8 3579.56 437.745 |
+| 0.169791 -0.574347 -0.77473 0.202705 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004543.jpg for plane 0
+| 7620.49 3722.26 437.558 |
+| 0.163128 -0.578228 -0.772555 0.205427 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004546.jpg for plane 0
+| 8050.05 3854.34 435.664 |
+| 0.160966 -0.562176 -0.78513 0.204006 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004549.jpg for plane 0
+| 8409.95 3994.04 426.03 |
+| 0.152561 -0.579954 -0.777699 0.188582 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004552.jpg for plane 0
+| 8778.64 4108.16 429.72 |
+| 0.148573 -0.564638 -0.787186 0.198617 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004558.jpg for plane 0
+| 9088.68 4016.08 427.677 |
+| 0.115562 -0.404186 -0.88087 0.217594 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004561.jpg for plane 0
+| 9251.81 3915.41 421.05 |
+| 0.0804221 -0.24187 -0.940868 0.223156 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004564.jpg for plane 0
+| 9426.63 3844.96 419.994 |
+| 0.0492601 -0.0606683 -0.969061 0.234121 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004567.jpg for plane 0
+| 9610.53 3867.9 429.644 |
+| -0.013866 0.145457 -0.956651 0.25193 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004573.jpg for plane 0
+| 9902.56 4138.5 429.385 |
+| -0.119131 0.521698 -0.815597 0.220093 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004576.jpg for plane 0
+| 9941.23 4259.57 427.035 |
+| -0.152499 0.666325 -0.703347 0.195084 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004580.jpg for plane 0
+| 9834.13 4348.22 433.178 |
+| -0.197232 0.781983 -0.56806 0.164043 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004585.jpg for plane 0
+| 9399.11 4302.98 442.031 |
+| -0.216755 0.793572 -0.544582 0.163377 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004589.jpg for plane 0
+| 8948.15 4197.89 432.841 |
+| -0.201688 0.803878 -0.536483 0.159021 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004592.jpg for plane 0
+| 8584.68 4078.9 428.351 |
+| -0.19477 0.809578 -0.531043 0.156974 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004598.jpg for plane 0
+| 7795.28 3740.53 426.754 |
+| -0.193612 0.801967 -0.544781 0.15026 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004601.jpg for plane 0
+| 7430.48 3625 419.528 |
+| -0.1773 0.800937 -0.550036 0.156605 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004728.jpg for plane 0
+| 6603.88 3281.76 412.291 |
+| -0.172857 0.792353 -0.569027 0.136036 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004742.jpg for plane 0
+| 6396.59 3148.26 440.964 |
+| -0.16957 0.655636 -0.704585 0.212011 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004759.jpg for plane 0
+| 6019.15 3237.36 435.93 |
+| -0.0243819 0.209575 -0.940772 0.265392 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004763.jpg for plane 0
+| 5821.36 3557.43 430.972 |
+| -0.0230883 0.175273 -0.951097 0.2533 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004766.jpg for plane 0
+| 5665.3 3922.49 423.664 |
+| -0.0185819 0.152657 -0.958493 0.240085 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004769.jpg for plane 0
+| 5516.09 4406.46 430.348 |
+| -0.0226501 0.150061 -0.956154 0.250475 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004771.jpg for plane 0
+| 5399.19 4737.53 433.93 |
+| -0.0314805 0.164665 -0.952321 0.254912 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004776.jpg for plane 0
+| 5134.57 5523.78 426.981 |
+| -0.0166043 0.16554 -0.954447 0.247694 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004779.jpg for plane 0
+| 4954.04 6003.35 427.003 |
+| -0.0242013 0.162113 -0.955648 0.244683 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004781.jpg for plane 0
+| 4821.1 6338.36 427.593 |
+| -0.0173788 0.149616 -0.957163 0.247291 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004784.jpg for plane 0
+| 4655.79 6807.48 435.475 |
+| -0.0255758 0.148139 -0.954165 0.258787 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004787.jpg for plane 0
+| 4505 7305.46 431.744 |
+| -0.0181364 0.15239 -0.954741 0.254791 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004789.jpg for plane 0
+| 4387.81 7651.33 425.607 |
+| -0.0194877 0.142418 -0.959433 0.242542 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004792.jpg for plane 0
+| 4246.85 8085.82 427.151 |
+| -0.025628 0.140845 -0.959352 0.243209 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004795.jpg for plane 0
+| 4145.64 8580.08 431.422 |
+| -0.018689 0.148336 -0.955661 0.253693 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004797.jpg for plane 0
+| 4050.46 8937.65 430.548 |
+| -0.026219 0.160799 -0.954362 0.250301 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004799.jpg for plane 0
+| 3937.82 9312.04 426.997 |
+| -0.0293091 0.167745 -0.954908 0.243215 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004801.jpg for plane 0
+| 3821.64 9716.87 439.302 |
+| -0.0299629 0.16769 -0.948849 0.265833 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004804.jpg for plane 0
+| 3661.04 10210 434.675 |
+| -0.0385693 0.171306 -0.951083 0.25418 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004806.jpg for plane 0
+| 3526.87 10556.1 424.072 |
+| -0.0239625 0.170464 -0.955367 0.240086 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004808.jpg for plane 0
+| 3398.24 10933 428.747 |
+| -0.0240516 0.166192 -0.954052 0.248167 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004810.jpg for plane 0
+| 3293.7 11283.4 426.205 |
+| -0.0190761 0.154565 -0.957047 0.244556 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004812.jpg for plane 0
+| 3163.75 11844.5 429.146 |
+| -0.0348262 0.176801 -0.952463 0.245649 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004816.jpg for plane 0
+| 3083.06 12200.4 419.917 |
+| -0.00892849 0.158971 -0.958261 0.237456 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004819.jpg for plane 0
+| 2949.67 12710.1 430.269 |
+| -0.016128 0.16127 -0.953652 0.253535 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004821.jpg for plane 0
+| 2829.51 13109.6 438.205 |
+| -0.0165997 0.15381 -0.951016 0.267648 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004823.jpg for plane 0
+| 2706.08 13467.7 438.351 |
+| -0.027843 0.146513 -0.953113 0.263315 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004825.jpg for plane 0
+| 2582.95 13871.4 438.42 |
+| -0.0324056 0.154348 -0.951989 0.262382 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004827.jpg for plane 0
+| 2498.7 14213.2 437.939 |
+| -0.0253173 0.166427 -0.949475 0.264876 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004830.jpg for plane 0
+| 2366.62 14669.8 435.704 |
+| -0.0246166 0.171736 -0.949537 0.261306 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image004832.jpg for plane 0
+| 2258.12 15004.6 430.073 |
+| -0.0287263 0.17332 -0.952344 0.249351 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006062.jpg for plane 0
+| 2729.49 13702.9 435.316 |
+| 0.259504 -0.953317 -0.152613 0.023552 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006064.jpg for plane 0
+| 2917.2 13014.4 438.266 |
+| 0.264567 -0.950861 -0.158684 0.0262151 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006085.jpg for plane 0
+| 3784.38 10068.3 427.5 |
+| 0.24531 -0.955343 -0.162832 0.0250828 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006087.jpg for plane 0
+| 3886.39 9732.09 425.528 |
+| 0.243145 -0.956368 -0.160644 0.0208308 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006089.jpg for plane 0
+| 3983.02 9395.67 428.999 |
+| 0.249068 -0.953198 -0.169775 0.0235522 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006095.jpg for plane 0
+| 4250.44 8496.16 438.815 |
+| 0.26776 -0.946802 -0.176829 0.0245392 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006098.jpg for plane 0
+| 4443.51 8021.2 439.232 |
+| 0.270512 -0.948733 -0.162656 0.0164942 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006101.jpg for plane 0
+| 4592.48 7542.34 442.723 |
+| 0.272003 -0.946664 -0.169813 0.0316959 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006104.jpg for plane 0
+| 4737.39 7095.37 435.348 |
+| 0.261171 -0.949675 -0.171378 0.0231579 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006107.jpg for plane 0
+| 4882.61 6697.11 430.127 |
+| 0.250633 -0.955392 -0.154685 0.0219441 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006233.jpg for plane 0
+| 5316.51 5139.64 415.207 |
+| 0.223001 -0.964893 -0.136686 0.0238743 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006298.jpg for plane 0
+| 2554.46 2196.79 437.13 |
+| -0.249265 0.931844 -0.243259 0.101778 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006302.jpg for plane 0
+| 2233.9 1862.51 438.921 |
+| -0.255174 0.937695 -0.218041 0.0898499 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006305.jpg for plane 0
+| 2021.62 1559.92 434.005 |
+| -0.244255 0.934506 -0.239782 0.0976877 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006308.jpg for plane 0
+| 1835.17 1232.55 430.864 |
+| -0.238054 0.933434 -0.25226 0.0916294 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006311.jpg for plane 0
+| 1653.25 924.109 432.116 |
+| -0.235717 0.922278 -0.285279 0.111606 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006315.jpg for plane 0
+| 1480.26 554.748 435.143 |
+| -0.233358 0.892937 -0.367315 0.115274 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006320.jpg for plane 0
+| 1244.97 231.564 442.472 |
+| -0.2232 0.808565 -0.521981 0.154726 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006324.jpg for plane 0
+| 959.212 -11.6595 440.351 |
+| -0.210498 0.772718 -0.575804 0.164459 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006328.jpg for plane 0
+| 587.841 -102.197 434.888 |
+| -0.198693 0.793386 -0.549062 0.17202 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006332.jpg for plane 0
+| 155.62 -241.155 439.09 |
+| -0.231899 0.858402 -0.438932 0.129255 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006336.jpg for plane 0
+| -245.161 -438.486 434.545 |
+| -0.235879 0.902004 -0.346019 0.104983 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006340.jpg for plane 0
+| -545.127 -770.02 437.519 |
+| -0.24494 0.914471 -0.306743 0.0982663 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006344.jpg for plane 0
+| -763.579 -1110.21 435.383 |
+| -0.241256 0.9127 -0.316197 0.0937789 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006348.jpg for plane 0
+| -939.897 -1422.46 436.293 |
+| -0.234591 0.885735 -0.384004 0.113942 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006354.jpg for plane 0
+| -1217.33 -1743.58 432.741 |
+| -0.207105 0.81638 -0.517977 0.149434 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006362.jpg for plane 0
+| -1540.47 -1950.07 439.071 |
+| -0.209601 0.782616 -0.563027 0.163038 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006375.jpg for plane 0
+| -1878.45 -2073.15 430.809 |
+| -0.199868 0.801297 -0.542634 0.153377 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006383.jpg for plane 0
+| -2229.57 -2165.47 435.427 |
+| -0.216781 0.844559 -0.466526 0.148592 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006389.jpg for plane 0
+| -2575.76 -2295.4 432.235 |
+| -0.23052 0.90656 -0.333143 0.118432 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006394.jpg for plane 0
+| -2806.72 -2566.87 428.487 |
+| -0.223744 0.903211 -0.348672 0.112146 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006398.jpg for plane 0
+| -3033.31 -2843.35 425.675 |
+| -0.205866 0.857766 -0.452131 0.132037 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006402.jpg for plane 0
+| -3376.36 -3128.04 429.186 |
+| -0.197475 0.815499 -0.521068 0.156372 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006406.jpg for plane 0
+| -3821.12 -3356.42 434.645 |
+| -0.202094 0.782454 -0.566822 0.160114 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006409.jpg for plane 0
+| -4200.52 -3461.47 438.797 |
+| -0.200361 0.782113 -0.561227 0.182152 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006412.jpg for plane 0
+| -4588.14 -3590.21 436.029 |
+| -0.201486 0.786527 -0.558962 0.168347 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006415.jpg for plane 0
+| -4947.87 -3704.53 427.907 |
+| -0.18795 0.792967 -0.555462 0.16535 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006418.jpg for plane 0
+| -5314.4 -3835.74 423.702 |
+| -0.187782 0.79933 -0.550786 0.149811 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006421.jpg for plane 0
+| -5669.74 -3925.55 419.037 |
+| -0.185118 0.826371 -0.511906 0.144205 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006424.jpg for plane 0
+| -6024.26 -4025.02 431.159 |
+| -0.218527 0.861594 -0.440684 0.1253 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006477.jpg for plane 0
+| -5679.58 -8580.56 430.642 |
+| 0.250219 -0.9412 -0.223782 0.0381313 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006481.jpg for plane 0
+| -5629.66 -8913.16 429.498 |
+| 0.238044 -0.90472 -0.345222 0.0750961 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006608.jpg for plane 0
+| -5473.7 -9448.13 421.554 |
+| 0.135259 -0.542483 -0.806733 0.191312 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006623.jpg for plane 0
+| -5079.76 -9383.39 439.518 |
+| 0.182409 -0.555583 -0.785569 0.202327 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006627.jpg for plane 0
+| -4643.01 -9223.96 443.692 |
+| 0.18075 -0.561994 -0.779219 0.210501 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006631.jpg for plane 0
+| -4237.89 -9082.23 434.457 |
+| 0.161509 -0.571524 -0.779106 0.20067 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006635.jpg for plane 0
+| -3824.59 -8977.96 429.206 |
+| 0.156168 -0.54821 -0.798116 0.195163 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006638.jpg for plane 0
+| -3484.73 -8904.66 439.716 |
+| 0.14409 -0.488208 -0.830936 0.22458 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006657.jpg for plane 0
+| -3015.5 -7318.94 434.83 |
+| -0.0329255 0.198281 -0.944892 0.258418 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006660.jpg for plane 0
+| -3169.6 -6877.06 433.358 |
+| -0.0184746 0.175953 -0.94935 0.259679 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006663.jpg for plane 0
+| -3319.73 -6418.72 427.461 |
+| -0.0179966 0.17618 -0.952197 0.248914 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006666.jpg for plane 0
+| -3472.99 -5969.01 429.785 |
+| -0.00490927 0.154348 -0.954166 0.256359 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006669.jpg for plane 0
+| -3589.53 -5525.96 433.649 |
+| -0.0252924 0.175657 -0.94985 0.257469 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006672.jpg for plane 0
+| -3698.63 -5087.11 439.718 |
+| -0.00193319 0.151655 -0.949032 0.276289 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006676.jpg for plane 0
+| -3830.3 -4694.82 426.852 |
+| 0.0182554 0.0833507 -0.963935 0.252088 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006680.jpg for plane 0
+| -3916.9 -4323.88 420.883 |
+| 0.0488958 -0.0382179 -0.969393 0.237541 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006684.jpg for plane 0
+| -3961.76 -3952.42 428.563 |
+| 0.0700726 -0.17755 -0.951667 0.240616 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006688.jpg for plane 0
+| -3843.5 -3597.06 437.102 |
+| 0.088576 -0.28923 -0.920676 0.246692 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006718.jpg for plane 0
+| -2604.99 -2228.3 434.15 |
+| 0.151585 -0.54291 -0.799643 0.206983 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006724.jpg for plane 0
+| -2247.74 -2084.65 441.179 |
+| 0.13513 -0.486052 -0.831937 0.231029 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006728.jpg for plane 0
+| -1915.11 -2018.07 437.98 |
+| 0.115892 -0.342957 -0.900689 0.240225 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006732.jpg for plane 0
+| -1618.97 -1772.52 437.997 |
+| 0.098812 -0.240486 -0.932368 0.251182 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006737.jpg for plane 0
+| -1410.43 -1388.97 431.985 |
+| 0.097161 -0.302036 -0.918584 0.235666 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006741.jpg for plane 0
+| -1213.33 -1060.21 435.652 |
+| 0.130515 -0.415502 -0.871109 0.226921 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+leftCameraPostProcessed/down/Camera_110732784_Image006745.jpg for plane 0
+| -948.347 -799.977 437.106 |
+| 0.157645 -0.499716 -0.824496 0.21363 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/right/Camera_110732692_Image000155.jpg for plane 0
+| 7428.2 952.657 453.334 |
+| -0.328272 0.645104 -0.336748 -0.602228 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/right/Camera_110732692_Image003675.jpg for plane 0
+| 18044.9 8995.22 443.141 |
+| -0.0334221 0.731884 -0.0423989 -0.679287 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/right/Camera_110732692_Image003678.jpg for plane 0
+| 17927.2 8622.95 443.691 |
+| 0.0446258 0.724863 0.0366314 -0.686469 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/right/Camera_110732692_Image003770.jpg for plane 0
+| 26106.1 5096.11 450.711 |
+| -0.0836207 -0.711757 -0.0855001 0.69217 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/right/Camera_110732692_Image003773.jpg for plane 0
+| 26225.3 4707.12 442.161 |
+| 0.0406081 0.735196 0.037983 -0.67557 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/right/Camera_110732692_Image003776.jpg for plane 0
+| 26312.8 4310.54 455.446 |
+| 0.00158668 0.722692 0.0160805 -0.690981 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/right/Camera_110732692_Image004368.jpg for plane 0
+| 9113.83 1828.17 440.035 |
+| -0.580379 -0.411053 -0.593075 0.377436 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/right/Camera_110732692_Image006481.jpg for plane 0
+| -5692.03 -8905.02 444.492 |
+| -0.252522 -0.673388 -0.246547 0.649612 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/right/Camera_110732692_Image006608.jpg for plane 0
+| -5502.58 -9504.2 435.813 |
+| -0.592919 -0.41225 -0.579124 0.378303 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/right/Camera_110732692_Image006623.jpg for plane 0
+| -5110.59 -9438.02 455.225 |
+| -0.550673 -0.41843 -0.596491 0.407276 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/right/Camera_110732692_Image006631.jpg for plane 0
+| -4270.65 -9135.62 450.5 |
+| -0.563148 -0.425443 -0.574582 0.41439 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/right/Camera_110732692_Image006644.jpg for plane 0
+| -2892.69 -8868.62 454.382 |
+| -0.689021 -0.084642 -0.714043 0.0907126 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000010.jpg for plane 0
+| -203.297 -278.32 421.558 |
+| 0.0999901 -0.419271 -0.881985 0.190568 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000051.jpg for plane 0
+| 673.164 624.273 426.253 |
+| 0.115055 -0.387581 -0.893219 0.196733 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000056.jpg for plane 0
+| 1192.83 1291.07 445.133 |
+| 0.121854 -0.455299 -0.855107 0.215977 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000059.jpg for plane 0
+| 1556.46 1600.21 435.291 |
+| 0.129861 -0.493782 -0.837113 0.196362 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000061.jpg for plane 0
+| 1834.88 1816.81 443.009 |
+| 0.145438 -0.515491 -0.820241 0.200803 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000064.jpg for plane 0
+| 2235.25 2076.02 443.653 |
+| 0.143756 -0.548943 -0.798935 0.199246 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000067.jpg for plane 0
+| 2653.08 2259.57 444.385 |
+| 0.15226 -0.562561 -0.788663 0.195839 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000070.jpg for plane 0
+| 3044.42 2438.23 439.074 |
+| 0.148549 -0.575015 -0.782231 0.188163 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000073.jpg for plane 0
+| 3434.3 2563.17 431.685 |
+| 0.147974 -0.575004 -0.78485 0.177437 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000076.jpg for plane 0
+| 3850.53 2688.34 438.916 |
+| 0.145287 -0.564377 -0.790059 0.190203 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000079.jpg for plane 0
+| 4226.06 2837.21 432.771 |
+| 0.134489 -0.579303 -0.782498 0.18444 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000082.jpg for plane 0
+| 4612.98 3007.34 438.659 |
+| 0.143211 -0.56605 -0.789165 0.190517 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000089.jpg for plane 0
+| 5339.54 3389.95 437.882 |
+| 0.181719 -0.670834 -0.701011 0.159823 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000093.jpg for plane 0
+| 5688.79 3492.59 433.926 |
+| 0.211426 -0.786739 -0.568583 0.114259 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000097.jpg for plane 0
+| 6073.05 3546.35 440.489 |
+| 0.240531 -0.87442 -0.414723 0.0744232 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000101.jpg for plane 0
+| 6423.02 3443.34 436.481 |
+| 0.228977 -0.937096 -0.257524 0.0556921 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000106.jpg for plane 0
+| 6692.58 3147.05 444.083 |
+| 0.247901 -0.94184 -0.223656 0.038209 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000111.jpg for plane 0
+| 6827.81 2816.51 444.746 |
+| 0.252062 -0.939425 -0.229763 0.0339741 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000122.jpg for plane 0
+| 7013.38 2504.43 431.75 |
+| 0.234529 -0.955001 -0.180703 0.0177685 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000132.jpg for plane 0
+| 7175.62 2135.9 443.313 |
+| 0.252274 -0.950442 -0.180744 0.0186893 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000141.jpg for plane 0
+| 7344.51 1778.97 462.407 |
+| 0.280035 -0.94879 -0.145082 0.0181186 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000148.jpg for plane 0
+| 7430 1415.09 454.101 |
+| -0.267156 0.96124 -0.0491014 0.0472687 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000155.jpg for plane 0
+| 7428.2 952.657 453.334 |
+| -0.222488 0.853495 -0.446371 0.150992 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000159.jpg for plane 0
+| 7179.13 629.419 459.056 |
+| -0.214473 0.767163 -0.583424 0.158361 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000163.jpg for plane 0
+| 6771.39 455.122 444.46 |
+| -0.182657 0.749222 -0.613248 0.170964 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000166.jpg for plane 0
+| 6371.3 335.979 441.351 |
+| -0.179034 0.736872 -0.630804 0.16448 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000169.jpg for plane 0
+| 5983.45 240.992 437.974 |
+| -0.173126 0.720772 -0.651394 0.16187 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000172.jpg for plane 0
+| 5613.04 185.539 429.537 |
+| -0.170069 0.734113 -0.641182 0.145055 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000175.jpg for plane 0
+| 5222.34 147.497 440.682 |
+| -0.192349 0.777811 -0.580922 0.143324 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000179.jpg for plane 0
+| 4780.67 103.427 444.455 |
+| -0.214729 0.850966 -0.463977 0.120309 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000183.jpg for plane 0
+| 4386.43 -72.797 441.157 |
+| -0.226395 0.91529 -0.321972 0.0855802 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000187.jpg for plane 0
+| 4024.92 -361.011 439.27 |
+| -0.235549 0.961068 -0.13993 0.035842 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000190.jpg for plane 0
+| 3810.91 -681.743 441.249 |
+| -0.244335 0.969556 -0.00393617 0.0156815 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000194.jpg for plane 0
+| 3739.49 -1123.94 439.789 |
+| 0.238828 -0.969531 -0.0533339 0.0112633 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000210.jpg for plane 0
+| 3815.81 -2813.32 446.738 |
+| 0.255532 -0.953951 -0.156105 0.0176617 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000217.jpg for plane 0
+| 3852.81 -3178.27 436.623 |
+| 0.240796 -0.951289 -0.191197 0.0225651 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000229.jpg for plane 0
+| 4057.82 -3462.63 420.493 |
+| 0.216182 -0.968579 -0.122563 0.00991825 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000248.jpg for plane 0
+| 4539.69 -4493.67 436.749 |
+| 0.238344 -0.964657 -0.111752 0.0118215 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000253.jpg for plane 0
+| 4686.53 -4904.83 440.37 |
+| -0.247676 0.965734 -0.0552306 0.0544437 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000257.jpg for plane 0
+| 4799.53 -5285.8 447.376 |
+| -0.238531 0.925956 -0.275551 0.0988908 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000398.jpg for plane 0
+| 3611.93 -6199.43 443.704 |
+| -0.203333 0.815103 -0.524515 0.138375 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000414.jpg for plane 0
+| 2982.73 -6235.33 433.269 |
+| -0.226659 0.960775 -0.154722 0.03999 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000420.jpg for plane 0
+| 2582.91 -6550.74 419.708 |
+| 0.207547 -0.944876 -0.249001 0.0461716 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000422.jpg for plane 0
+| 2522.47 -6770.89 421.272 |
+| 0.190488 -0.88316 -0.418369 0.0933296 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000424.jpg for plane 0
+| 2544.49 -7012.46 428.06 |
+| 0.183339 -0.785649 -0.576928 0.127659 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000427.jpg for plane 0
+| 2769.67 -7232.85 434.701 |
+| 0.160873 -0.658206 -0.716025 0.167907 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000431.jpg for plane 0
+| 3151.61 -7259 434.419 |
+| 0.134209 -0.568921 -0.789352 0.187722 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000435.jpg for plane 0
+| 3599.66 -7156.86 432.131 |
+| 0.129873 -0.529789 -0.816561 0.188905 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000438.jpg for plane 0
+| 4040.01 -7038.71 447.554 |
+| 0.101003 -0.399243 -0.882234 0.228183 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000441.jpg for plane 0
+| 4444.25 -6884.13 436.428 |
+| 0.0634938 -0.2214 -0.946094 0.227723 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000444.jpg for plane 0
+| 4739.89 -6653.3 432.162 |
+| 0.0106631 -0.048459 -0.972542 0.227376 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000448.jpg for plane 0
+| 4923.76 -6284.91 423.68 |
+| 0.00155548 0.105682 -0.96889 0.223791 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000452.jpg for plane 0
+| 4913.53 -5850.56 437.42 |
+| -0.0277228 0.161205 -0.957685 0.23682 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000457.jpg for plane 0
+| 4856.28 -5426.51 434.713 |
+| -0.0184376 0.198195 -0.949971 0.240693 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000463.jpg for plane 0
+| 4756.39 -5082.82 412.31 |
+| -0.00319267 0.242651 -0.944802 0.220137 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000469.jpg for plane 0
+| 4591.35 -4732.87 422.046 |
+| -0.0100874 0.255717 -0.938202 0.23299 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000479.jpg for plane 0
+| 4342.43 -4440.01 437.41 |
+| -0.0251682 0.159661 -0.957769 0.237809 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000490.jpg for plane 0
+| 4226.92 -4069.25 446.446 |
+| -0.0197009 0.156866 -0.954145 0.254189 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000497.jpg for plane 0
+| 4118.67 -3711.4 447.326 |
+| 0.0238672 0.0147752 -0.965882 0.257457 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000500.jpg for plane 0
+| 4041 -3485.21 444.769 |
+| 0.0979622 -0.184832 -0.946526 0.24562 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000504.jpg for plane 0
+| 4072.54 -3119.75 447.297 |
+| 0.12996 -0.384845 -0.885805 0.224399 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000508.jpg for plane 0
+| 4253.35 -2768.51 441.406 |
+| 0.144766 -0.517935 -0.819402 0.198412 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000513.jpg for plane 0
+| 4583.51 -2547.55 429.819 |
+| 0.166509 -0.597559 -0.766896 0.164528 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000516.jpg for plane 0
+| 4753.29 -2328.79 430.205 |
+| 0.186799 -0.737519 -0.634747 0.135163 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000519.jpg for plane 0
+| 5013.14 -2294.67 432.842 |
+| 0.21831 -0.863665 -0.44579 0.087723 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000522.jpg for plane 0
+| 5282.29 -2277.97 444.088 |
+| 0.238105 -0.930879 -0.269789 0.0631249 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000530.jpg for plane 0
+| 5554.6 -2519.29 443.392 |
+| 0.24371 -0.945369 -0.212423 0.0419383 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000543.jpg for plane 0
+| 5762.69 -2841.23 435.389 |
+| 0.236111 -0.954173 -0.181967 0.0263308 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000549.jpg for plane 0
+| 5893.61 -3198.08 444.019 |
+| 0.24607 -0.943182 -0.219561 0.0406365 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000553.jpg for plane 0
+| 6049.83 -3544.91 445.007 |
+| 0.241903 -0.942263 -0.225517 0.0525881 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000557.jpg for plane 0
+| 6236.04 -3896.73 441.692 |
+| 0.243936 -0.954713 -0.168051 0.0278968 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000560.jpg for plane 0
+| 6355.44 -4260.64 449.664 |
+| 0.25444 -0.951135 -0.171735 0.0333024 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000564.jpg for plane 0
+| 6490.31 -4694.2 442.201 |
+| 0.243712 -0.951369 -0.185447 0.0333363 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000571.jpg for plane 0
+| 6693.62 -5437.18 444.357 |
+| 0.232079 -0.90122 -0.356082 0.0845471 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000575.jpg for plane 0
+| 6860.36 -5828.02 452.966 |
+| 0.210593 -0.796191 -0.547519 0.148166 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000579.jpg for plane 0
+| 7115.15 -6104.08 450.771 |
+| 0.187757 -0.653234 -0.711213 0.179467 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000582.jpg for plane 0
+| 7325.73 -6312.9 435.392 |
+| 0.132183 -0.488868 -0.839653 0.196262 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000586.jpg for plane 0
+| 7545.73 -6364.03 438.387 |
+| 0.0935319 -0.311959 -0.918907 0.222583 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000590.jpg for plane 0
+| 7806.94 -6279.4 441.223 |
+| 0.0246547 -0.0929401 -0.966041 0.239834 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000593.jpg for plane 0
+| 7988.93 -6149.55 439.278 |
+| -0.016459 0.0959948 -0.966075 0.239193 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000597.jpg for plane 0
+| 8081.96 -5841.26 445.246 |
+| -0.070918 0.267418 -0.931684 0.235423 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000603.jpg for plane 0
+| 7971.08 -5446.76 440.036 |
+| -0.0755149 0.340146 -0.908822 0.229437 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000733.jpg for plane 0
+| 7382.67 -4670.33 427.201 |
+| -0.0952017 0.454577 -0.862232 0.202119 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000749.jpg for plane 0
+| 7120.55 -4423.84 442.456 |
+| -0.106678 0.478044 -0.842745 0.223326 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000755.jpg for plane 0
+| 6784.98 -4269.1 435.773 |
+| -0.0862467 0.44011 -0.865146 0.224471 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000762.jpg for plane 0
+| 6452.77 -4114.24 436.155 |
+| -0.0478896 0.291268 -0.925749 0.236346 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000772.jpg for plane 0
+| 6145.19 -3907.97 434.492 |
+| -0.0280043 0.172146 -0.956684 0.233104 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000781.jpg for plane 0
+| 5997.73 -3585.6 451.902 |
+| -0.04318 0.142995 -0.956233 0.251609 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000788.jpg for plane 0
+| 5871.56 -3236.91 460.396 |
+| -0.0346733 0.0902023 -0.959344 0.26518 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000792.jpg for plane 0
+| 5820.49 -2971.02 459.845 |
+| 0.0635292 -0.127287 -0.95222 0.270256 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000795.jpg for plane 0
+| 5728.09 -2751.7 453.961 |
+| 0.101071 -0.310884 -0.912876 0.244529 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000799.jpg for plane 0
+| 5864.83 -2397.57 443.584 |
+| 0.127553 -0.493078 -0.834772 0.209187 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000802.jpg for plane 0
+| 6127.42 -2120.82 451.679 |
+| 0.147896 -0.551449 -0.793751 0.20974 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000806.jpg for plane 0
+| 6556.53 -1956.91 437.837 |
+| 0.156362 -0.576068 -0.781156 0.18301 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000809.jpg for plane 0
+| 6906.84 -1845.42 444.546 |
+| 0.160083 -0.565857 -0.785519 0.192714 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000813.jpg for plane 0
+| 7316.66 -1697 434.281 |
+| 0.158866 -0.585359 -0.775399 0.175707 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000816.jpg for plane 0
+| 7681.12 -1576.76 438.452 |
+| 0.14997 -0.562661 -0.790978 0.187817 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000819.jpg for plane 0
+| 8041.96 -1465.98 434.552 |
+| 0.153531 -0.564716 -0.790539 0.180478 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000825.jpg for plane 0
+| 8791.43 -1232.43 444.344 |
+| 0.149967 -0.582312 -0.774867 0.194946 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000837.jpg for plane 0
+| 9739.3 -813.972 444.743 |
+| 0.210027 -0.788008 -0.562911 0.134403 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000840.jpg for plane 0
+| 9932.57 -745.512 428.855 |
+| 0.221913 -0.88849 -0.395921 0.0677339 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000843.jpg for plane 0
+| 10157.7 -695.333 441.857 |
+| 0.238668 -0.942243 -0.229671 0.0496747 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000849.jpg for plane 0
+| 10448.6 -908.744 449.706 |
+| 0.249741 -0.958359 -0.133273 0.0376335 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000858.jpg for plane 0
+| 10593.4 -1235.57 442.562 |
+| 0.248177 -0.960193 -0.127559 0.012901 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000868.jpg for plane 0
+| 10701.9 -1582.03 439.443 |
+| -0.239087 0.970535 -0.0275823 0.0117603 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000871.jpg for plane 0
+| 10826.4 -1808.59 435.424 |
+| -0.226774 0.946698 -0.217564 0.0707299 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000874.jpg for plane 0
+| 10769 -2079.35 446.511 |
+| -0.222891 0.881952 -0.396454 0.123708 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000881.jpg for plane 0
+| 10274.6 -2537.97 453.724 |
+| -0.244901 0.914488 -0.308191 0.0935606 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000884.jpg for plane 0
+| 10008.6 -2727.02 445.173 |
+| -0.24362 0.959813 -0.136117 0.029663 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000888.jpg for plane 0
+| 9760.06 -3108.97 438.694 |
+| -0.241339 0.969249 0.0479471 0.00352397 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000891.jpg for plane 0
+| 9711.11 -3474.56 442.006 |
+| 0.242791 -0.964564 -0.101537 0.0189531 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000894.jpg for plane 0
+| 9705.74 -3847.46 441.624 |
+| 0.237999 -0.956198 -0.165505 0.0406142 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000897.jpg for plane 0
+| 9734.82 -4218.77 442.019 |
+| 0.232505 -0.934164 -0.26251 0.0660797 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000900.jpg for plane 0
+| 9776.09 -4586.55 448.822 |
+| 0.223784 -0.8779 -0.408214 0.112134 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000903.jpg for plane 0
+| 9903.72 -4894.81 445.76 |
+| 0.200762 -0.782283 -0.571567 0.145051 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000907.jpg for plane 0
+| 10112.5 -5176.51 445.028 |
+| 0.161326 -0.641296 -0.726834 0.185542 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000911.jpg for plane 0
+| 10349.1 -5359.04 447.182 |
+| 0.124248 -0.46389 -0.849691 0.2177 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000914.jpg for plane 0
+| 10568.5 -5449.62 452.631 |
+| 0.0744045 -0.289682 -0.921977 0.245982 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000918.jpg for plane 0
+| 10801.6 -5551.15 443.569 |
+| 0.0476776 -0.10999 -0.962015 0.245269 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000926.jpg for plane 0
+| 10997.8 -5240.02 445.559 |
+| 0.00684709 0.0554974 -0.965749 0.253381 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000930.jpg for plane 0
+| 11036.6 -4828.02 448.005 |
+| 0.00485452 0.0473766 -0.965587 0.255683 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000934.jpg for plane 0
+| 11058.9 -4369.63 453.127 |
+| -0.00436414 0.0676502 -0.962591 0.262343 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000938.jpg for plane 0
+| 11039.8 -3993.46 432.618 |
+| -0.00337112 0.0897454 -0.96819 0.233544 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000941.jpg for plane 0
+| 10986.6 -3640.64 434.231 |
+| -0.0156963 0.0945595 -0.968006 0.231898 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000944.jpg for plane 0
+| 10915 -3271.16 438.098 |
+| -0.0160229 0.10854 -0.964923 0.238508 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000947.jpg for plane 0
+| 10825.6 -2921.66 450.345 |
+| -0.0137695 0.0807465 -0.963245 0.255832 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000952.jpg for plane 0
+| 10781 -2504.94 451.303 |
+| -0.00590685 0.0915472 -0.960925 0.261167 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000964.jpg for plane 0
+| 10800.5 -2138.29 445.841 |
+| -0.00816403 0.157944 -0.952868 0.258903 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000972.jpg for plane 0
+| 10696.2 -1748.6 449.799 |
+| 0.027719 0.000203256 -0.964991 0.260815 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image000975.jpg for plane 0
+| 10565.4 -1559.11 445.73 |
+| 0.0797074 -0.214159 -0.942994 0.241961 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001103.jpg for plane 0
+| 10559.7 -773.665 402.114 |
+| 0.135802 -0.615389 -0.764264 0.136948 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001124.jpg for plane 0
+| 12129.9 -1039.8 443.145 |
+| 0.203655 -0.77207 -0.585667 0.13938 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001127.jpg for plane 0
+| 12545.6 -1168.86 443.41 |
+| 0.197817 -0.785617 -0.568578 0.142807 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001130.jpg for plane 0
+| 12919.8 -1390.9 444.442 |
+| 0.209866 -0.748945 -0.612543 0.140816 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001133.jpg for plane 0
+| 13296.9 -1594.33 433.169 |
+| 0.184755 -0.698171 -0.675905 0.146887 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001136.jpg for plane 0
+| 13723.3 -1755.41 435.318 |
+| 0.17719 -0.624788 -0.742442 0.164388 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001139.jpg for plane 0
+| 14154.9 -1763.34 439.404 |
+| 0.174297 -0.608431 -0.754419 0.174026 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001141.jpg for plane 0
+| 14513.8 -1740.85 442.864 |
+| 0.163371 -0.597228 -0.763058 0.185395 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001144.jpg for plane 0
+| 15027 -1686.56 443.145 |
+| 0.174426 -0.57436 -0.778319 0.184133 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001146.jpg for plane 0
+| 15363.6 -1571.31 457.025 |
+| 0.184587 -0.57734 -0.769489 0.201229 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001148.jpg for plane 0
+| 15741.3 -1481.81 461.556 |
+| 0.175282 -0.576375 -0.769452 0.21216 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001150.jpg for plane 0
+| 16110.9 -1417.91 458.376 |
+| 0.177431 -0.56588 -0.777954 0.20757 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001152.jpg for plane 0
+| 16461.8 -1319.67 453.382 |
+| 0.187214 -0.563593 -0.780152 0.196664 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001154.jpg for plane 0
+| 16822.4 -1190.32 451.372 |
+| 0.172357 -0.564582 -0.782348 0.198675 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001156.jpg for plane 0
+| 17195.6 -1060.23 456.473 |
+| 0.168689 -0.554843 -0.787376 0.209123 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001158.jpg for plane 0
+| 17552.4 -934.686 449.975 |
+| 0.161018 -0.564406 -0.784345 0.200802 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001160.jpg for plane 0
+| 17945.8 -809.215 457.528 |
+| 0.174327 -0.571091 -0.775067 0.20673 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image001164.jpg for plane 0
+| 18672.2 -554.766 453.97 |
+| 0.161553 -0.571125 -0.777967 0.206117 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003672.jpg for plane 0
+| 18403.9 9256.14 439.731 |
+| -0.233148 0.943847 -0.218822 0.0831397 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003675.jpg for plane 0
+| 18044.9 8995.22 443.141 |
+| -0.252131 0.965491 -0.0421609 0.0498003 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003678.jpg for plane 0
+| 17927.2 8622.95 443.691 |
+| -0.252831 0.965421 0.0625263 0.0113525 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003681.jpg for plane 0
+| 17891.1 8198.03 446.331 |
+| 0.255233 -0.959932 -0.115477 0.00722762 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003684.jpg for plane 0
+| 17954.5 7758.45 440.688 |
+| 0.250962 -0.957606 -0.141416 0.00338072 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003687.jpg for plane 0
+| 18069.8 7298.86 444.141 |
+| 0.24511 -0.958465 -0.142874 0.029215 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003690.jpg for plane 0
+| 18150.7 6838.19 438.188 |
+| 0.244679 -0.956492 -0.158422 0.0125333 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003693.jpg for plane 0
+| 18271.5 6369.33 441.187 |
+| 0.239755 -0.953876 -0.176856 0.0368858 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003696.jpg for plane 0
+| 18349.8 5985.35 430.757 |
+| 0.220819 -0.943826 -0.2403 0.051839 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003699.jpg for plane 0
+| 18422.7 5589.79 437.765 |
+| 0.220034 -0.906186 -0.351022 0.0848329 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003702.jpg for plane 0
+| 18480.3 5241.05 443.395 |
+| 0.21139 -0.818553 -0.519197 0.125383 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003705.jpg for plane 0
+| 18610.6 4952.05 450.5 |
+| 0.187475 -0.680081 -0.686623 0.17576 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003710.jpg for plane 0
+| 19055.9 4820.51 441.16 |
+| 0.153185 -0.554374 -0.795329 0.191455 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003713.jpg for plane 0
+| 19512.6 4885.89 453.057 |
+| 0.161188 -0.541207 -0.798647 0.208029 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003716.jpg for plane 0
+| 19915.5 5027.08 440.551 |
+| 0.168605 -0.556895 -0.792036 0.184713 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003719.jpg for plane 0
+| 20445.5 5168.07 442.274 |
+| 0.162794 -0.558846 -0.790844 0.189091 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003721.jpg for plane 0
+| 20821.8 5278.9 443.762 |
+| 0.16748 -0.548272 -0.796791 0.190978 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003723.jpg for plane 0
+| 21199.4 5415.62 454.743 |
+| 0.183734 -0.56316 -0.780439 0.200021 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003725.jpg for plane 0
+| 21558.3 5506.87 449.157 |
+| 0.166584 -0.560839 -0.786488 0.197856 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003728.jpg for plane 0
+| 22029 5625.84 439.511 |
+| 0.164106 -0.556813 -0.793024 0.184771 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003731.jpg for plane 0
+| 22504.8 5772.6 435.79 |
+| 0.168104 -0.563317 -0.789344 0.177062 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003745.jpg for plane 0
+| 24604.6 6451.67 436.785 |
+| 0.163096 -0.582972 -0.775805 0.177961 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003748.jpg for plane 0
+| 24937.3 6567.09 442.351 |
+| 0.190246 -0.659925 -0.70815 0.163796 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003751.jpg for plane 0
+| 25178.4 6665.85 455.976 |
+| 0.231717 -0.789483 -0.551661 0.136727 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003846.jpg for plane 0
+| 18003.7 -612.18 448.277 |
+| -0.172135 0.69739 -0.669304 0.189864 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003849.jpg for plane 0
+| 17756.9 -736.364 445.347 |
+| -0.112717 0.52762 -0.809596 0.23123 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003860.jpg for plane 0
+| 17010.1 -251.651 455.552 |
+| -0.0324955 0.155446 -0.951655 0.262933 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003863.jpg for plane 0
+| 16843.9 175.893 455.436 |
+| -0.0241694 0.153064 -0.951345 0.266328 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003866.jpg for plane 0
+| 16754.3 596.111 439.142 |
+| -0.0130025 0.163964 -0.95507 0.246555 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003869.jpg for plane 0
+| 16600.8 1078.16 445.18 |
+| -0.0186161 0.155336 -0.954862 0.252514 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image003998.jpg for plane 0
+| 16200.4 2817.48 431.697 |
+| -0.0387909 0.208548 -0.950608 0.226598 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004012.jpg for plane 0
+| 16137.2 3232.82 444.081 |
+| -0.0211542 0.177457 -0.951111 0.251893 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004015.jpg for plane 0
+| 15993.6 3620.67 453.441 |
+| -0.026427 0.1343 -0.955785 0.260271 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004017.jpg for plane 0
+| 15927.6 3984.71 466.37 |
+| -0.0356321 0.150464 -0.947692 0.279231 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004020.jpg for plane 0
+| 15829.3 4507.78 458.254 |
+| -0.0246024 0.151364 -0.950389 0.270636 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004022.jpg for plane 0
+| 15745.8 4864.83 452.182 |
+| -0.0247956 0.145847 -0.95421 0.259996 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004025.jpg for plane 0
+| 15588.3 5344.44 435.956 |
+| -0.0208063 0.141445 -0.961185 0.235973 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004027.jpg for plane 0
+| 15499.6 5725.46 444.354 |
+| -0.0308481 0.161101 -0.955243 0.246181 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004030.jpg for plane 0
+| 15361.5 6202.48 433.369 |
+| -0.0411319 0.181057 -0.956233 0.226155 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004036.jpg for plane 0
+| 15077.5 7141.5 446.347 |
+| -0.0858496 0.36804 -0.895296 0.235843 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004039.jpg for plane 0
+| 14877.8 7546.27 455.97 |
+| -0.13084 0.511157 -0.817264 0.231686 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004043.jpg for plane 0
+| 14598.2 7897.21 452.676 |
+| -0.17281 0.673539 -0.691397 0.196092 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004047.jpg for plane 0
+| 14214.7 8033.91 442.814 |
+| -0.182981 0.747258 -0.61748 0.163836 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004051.jpg for plane 0
+| 13784.7 8073.24 439.773 |
+| -0.181819 0.777631 -0.57854 0.165901 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004054.jpg for plane 0
+| 13410.6 8051.15 453.793 |
+| -0.214747 0.81297 -0.519687 0.15129 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004057.jpg for plane 0
+| 13051.8 8053.25 454.553 |
+| -0.236204 0.88295 -0.387744 0.11942 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004060.jpg for plane 0
+| 12744 7992.07 451.739 |
+| -0.251734 0.947159 -0.189709 0.0594139 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004063.jpg for plane 0
+| 12489.1 7801.52 454.642 |
+| -0.262722 0.96473 0.016216 0.0032425 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004067.jpg for plane 0
+| 12368.6 7396.38 449.541 |
+| 0.260191 -0.951623 -0.162356 0.0188517 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004070.jpg for plane 0
+| 12407.5 6983.97 453.981 |
+| 0.262711 -0.948602 -0.173681 0.0311802 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004073.jpg for plane 0
+| 12482.5 6605.59 440.29 |
+| 0.246095 -0.955029 -0.164433 0.0178321 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004076.jpg for plane 0
+| 12604.8 6130.7 445.316 |
+| 0.246303 -0.953491 -0.170069 0.0355711 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004079.jpg for plane 0
+| 12725.5 5662.52 443.403 |
+| 0.247208 -0.950477 -0.185933 0.0301741 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004082.jpg for plane 0
+| 12859.4 5223.05 440.93 |
+| 0.243198 -0.949208 -0.196997 0.0324303 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004088.jpg for plane 0
+| 13063.1 4396.09 448.089 |
+| 0.242831 -0.910883 -0.32525 0.0744143 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004092.jpg for plane 0
+| 13147 3954.9 452.618 |
+| 0.226968 -0.817927 -0.512793 0.128548 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004095.jpg for plane 0
+| 13253.6 3670.05 446.701 |
+| 0.194145 -0.708215 -0.659243 0.16167 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004100.jpg for plane 0
+| 13596.4 3546.02 447.12 |
+| 0.161382 -0.574966 -0.778005 0.195138 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004104.jpg for plane 0
+| 13982.4 3571.14 451.581 |
+| 0.166103 -0.548804 -0.793689 0.203181 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004108.jpg for plane 0
+| 14415.6 3693.49 458.932 |
+| 0.162667 -0.547911 -0.791645 0.215943 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004112.jpg for plane 0
+| 14816.6 3841.45 464.699 |
+| 0.209059 -0.641656 -0.712132 0.193494 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004116.jpg for plane 0
+| 15113.4 4024.91 451.134 |
+| 0.236233 -0.784683 -0.55926 0.125279 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004122.jpg for plane 0
+| 15460.1 4031.82 462.334 |
+| 0.270225 -0.935182 -0.222531 0.0537875 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004127.jpg for plane 0
+| 15708 3734.27 456.626 |
+| 0.272761 -0.948388 -0.16086 0.0168935 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004136.jpg for plane 0
+| 16038.5 2428.75 452.055 |
+| 0.261455 -0.955289 -0.136758 0.0190249 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004139.jpg for plane 0
+| 16125.1 1948.82 446.338 |
+| 0.253755 -0.955156 -0.151401 0.019049 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004142.jpg for plane 0
+| 16268.9 1483.95 444.702 |
+| 0.248413 -0.960009 -0.127519 0.0203197 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004145.jpg for plane 0
+| 16426.6 1029.84 444.237 |
+| 0.251078 -0.955996 -0.150753 0.0174667 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004148.jpg for plane 0
+| 16560 659.921 432.705 |
+| 0.236282 -0.967017 -0.0951004 -0.00234332 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004154.jpg for plane 0
+| 16757.5 174.611 448.003 |
+| -0.241905 0.93407 -0.250742 0.0782565 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004167.jpg for plane 0
+| 15643.9 -541.584 441.098 |
+| -0.198328 0.797074 -0.554121 0.135237 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004170.jpg for plane 0
+| 15150.8 -677.301 438.893 |
+| -0.194365 0.790434 -0.564992 0.134984 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004172.jpg for plane 0
+| 14811.6 -791.096 446.746 |
+| -0.197284 0.770927 -0.586113 0.152389 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004175.jpg for plane 0
+| 14353.3 -917.222 445.066 |
+| -0.196793 0.781714 -0.572386 0.150235 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004178.jpg for plane 0
+| 13986.9 -992.392 439.148 |
+| -0.175599 0.754211 -0.609582 0.16953 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004201.jpg for plane 0
+| 12218.9 382.327 451.553 |
+| -0.0297282 0.146034 -0.954895 0.256837 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004204.jpg for plane 0
+| 12076.5 805.55 448.217 |
+| -0.0310913 0.152622 -0.955249 0.251475 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004230.jpg for plane 0
+| 10599.3 2368.79 447.928 |
+| -0.193311 0.769516 -0.585574 0.166072 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004233.jpg for plane 0
+| 10215.2 2319.85 450.185 |
+| -0.210774 0.807558 -0.531861 0.143347 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004238.jpg for plane 0
+| 9832.7 2367.6 442.286 |
+| -0.215703 0.87387 -0.419456 0.117815 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004241.jpg for plane 0
+| 9613.3 2475.15 440.278 |
+| -0.23425 0.949441 -0.201713 0.0547834 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004244.jpg for plane 0
+| 9383.94 2492.56 440.248 |
+| 0.239553 -0.969761 -0.0456898 0.00948132 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004368.jpg for plane 0
+| 9113.83 1828.17 440.035 |
+| 0.152975 -0.536225 -0.807636 0.191796 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004383.jpg for plane 0
+| 9540.53 1903.93 465.718 |
+| 0.181023 -0.549406 -0.78542 0.220224 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004386.jpg for plane 0
+| 9896.52 2011.64 471.762 |
+| 0.183166 -0.537518 -0.790033 0.231025 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004390.jpg for plane 0
+| 10276.9 2140.36 454.62 |
+| 0.178047 -0.557583 -0.785084 0.202591 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004399.jpg for plane 0
+| 10974.7 2480.65 448.212 |
+| 0.218166 -0.731756 -0.62927 0.144763 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004402.jpg for plane 0
+| 11149.3 2681.09 449.677 |
+| 0.23634 -0.858381 -0.44343 0.103421 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004415.jpg for plane 0
+| 11571.4 2417.44 451.003 |
+| 0.256152 -0.956489 -0.136967 0.0274765 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004418.jpg for plane 0
+| 11663 2069.47 443.348 |
+| 0.250223 -0.955141 -0.157414 0.0177562 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004421.jpg for plane 0
+| 11784 1691.24 443.221 |
+| 0.249049 -0.956133 -0.15306 0.0189086 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004434.jpg for plane 0
+| 12188.3 416.75 457.355 |
+| -0.257346 0.935014 -0.231003 0.0784891 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004442.jpg for plane 0
+| 12058.5 -98.575 449.797 |
+| -0.204055 0.801758 -0.538755 0.159024 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004450.jpg for plane 0
+| 10950.8 -532.481 454.816 |
+| -0.203425 0.773885 -0.57499 0.170606 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004455.jpg for plane 0
+| 10139.3 -817.647 445.26 |
+| -0.190077 0.77085 -0.58546 0.164003 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004457.jpg for plane 0
+| 9802.93 -930.016 447.339 |
+| -0.191302 0.769032 -0.586153 0.168576 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004467.jpg for plane 0
+| 8719.03 -1370.98 452.919 |
+| -0.11996 0.497264 -0.826641 0.234526 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004480.jpg for plane 0
+| 8202.45 -1162.4 476.711 |
+| -0.0455603 0.134499 -0.945949 0.291573 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004484.jpg for plane 0
+| 8116.28 -806.208 447.612 |
+| -0.0173553 0.158805 -0.953013 0.257382 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004487.jpg for plane 0
+| 7911.54 -446.175 450.119 |
+| -0.0218001 0.117846 -0.959359 0.255476 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004490.jpg for plane 0
+| 7818.41 -43.14 453.819 |
+| -0.0136313 0.131506 -0.954819 0.266161 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004493.jpg for plane 0
+| 7702.92 299.862 452.725 |
+| -0.0276172 0.118614 -0.958607 0.257372 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004497.jpg for plane 0
+| 7582.59 701.305 451.527 |
+| -0.0184108 0.104997 -0.960261 0.257944 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004502.jpg for plane 0
+| 7485.96 1109.1 455.924 |
+| -0.0257398 0.144431 -0.952872 0.265541 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004511.jpg for plane 0
+| 7344.1 1452.29 464.967 |
+| -0.0351415 0.130231 -0.951863 0.275249 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004518.jpg for plane 0
+| 7225.42 1832.77 460.921 |
+| -0.0509922 0.217647 -0.936903 0.26878 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004523.jpg for plane 0
+| 7075.08 2172.12 452.105 |
+| -0.0509937 0.233556 -0.936868 0.255205 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004528.jpg for plane 0
+| 6796.04 2478.31 441.179 |
+| 0.000959706 0.0497305 -0.96841 0.244354 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004531.jpg for plane 0
+| 6709.39 2707.89 447.015 |
+| 0.0665405 -0.175432 -0.950786 0.246582 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004534.jpg for plane 0
+| 6635.28 3011.88 455.245 |
+| 0.113816 -0.377941 -0.887188 0.238966 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004537.jpg for plane 0
+| 6775.22 3304.66 452.89 |
+| 0.144148 -0.543866 -0.798606 0.21368 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004540.jpg for plane 0
+| 7160.65 3526.51 454.106 |
+| 0.169791 -0.574347 -0.77473 0.202705 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004543.jpg for plane 0
+| 7586.95 3669.61 454.395 |
+| 0.163128 -0.578228 -0.772555 0.205427 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004546.jpg for plane 0
+| 8018.59 3800.23 451.881 |
+| 0.160966 -0.562176 -0.78513 0.204006 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004549.jpg for plane 0
+| 8375.92 3941.07 440.765 |
+| 0.152561 -0.579954 -0.777699 0.188582 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004552.jpg for plane 0
+| 8746.84 4054.08 445.371 |
+| 0.148573 -0.564638 -0.787186 0.198617 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004558.jpg for plane 0
+| 9079.31 3953.82 442.389 |
+| 0.115562 -0.404186 -0.88087 0.217594 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004561.jpg for plane 0
+| 9264.59 3853.39 434.159 |
+| 0.0804221 -0.24187 -0.940868 0.223156 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004564.jpg for plane 0
+| 9461.4 3791.83 432.193 |
+| 0.0492601 -0.0606683 -0.969061 0.234121 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004570.jpg for plane 0
+| 9843.49 3957.29 440.027 |
+| -0.055648 0.340569 -0.906323 0.243915 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004573.jpg for plane 0
+| 9963.08 4155.83 444.141 |
+| -0.119131 0.521698 -0.815597 0.220093 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004576.jpg for plane 0
+| 9991.26 4298.06 441.073 |
+| -0.152499 0.666325 -0.703347 0.195084 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004580.jpg for plane 0
+| 9866.53 4401.99 448.673 |
+| -0.197232 0.781983 -0.56806 0.164043 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004585.jpg for plane 0
+| 9427.99 4358.17 459.377 |
+| -0.216755 0.793572 -0.544582 0.163377 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004589.jpg for plane 0
+| 8976.24 4254.1 448.063 |
+| -0.201688 0.803878 -0.536483 0.159021 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004592.jpg for plane 0
+| 8612.15 4135.69 442.554 |
+| -0.19477 0.809578 -0.531043 0.156974 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004595.jpg for plane 0
+| 8237.39 3962.98 440.274 |
+| -0.187741 0.798682 -0.548342 0.161809 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004598.jpg for plane 0
+| 7824.56 3796.34 441.235 |
+| -0.193612 0.801967 -0.544781 0.15026 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004601.jpg for plane 0
+| 7460.83 3680.72 431.997 |
+| -0.1773 0.800937 -0.550036 0.156605 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004728.jpg for plane 0
+| 6636.61 3336.1 424.787 |
+| -0.172857 0.792353 -0.569027 0.136036 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004742.jpg for plane 0
+| 6446.43 3185.94 457.621 |
+| -0.16957 0.655636 -0.704585 0.212011 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004747.jpg for plane 0
+| 6382.2 3154.61 463.528 |
+| -0.133443 0.521422 -0.805414 0.248236 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004751.jpg for plane 0
+| 6298.54 3080.68 459.894 |
+| -0.0959 0.360192 -0.892859 0.25272 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004769.jpg for plane 0
+| 5569.8 4373.74 445.378 |
+| -0.0226501 0.150061 -0.956154 0.250475 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004771.jpg for plane 0
+| 5453.79 4706.75 449.827 |
+| -0.0314805 0.164665 -0.952321 0.254912 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004773.jpg for plane 0
+| 5323.57 5037.17 443.925 |
+| -0.0272032 0.159042 -0.955498 0.246962 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004776.jpg for plane 0
+| 5189.45 5492.52 440.858 |
+| -0.0166043 0.16554 -0.954447 0.247694 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004779.jpg for plane 0
+| 5008.61 5971.79 441.428 |
+| -0.0242013 0.162113 -0.955648 0.244683 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004781.jpg for plane 0
+| 4874.86 6305.38 441.875 |
+| -0.0173788 0.149616 -0.957163 0.247291 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004784.jpg for plane 0
+| 4709.29 6774.91 451.515 |
+| -0.0255758 0.148139 -0.954165 0.258787 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004787.jpg for plane 0
+| 4558.91 7273.03 446.66 |
+| -0.0181364 0.15239 -0.954741 0.254791 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004789.jpg for plane 0
+| 4441.04 7617.48 439.843 |
+| -0.0194877 0.142418 -0.959433 0.242542 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004792.jpg for plane 0
+| 4299.89 8051.96 442.048 |
+| -0.025628 0.140845 -0.959352 0.243209 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004795.jpg for plane 0
+| 4199.27 8547.19 446.391 |
+| -0.018689 0.148336 -0.955661 0.253693 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004797.jpg for plane 0
+| 4104.88 8906.18 445.657 |
+| -0.026219 0.160799 -0.954362 0.250301 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004799.jpg for plane 0
+| 3992.71 9281.17 441.663 |
+| -0.0293091 0.167745 -0.954908 0.243215 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004801.jpg for plane 0
+| 3876.42 9686.77 455.874 |
+| -0.0299629 0.16769 -0.948849 0.265833 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004804.jpg for plane 0
+| 3715.98 10180.1 451.036 |
+| -0.0385693 0.171306 -0.951083 0.25418 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004806.jpg for plane 0
+| 3582.02 10525.3 437.913 |
+| -0.0239625 0.170464 -0.955367 0.240086 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004808.jpg for plane 0
+| 3453.07 10902 443.354 |
+| -0.0240516 0.166192 -0.954052 0.248167 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004810.jpg for plane 0
+| 3347.79 11250.9 440.305 |
+| -0.0190761 0.154565 -0.957047 0.244556 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004812.jpg for plane 0
+| 3219.16 11814.8 444.339 |
+| -0.0348262 0.176801 -0.952463 0.245649 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004816.jpg for plane 0
+| 3137.58 12168 432.37 |
+| -0.00892849 0.158971 -0.958261 0.237456 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004819.jpg for plane 0
+| 3004.23 12678.6 444.683 |
+| -0.016128 0.16127 -0.953652 0.253535 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004821.jpg for plane 0
+| 2883.5 13077.8 454.009 |
+| -0.0165997 0.15381 -0.951016 0.267648 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004823.jpg for plane 0
+| 2759.41 13435.2 455.016 |
+| -0.027843 0.146513 -0.953113 0.263315 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004825.jpg for plane 0
+| 2636.78 13839.7 455.252 |
+| -0.0324056 0.154348 -0.951989 0.262382 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image004827.jpg for plane 0
+| 2553.46 14182.8 454.025 |
+| -0.0253173 0.166427 -0.949475 0.264876 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006056.jpg for plane 0
+| 2386.41 14707.4 449.109 |
+| 0.256713 -0.952552 -0.16169 0.024506 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006059.jpg for plane 0
+| 2551.47 14210 454.305 |
+| 0.266618 -0.951778 -0.150573 0.0189963 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006062.jpg for plane 0
+| 2675.64 13735 451.123 |
+| 0.259504 -0.953317 -0.152613 0.023552 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006064.jpg for plane 0
+| 2862.98 13045.7 454.596 |
+| 0.264567 -0.950861 -0.158684 0.0262151 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006069.jpg for plane 0
+| 2984.71 12625.3 453.107 |
+| 0.264758 -0.952103 -0.151791 0.0190405 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006072.jpg for plane 0
+| 3141.05 12167.5 452.379 |
+| 0.264358 -0.951899 -0.153896 0.0178618 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006074.jpg for plane 0
+| 3271.45 11763.5 454.251 |
+| 0.266825 -0.949828 -0.161826 0.0210429 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006076.jpg for plane 0
+| 3377.96 11415.2 456.601 |
+| 0.266821 -0.947762 -0.171965 0.031348 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006079.jpg for plane 0
+| 3483.58 11012.8 448.863 |
+| 0.259554 -0.951654 -0.163273 0.0181032 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006082.jpg for plane 0
+| 3612.33 10511.2 452.425 |
+| 0.260901 -0.953397 -0.149557 0.0244569 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006085.jpg for plane 0
+| 3729.78 10099.8 442.045 |
+| 0.24531 -0.955343 -0.162832 0.0250828 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006087.jpg for plane 0
+| 3831.89 9763.93 439.54 |
+| 0.243145 -0.956368 -0.160644 0.0208308 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006089.jpg for plane 0
+| 3927.94 9426.26 443.551 |
+| 0.249068 -0.953198 -0.169775 0.0235522 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006092.jpg for plane 0
+| 4064.12 8975.05 449.393 |
+| 0.255656 -0.952451 -0.163365 0.0280979 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006101.jpg for plane 0
+| 4537.62 7571.94 459.904 |
+| 0.272003 -0.946664 -0.169813 0.0316959 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006104.jpg for plane 0
+| 4682.25 7125.4 450.81 |
+| 0.261171 -0.949675 -0.171378 0.0231579 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006233.jpg for plane 0
+| 5263.7 5174.57 428.299 |
+| 0.223001 -0.964893 -0.136686 0.0238743 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006249.jpg for plane 0
+| 5403.7 4771.56 442.181 |
+| 0.248868 -0.958423 -0.139041 0.0125528 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006278.jpg for plane 0
+| 5011.41 3148.9 457.547 |
+| -0.213357 0.795737 -0.542058 0.165696 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006281.jpg for plane 0
+| 4599.33 2995.08 452.879 |
+| -0.201412 0.790776 -0.550399 0.176541 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006290.jpg for plane 0
+| 3372.69 2585.21 459.932 |
+| -0.230778 0.843095 -0.461976 0.150034 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006294.jpg for plane 0
+| 2958.98 2438.21 456.352 |
+| -0.236291 0.875591 -0.401606 0.127358 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006298.jpg for plane 0
+| 2541.68 2258.35 452.214 |
+| -0.249265 0.931844 -0.243259 0.101778 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006302.jpg for plane 0
+| 2217.77 1923.12 454.657 |
+| -0.255174 0.937695 -0.218041 0.0898499 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006305.jpg for plane 0
+| 2008.44 1621.51 448.627 |
+| -0.244255 0.934506 -0.239782 0.0976877 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006308.jpg for plane 0
+| 1823.65 1294.5 445.382 |
+| -0.238054 0.933434 -0.25226 0.0916294 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006311.jpg for plane 0
+| 1646.22 986.817 446.233 |
+| -0.235717 0.922278 -0.285279 0.111606 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006315.jpg for plane 0
+| 1484.34 617.322 450.915 |
+| -0.233358 0.892937 -0.367315 0.115274 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006320.jpg for plane 0
+| 1270.63 288.238 460.092 |
+| -0.2232 0.808565 -0.521981 0.154726 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006324.jpg for plane 0
+| 992.337 41.0693 457.77 |
+| -0.210498 0.772718 -0.575804 0.164459 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006328.jpg for plane 0
+| 617.786 -46.9133 449.986 |
+| -0.198693 0.793386 -0.549062 0.17202 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006332.jpg for plane 0
+| 169.637 -180.358 456.071 |
+| -0.231899 0.858402 -0.438932 0.129255 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006336.jpg for plane 0
+| -244.08 -375.828 450.478 |
+| -0.235879 0.902004 -0.346019 0.104983 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006340.jpg for plane 0
+| -549.501 -707.613 453.866 |
+| -0.24494 0.914471 -0.306743 0.0982663 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006344.jpg for plane 0
+| -766.656 -1047.71 451.706 |
+| -0.241256 0.9127 -0.316197 0.0937789 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006348.jpg for plane 0
+| -933.561 -1360.23 452.674 |
+| -0.234591 0.885735 -0.384004 0.113942 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006354.jpg for plane 0
+| -1191.92 -1686.18 448.258 |
+| -0.207105 0.81638 -0.517977 0.149434 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006362.jpg for plane 0
+| -1509 -1896.18 456.022 |
+| -0.209601 0.782616 -0.563027 0.163038 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006375.jpg for plane 0
+| -1849.56 -2017.34 446.013 |
+| -0.199868 0.801297 -0.542634 0.153377 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006383.jpg for plane 0
+| -2211.34 -2105.37 450.803 |
+| -0.216781 0.844559 -0.466526 0.148592 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006389.jpg for plane 0
+| -2576.26 -2232.37 446.678 |
+| -0.23052 0.90656 -0.333143 0.118432 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006394.jpg for plane 0
+| -2805.06 -2503.83 442.736 |
+| -0.223744 0.903211 -0.348672 0.112146 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006398.jpg for plane 0
+| -3017.02 -2782.35 439.646 |
+| -0.205866 0.857766 -0.452131 0.132037 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006402.jpg for plane 0
+| -3350.28 -3070.62 443.47 |
+| -0.197475 0.815499 -0.521068 0.156372 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006406.jpg for plane 0
+| -3789.01 -3302.65 450.748 |
+| -0.202094 0.782454 -0.566822 0.160114 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006409.jpg for plane 0
+| -4168.92 -3407.27 454.427 |
+| -0.200361 0.782113 -0.561227 0.182152 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006412.jpg for plane 0
+| -4556.98 -3535.79 451.795 |
+| -0.201486 0.786527 -0.558962 0.168347 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006415.jpg for plane 0
+| -4916.93 -3649.49 441.844 |
+| -0.18795 0.792967 -0.555462 0.16535 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006418.jpg for plane 0
+| -5284.22 -3780.27 437.591 |
+| -0.187782 0.79933 -0.550786 0.149811 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006421.jpg for plane 0
+| -5644.8 -3867.24 431.645 |
+| -0.185118 0.826371 -0.511906 0.144205 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006432.jpg for plane 0
+| -6634.63 -4102.84 459.871 |
+| -0.269977 0.956777 -0.0987308 0.0440703 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006445.jpg for plane 0
+| -6854.25 -4583.01 446.46 |
+| 0.257072 -0.950251 -0.17497 0.0179575 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006449.jpg for plane 0
+| -6747.47 -4977.44 436.675 |
+| 0.240994 -0.955614 -0.168569 0.0175787 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006452.jpg for plane 0
+| -6647.46 -5374.25 435.706 |
+| 0.24693 -0.953843 -0.17088 0.00308057 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006455.jpg for plane 0
+| -6515.77 -5757.61 431.799 |
+| 0.237803 -0.959238 -0.152609 0.00485309 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006458.jpg for plane 0
+| -6373.13 -6194.27 438.868 |
+| 0.245947 -0.953903 -0.171325 0.0150401 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006461.jpg for plane 0
+| -6240.53 -6572.82 438.535 |
+| 0.24375 -0.958277 -0.148689 0.0135131 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006464.jpg for plane 0
+| -6153.68 -6987.54 442.303 |
+| 0.250522 -0.956547 -0.148737 0.0115833 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006467.jpg for plane 0
+| -6051.71 -7411 451.231 |
+| 0.26103 -0.954212 -0.14487 0.0188574 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006470.jpg for plane 0
+| -5962.67 -7800.04 450.532 |
+| 0.2623 -0.951101 -0.162136 0.0178059 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006473.jpg for plane 0
+| -5847 -8138.44 451.39 |
+| 0.262749 -0.950176 -0.166426 0.0207679 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006481.jpg for plane 0
+| -5692.03 -8905.02 444.492 |
+| 0.238044 -0.90472 -0.345222 0.0750961 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006608.jpg for plane 0
+| -5502.58 -9504.2 435.813 |
+| 0.135259 -0.542483 -0.806733 0.191312 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006623.jpg for plane 0
+| -5110.59 -9438.02 455.225 |
+| 0.182409 -0.555583 -0.785569 0.202327 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006627.jpg for plane 0
+| -4674.47 -9277.85 460.655 |
+| 0.18075 -0.561994 -0.779219 0.210501 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006631.jpg for plane 0
+| -4270.65 -9135.62 450.5 |
+| 0.161509 -0.571524 -0.779106 0.20067 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006635.jpg for plane 0
+| -3854.34 -9033.45 443.933 |
+| 0.156168 -0.54821 -0.798116 0.195163 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006644.jpg for plane 0
+| -2892.69 -8868.62 454.382 |
+| 0.0491825 -0.11519 -0.9572 0.260925 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006647.jpg for plane 0
+| -2729.85 -8589.75 461.737 |
+| 0.00185259 0.0855078 -0.956036 0.2805 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006651.jpg for plane 0
+| -2699.64 -8151.12 451.467 |
+| -0.0262978 0.193106 -0.944857 0.263179 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006654.jpg for plane 0
+| -2821.36 -7774.14 451.577 |
+| -0.015141 0.172258 -0.948158 0.266635 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006657.jpg for plane 0
+| -2958.77 -7345.79 450.365 |
+| -0.0329255 0.198281 -0.944892 0.258418 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006660.jpg for plane 0
+| -3114.1 -6906.74 448.142 |
+| -0.0184746 0.175953 -0.94935 0.259679 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006663.jpg for plane 0
+| -3264.16 -6448.74 441.323 |
+| -0.0179966 0.17618 -0.952197 0.248914 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006666.jpg for plane 0
+| -3418.8 -6001.49 443.548 |
+| -0.00490927 0.154348 -0.954166 0.256359 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006669.jpg for plane 0
+| -3534.12 -5555.59 448.911 |
+| -0.0252924 0.175657 -0.94985 0.257469 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006676.jpg for plane 0
+| -3781.47 -4735.15 439.894 |
+| 0.0182554 0.0833507 -0.963935 0.252088 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006680.jpg for plane 0
+| -3879.7 -4375.37 432.941 |
+| 0.0488958 -0.0382179 -0.969393 0.237541 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006684.jpg for plane 0
+| -3940.62 -4011.85 442.782 |
+| 0.0700726 -0.17755 -0.951667 0.240616 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006688.jpg for plane 0
+| -3836.73 -3659.19 453.666 |
+| 0.088576 -0.28923 -0.920676 0.246692 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006718.jpg for plane 0
+| -2633.76 -2283.91 450.29 |
+| 0.151585 -0.54291 -0.799643 0.206983 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006724.jpg for plane 0
+| -2268.26 -2143.28 459.126 |
+| 0.13513 -0.486052 -0.831937 0.231029 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006728.jpg for plane 0
+| -1915.78 -2080.72 453.952 |
+| 0.115892 -0.342957 -0.900689 0.240225 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006732.jpg for plane 0
+| -1605.79 -1833.93 453.382 |
+| 0.098812 -0.240486 -0.932368 0.251182 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006737.jpg for plane 0
+| -1405.54 -1451.63 447.158 |
+| 0.097161 -0.302036 -0.918584 0.235666 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006741.jpg for plane 0
+| -1224.23 -1121.97 451.376 |
+| 0.130515 -0.415502 -0.871109 0.226921 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |
+rightCameraPostProcessed/down/Camera_110732694_Image006745.jpg for plane 0
+| -971.231 -858.368 452.848 |
+| 0.157645 -0.499716 -0.824496 0.21363 |
+| 612 0 1224 |
+| 0 612 1024 |
+| 0 0 1 |

@@ -28,8 +28,8 @@ classdef plane < handle
     methods
         function obj = load_images(obj)
             n = 1;
-            %for imgnum = 1:size(obj.image_filenames,1)
-            for imgnum = 1:100:size(obj.image_filenames,1)
+            for imgnum = 1:size(obj.image_filenames,1)
+            %for imgnum = 1:10:size(obj.image_filenames,1)
                 fprintf('Loading img number %d\tn=%d\n', imgnum,n);
                 r = obj.image_rotations{imgnum};
                 t = obj.t_cam2world(imgnum,:)';
@@ -230,6 +230,51 @@ classdef plane < handle
             fprintf('cost: %f\n', cost);
         end
         
+        function images = greedy_overlap_camera_cost(obj)
+            obj = obj.set_overlap(size(obj.images,2));
+            % Generate cost DAG
+            node_total_cost = zeros(1,size(obj.images,2));
+            node_cost_count = zeros(1,size(obj.images,2));
+            node_avg_cost = zeros(1,size(obj.images,2));
+            % For each starting image
+            %for idx1 = 1:size(obj.images,2)
+            %    i1 = obj.images(idx1);
+            %    for idx2_i = 1:size(i1.overlap,2)
+            %        idx2 = i1.overlap(idx2_i);
+            %        i2 = obj.images(idx2);
+            %        obj.outimg = zeros(obj.height,obj.width,3);
+            %        obj = obj.print_tile(i1.mytile_on_plane);
+            %        cost = obj.cost_of_tile(i2.mytile_on_plane);
+
+                    % End loop if it no longer overlaps
+            %        if(cost == Inf )
+            %            keyboard
+            %            fprintf('\n');
+            %            break
+            %        else
+            %            fprintf('Images %d to %d, cost=%f\n', idx1, idx2, cost)
+            %            node_total_cost(idx1) = node_total_cost(idx1) + cost;
+            %            node_total_cost(idx2) = node_total_cost(idx2) + cost;
+            %            node_cost_count(idx1) = node_cost_count(idx1)+1;
+            %            node_cost_count(idx2) = node_cost_count(idx2)+1;
+            %        end
+            %    end
+            %end
+            
+            for idx = 1:size(obj.images,2)
+                if (node_cost_count(idx) ~= 0)
+                    %node_avg_cost(idx) = node_total_cost(idx)/(10000*node_cost_count(idx));
+                    node_avg_cost(idx) = node_total_cost(idx)/(10000*node_cost_count(idx));
+                else
+                    node_avg_cost(idx) = 0;
+                end
+                node_avg_cost(idx) = node_avg_cost(idx) + ...
+                                        obj.images(idx).cam_dist + ...
+                                        ((10000/180)*obj.images(idx).cam_angle);
+            end
+            [sorted, images] = sort(node_avg_cost);
+        end
+        
         function images = repeated_shortest_path(obj)
             images = [];
             obj = obj.setup_DAG();
@@ -289,6 +334,7 @@ classdef plane < handle
             valid_img = zeros(1,size(obj.images,2));
             grid = false(obj.height,obj.width);
             change_made = 1;
+            images_to_try = obj.images;
             iter = 0;
             while(change_made)
                 iter = iter + 1;
@@ -340,6 +386,120 @@ classdef plane < handle
             obj.outimg = zeros(obj.height,obj.width,3);
         end
         
+        
+        function candidateImages = getCandidateImages(obj, section, imageIndices, maxAngle)
+            candidateImages = [];
+            for i = 1:size(imageIndices,2)
+                if imageIndices(i) == 0
+                    continue
+                end
+                box = obj.images(imageIndices(i)).mytile_on_plane.orig_box;
+                if section.row_max > box.row_max || section.row_min < box.row_min || ...
+                        section.col_max > box.col_max || section.col_min < box.col_min
+                    continue
+                end
+                data = obj.images(imageIndices(i)).mytile_on_plane.orig_data;
+                y_min = section.row_min - box.row_min + 1;
+                y_max = section.row_max - box.row_min + 1;
+                x_min = section.col_min - box.col_min + 1;
+                x_max = section.col_max - box.col_min + 1;
+                if sum(data(y_min,x_min,:)) == 0 || sum(data(y_min,x_max,:)) == 0 || ...
+                        sum(data(y_max,x_min,:)) == 0 || sum(data(y_max,x_max,:)) == 0
+                    continue
+                end
+                candidateImages = [candidateImages imageIndices(i)];
+            end
+        end
+        
+        
+        %Score calculated:
+        %cameraDirection = -1 * normalized(rotMatrix * [0,0,1])
+        %cosineValue = cameraDirection * plane Normal
+        %score = (1/distToCamera) * cosineValue
+        function [obj, section] = textureWithBestImage(obj, origSection, imageIndices)
+            section = origSection;
+            bestScore = 0;
+            for i = 1:size(imageIndices,2)
+                currImage = obj.images(imageIndices(i));
+                cameraDirection = -1 * ((currImage.r * [0;0;1])/norm(currImage.r * [0;0;1]));
+                cosineValue = dot(cameraDirection,obj.normal);
+                section_center_world = obj.get_world_pts([(section.row_max+section.row_min)/2;(section.col_max+section.col_min)/2]);
+                distToCamera = norm(currImage.t - section_center_world);
+                score = (1/distToCamera) * cosineValue;
+                if (score > bestScore) || section.bestImage == 0
+                    bestScore = score;
+                    section.bestImage = imageIndices(i);
+                end
+            end
+            if section.bestImage == 0
+                return
+            end
+            bestImage = obj.images(section.bestImage);
+            box = bestImage.mytile_on_plane.orig_box;
+            data = bestImage.mytile_on_plane.orig_data;
+            y_min = section.row_min - box.row_min + 1;
+            y_max = section.row_max - box.row_min + 1;
+            x_min = section.col_min - box.col_min + 1;
+            x_max = section.col_max - box.col_min + 1;
+            %obj.outimg(section.row_min:section.row_max, section.col_min:section.col_max,:) = ...
+                %data(y_min:y_max,x_min:x_max,:);
+            temp_tile = tile();
+            temp_tile.box = section;
+            temp_tile.data = data(y_min:y_max,x_min:x_max,:);
+            obj = obj.blend_tile(temp_tile);
+        end
+        
+        %Approximation of Stewart's method
+        function obj = split_plane_texturing(obj)
+            %first create lots of rectangular sections
+            sections = [];
+            step = 50;
+            for col_min = 1:step:obj.width-step
+                col_max = min(col_min+step, obj.width);
+                for row_min = 1:step:obj.height-step
+                    row_max = min(row_min+step,obj.height);
+                    newSection.row_min = max(1,row_min-round(step/10));
+                    newSection.row_max = min(obj.height,row_max+round(step/10));
+                    newSection.col_min = max(1,col_min-round(step/10));
+                    newSection.col_max = min(obj.width,col_max+round(step/10));
+                    newSection.bestImage = 0;
+                    sections = [sections newSection];
+                end
+            end
+            numSectionsX = ceil(obj.width/step) - 1;
+            numSectionsY = ceil(obj.height/step) - 1;
+            %spatial index of where each section is
+            sectionGrid = reshape((1:size(sections,2)),numSectionsY,numSectionsX);
+            for i = 1:size(sectionGrid,1)
+                for j = 1:size(sectionGrid,2)
+                    UImage = 0;
+                    LImage = 0;
+                    ULImage = 0;
+                    if i > 1
+                        UImage = sections(sectionGrid(i-1,j)).bestImage;
+                    end
+                    if j > 1
+                        LImage = sections(sectionGrid(i,j-1)).bestImage;
+                    end
+                    if (i > 1) && (j > 1)
+                        ULImage = sections(sectionGrid(i-1,j-1)).bestImage;
+                    end
+                    cacheCandidates = obj.getCandidateImages(sections(sectionGrid(i,j)), [UImage,LImage,ULImage], 45);
+                    [obj, newSection] = obj.textureWithBestImage(sections(sectionGrid(i,j)), cacheCandidates);
+                    if newSection.bestImage == 0
+                        allCandidates = obj.getCandidateImages(sections(sectionGrid(i,j)), (1:size(obj.images,2)), 180);
+                        [obj, newSection] = obj.textureWithBestImage(sections(sectionGrid(i,j)), allCandidates);
+                    end
+                    if newSection.bestImage == 0
+                        continue
+                    else
+                        sections(sectionGrid(i,j)) = newSection;
+                    end
+                end
+            end
+            keyboard
+        end
+        
         function obj = native_blending(obj, images)
             for i = 1:size(images,2)
                 idx = images(i);
@@ -366,6 +526,7 @@ classdef plane < handle
         function obj = minimum_blending(obj, images)
             for i = 1:size(images,2)
                 idx = images(i);
+                disp(['min blending tile ', num2str(i)]);
                  obj = obj.blend_minimum_tile(obj.images(idx).mytile_on_plane);
             end
             obj = obj.blend_uncropped_pieces(images);
@@ -377,6 +538,7 @@ classdef plane < handle
         function obj = blend_uncropped_pieces(obj, images)
             for i = 1:size(images,2)
                 idx = images(i);
+                disp(['uncropped blending tile ', num2str(i)]);
                 obj = obj.blend_uncropped_tile(obj.images(idx).mytile_on_plane);
             end
         end
