@@ -7,6 +7,7 @@ string mapFile = "";
 string iveFile = "";
 string outputFile = "";
 
+//liberally borrowed from modeling.exe
 void doEarClipping( Geometry* planeGeometry, Vec2Array* planeVertices )
 {
 	vector<DrawElementsUInt*> triangles;
@@ -31,7 +32,7 @@ void doEarClipping( Geometry* planeGeometry, Vec2Array* planeVertices )
 			lastTri->push_back(polyList[1]);
 			lastTri->push_back(polyList[2]);
 			triangles.push_back(lastTri);
-			polyList.clear(); 
+			polyList.clear();
 		}
 		//if there are more than three vertices left, we randomly choose a point and it's adjacent vertices to make a triangle
 		else
@@ -39,15 +40,20 @@ void doEarClipping( Geometry* planeGeometry, Vec2Array* planeVertices )
 			//if we've tried a lot of points, we just have to give up and make a triangle to allow the process to continue
 			if(curIterations > numPoints + 10)
 			{
-				//cerr << "Giving up" << endl;
+				cerr << "Giving up after " << curIterations << " attempts " << polyList.size() << " remaining vertices" << endl;
+				/*for (int k = 0; k < polyList.size(); k++) {
+					cerr << polyList[k] << endl;
+					cerr << planeVertices->at(polyList[k]).x() << ", " << planeVertices->at(polyList[k]).y() << endl;
+				}*/
 				DrawElementsUInt* currTriangle =
 					new DrawElementsUInt( PrimitiveSet::POLYGON, 0 );
 				currTriangle->push_back(polyList[0]);
 				currTriangle->push_back(polyList[1]);
 				currTriangle->push_back(polyList[2]);
 				triangles.push_back(currTriangle);
-				polyList.erase(polyList.begin() +1);
+				polyList.erase(polyList.begin() + 1);
 				curIterations=0;
+				continue;
 			}
 
 
@@ -64,6 +70,19 @@ void doEarClipping( Geometry* planeGeometry, Vec2Array* planeVertices )
 			{
 				nextIndex = 0; 
 			}
+
+			//for some lame reason there are a lot of duplicate points in some models.
+			if (((planeVertices->at(polyList[prevIndex]).x() ==  planeVertices->at(polyList[curIndex]).x()) &&
+				(planeVertices->at(polyList[prevIndex]).y() ==  planeVertices->at(polyList[curIndex]).y())) ||
+				((planeVertices->at(polyList[nextIndex]).x() ==  planeVertices->at(polyList[curIndex]).x()) &&
+				(planeVertices->at(polyList[nextIndex]).y() ==  planeVertices->at(polyList[curIndex]).y()))) {
+				cerr << "removing duplicate points" << endl;
+				polyList.erase(polyList.begin() + curIndex);
+				curIterations=0;
+				continue;
+			}
+				
+				
 			
 			//now that we have a candidate triangle we have to perform a couple of checks
 
@@ -84,11 +103,11 @@ void doEarClipping( Geometry* planeGeometry, Vec2Array* planeVertices )
 			Vec2 v2 = planeVertices->at(polyList[nextIndex]) - planeVertices->at(polyList[curIndex]); 
 			Vec3 v1_3d = Vec3(v1[0], v1[1], 0);
 			Vec3 v2_3d = Vec3(v2[0], v2[1], 0);
-			double zCross = (v1_3d^v2_3d)[2]; 
-
+			double zCross = (v1_3d^v2_3d)[2];
+			// we want zCross < 0 since we know points go clockwise
 
 			//if both conditions are satisfied, we create the triangle and remove the current vertex from the polygon
-			if(numInside == 0 && (zCross >= 0))
+			if(numInside == 0 && (zCross < 0))
 			{
 				DrawElementsUInt* currTriangle =
 					new DrawElementsUInt( PrimitiveSet::POLYGON, 0 );
@@ -107,7 +126,7 @@ void doEarClipping( Geometry* planeGeometry, Vec2Array* planeVertices )
 			}
 		}
 	}
-	//Done triangulating. Now combine triangles into convex polys. This is unnecessary for rendering, but just to keep things consistent
+	//Done triangulating. Now combine triangles into convex polys. This is unnecessary for rendering, but just an attempt to keep things consistent with texturing output
 	vector<DrawElementsUInt*> polygons = triangles;
 	int currPolyInd = 0;
 //	while (triangles.size() > 0){
@@ -140,7 +159,7 @@ void doEarClipping( Geometry* planeGeometry, Vec2Array* planeVertices )
 			}
 		}
 	}*/
-	//cout << "Num pieces: " << polygons.size() << endl;
+	cout << "Num pieces: " << polygons.size() << endl;
 	for (int i = 0; i < polygons.size(); ++i){
 		planeGeometry->addPrimitiveSet(polygons[i]);
 	}
@@ -178,8 +197,12 @@ void applyColors(Group* root, bool showTriangles){
 		Geometry* currGeometry = (Geometry*)currGeode->getDrawable(0);
 		int numPrimitives = currGeometry->getNumPrimitiveSets();
 		for (int j = 0; j < numPrimitives; j++){
-			float color = (i+10*j) % (numPlanes + numPrimitives);
-			colors->push_back(osg::Vec4(color/(numPlanes+numPrimitives), color/(numPlanes+numPrimitives), color/(numPlanes+numPrimitives), 1.0f));
+			int a = rand() % 1000;
+			int b = rand() % 1000;
+			int c = rand() % 1000;
+			colors->push_back(osg::Vec4(float(a)/1000.0f,float(b)/1000.0f,float(c)/1000.0f, 1.0f));
+			//float color = (i*numPrimitives+j) % (numPlanes * numPrimitives);
+			//colors->push_back(osg::Vec4(color/(numPlanes*numPrimitives), color/(numPlanes*numPrimitives), color/(numPlanes*numPrimitives), 1.0f));
 		}
 		currGeometry->setColorArray(colors);
 		if (showTriangles) {
@@ -304,23 +327,66 @@ void parseModelFile(Group* root) {
 
 		planeGeometry->setVertexArray( planeVertices );
 
-
-
+		
 		//dotransformation to make horizontal
 		Vec3 normal = ((planeVertices->at(1) - planeVertices->at(0)) ^ (planeVertices->at(2) - planeVertices->at(1)));
+		int v = 2;
+		while (normal.length() == 0) {
+			if (v == planeVertices->size()-1) {
+				cerr << "Cannot calculate a normal vector for plane " << i << " stopping now" << endl;
+				std::cin.get();
+			}
+			normal = ((planeVertices->at(v) - planeVertices->at(v-1)) ^ (planeVertices->at(v+1) - planeVertices->at(v)));
+			v++;
+		}
 		Matrix rotateMat = Matrix();
 		rotateMat.makeRotate(normal, Vec3(0, 0, 1));
+		bool reverseFlip = false;
 		for ( int j = 0; j < planeVertices->size() ; j++ ){
 			planeVertices->at(j) = rotateMat * planeVertices->at(j);
 		}
 		float zVal = planeVertices->at(0)[2];
+
+
 		Vec2Array* planeVertices2d = convert3dTo2d( planeVertices );
 
-		//if (i != 1 && i!=3 && i != 6)
-			doEarClipping( planeGeometry, planeVertices2d );
+		//standardize so that points go clockwise
+		//if sum > 0, then we are clockwise
+		float sum = (planeVertices2d->at(0).x()-planeVertices2d->back().x())*(planeVertices2d->at(0).y()+planeVertices2d->back().y());
+		for ( int j = 1; j < planeVertices2d->size(); j++) {
+			sum += (planeVertices2d->at(j).x()-planeVertices2d->at(j-1).x())*(planeVertices2d->at(j).y()+planeVertices2d->at(j-1).y());
+		}
+		
+		if (sum < 0) {
+			//not sure how makerotate works, so doing it this safe way
+			cerr << "flipping again so points go clockwise" << endl;
+			Matrix unRotateMat = Matrix();
+			unRotateMat.makeRotate(Vec3(0, 0, 1), normal);
+			for ( int j = 0; j < planeVertices2d->size() ; j++ ){
+				planeVertices->at(j)[0] = planeVertices2d->at(j)[0];
+				planeVertices->at(j)[1] = planeVertices2d->at(j)[1];
+				planeVertices->at(j)[2] = zVal;
+				planeVertices->at(j) = unRotateMat * planeVertices->at(j);
+			}
 
+			rotateMat = Matrix();
+			rotateMat.makeRotate(normal, Vec3(0, 0, -1));
+			reverseFlip = true;
+			for ( int j = 0; j < planeVertices->size() ; j++ ){
+				planeVertices->at(j) = rotateMat * planeVertices->at(j);
+			}
+			zVal = planeVertices->at(0)[2];
+
+			planeVertices2d = convert3dTo2d( planeVertices );
+		}
+		doEarClipping( planeGeometry, planeVertices2d );
 		Matrix unRotateMat = Matrix();
-		unRotateMat.makeRotate(Vec3(0, 0, 1), normal);
+		if (reverseFlip){
+			unRotateMat.makeRotate(Vec3(0, 0, -1), normal);
+		}
+		else {
+			unRotateMat.makeRotate(Vec3(0, 0, 1), normal);
+		}
 		for ( int j = 0; j < planeVertices2d->size() ; j++ ){
 			planeVertices->at(j)[0] = planeVertices2d->at(j)[0];
 			planeVertices->at(j)[1] = planeVertices2d->at(j)[1];
@@ -411,7 +477,9 @@ int main(int argc, char** argv)
     Group* root = new Group();
     vector<string> planeToImageFile;
     vector<Vec2Array*> planeToImageCoords;
-    parseMapFile(mapFile, planeToImageFile, planeToImageCoords);
+	if (!noTexture) {
+	    parseMapFile(mapFile, planeToImageFile, planeToImageCoords);
+	}
     parseModelFile(root);
 	if (noTexture){
 		applyColors(root, showTriangles);
