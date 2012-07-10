@@ -39,8 +39,6 @@ function loadedPlanes = loadPlanes()
   nplanes = model(1);
   linenum = 2;
   
-  
-  prevLoaded = 0;
   loadedPlanes = [];
   for pnum=1:nplanes
     disp(['loading plane', num2str(pnum)])
@@ -56,15 +54,32 @@ function loadedPlanes = loadPlanes()
     my_masks = masks(imgplanes==(pnum-1));
     my_t_cam2world = t_cam2world(imgplanes==(pnum-1),:);
     my_R_cam2world = R_cam2world(imgplanes==(pnum-1),:);
+    rotations = cell(size(my_R_cam2world,1));
     for i=1:size(my_R_cam2world,1)
       rotations{i} = quat2rot(my_R_cam2world(i,:));
     end
 	numcorners = model(linenum,1);
-    normal = model(linenum+1,1:3);
-    normal = normal/norm(normal);
+    inputnormal = model(linenum+1,1:3);
+    inputnormal = inputnormal/norm(inputnormal);
     plane_offset = model(linenum+1,4);
     vertices = model(linenum+2:linenum+numcorners+1,1:3);
     
+    %turns out model file normals are UNTRUSTWORTHY
+    %however they still have normals facing the right side of the plane
+    side1 = vertices(end,:) - vertices(1,:);
+    s = 1;
+    side2 = vertices(s,:) - vertices(s+1,:);
+    normal = cross(side1,side2);
+    while (sum(normal) == 0)
+        s = s + 1;
+        side1 = vertices(s-1,:) - vertices(s,:);
+        side2 = vertices(s,:) - vertices(s+1,:);
+        normal = cross(side1,side2);
+    end
+    normal = normal/norm(normal);
+    if dot(normal, inputnormal) < 0
+        normal = -1 * normal;
+    end
     [bbCorners,relCoords] = calculate_bounding_box(vertices,normal);
     
     %planes{pnum}.normal = normal;
@@ -87,7 +102,6 @@ function loadedPlanes = loadPlanes()
     axis('equal')
     hold off;
     drawnow
-    
     
     % We want plane corners arranged like this
     % 2   3 
@@ -126,12 +140,19 @@ function loadedPlanes = loadPlanes()
     newPlane.t_cam2world = my_t_cam2world;
     newPlane.K = K;
     
-    
+    myTextureStyle = textureStyle;
+    if (strcmp(textureStyle, 'dynprogsplit_plane'))
+        if (newPlane.normal(3) == 1 || newPlane.normal(3) == -1)
+            myTextureStyle = 'split_plane';
+        else
+            myTextureStyle = 'dynprog';
+        end
+    end
     
     %write to mapFile
     fid = fopen(mapFile, 'a');
     fprintf(fid, [num2str(size(vertices,1)), '\n']);
-    fprintf(fid, [prePath, '/', folder, '/', textureStyle, '.jpg\n']);
+    fprintf(fid, [prePath, '/', folder, '/', myTextureStyle, '.jpg\n']);
     for vertInd = 1:size(relCoords,1)
       fprintf(fid, [num2str(relCoords(vertInd,1),4), ' ', num2str(relCoords(vertInd,2),4), '\n']);
     end

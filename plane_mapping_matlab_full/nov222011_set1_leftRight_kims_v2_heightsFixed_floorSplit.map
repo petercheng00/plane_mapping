@@ -1,6 +1,6 @@
 104
 50
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures1/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures1/split_plane.jpg
 1 0.8455
 0.9722 0.8254
 0.9542 0.8195
@@ -52,7 +52,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 0.5726 0.1282
 1 0.2604
 85
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures2/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures2/split_plane.jpg
 0.08253 0
 0.6422 0.3375
 0.6506 0.3444
@@ -139,7 +139,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 0.5304 0.4071
 0 0.09001
 19
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures3/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures3/split_plane.jpg
 0.9672 0.7018
 0.9766 0.718
 0.9862 0.7526
@@ -160,7 +160,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 0.8849 0.6338
 0.9745 0.7101
 60
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures4/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures4/split_plane.jpg
 1 0
 0.9835 0.0711
 0.9741 0.08771
@@ -222,7 +222,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 0 0.0005516
 0 0
 51
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures5/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures5/split_plane.jpg
 0.9977 0.7061
 0.9684 0.8473
 0.9609 0.8915
@@ -275,7 +275,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 1 0.2266
 0.9965 1
 72
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures6/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures6/split_plane.jpg
 0.976 0.2994
 0.683 0.3086
 0.683 0.3086
@@ -349,7 +349,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 0.9726 0.02064
 1 0.01511
 42
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures7/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures7/split_plane.jpg
 0.03446 0.8891
 0.1755 0.1941
 0.1755 0.1941
@@ -393,7 +393,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 0.3163 0.2368
 0.1589 1
 20
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures8/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures8/split_plane.jpg
 1 1
 0.4451 0.9714
 0.4704 0.8765
@@ -415,7 +415,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 0.9318 0.6902
 0.8986 0.8999
 38
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures9/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures9/split_plane.jpg
 0.07596 0
 0.814 0.3822
 0.8336 0.2662
@@ -455,7 +455,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 0.0121 0.5673
 0 0.555
 43
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures10/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures10/split_plane.jpg
 0.1422 0.01631
 1 0.07638
 0.9461 0.9894
@@ -500,7 +500,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 0.02271 0.166
 0.02071 0
 35
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures11/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures11/split_plane.jpg
 0.0211 0.9728
 0.01138 0.5791
 0.03759 0.5759
@@ -537,7 +537,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 0 0.9868
 0.01516 0.9103
 35
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures12/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures12/split_plane.jpg
 0.9993 0.5967
 0.9982 0.6628
 0.9722 0.7597
@@ -574,7 +574,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 0.9995 0
 1 0.9422
 39
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures13/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures13/split_plane.jpg
 0.003738 0.9971
 0.03962 0.5734
 0.03375 0.5514
@@ -615,7 +615,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 0.003738 0.9971
 0 1
 25
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures14/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures14/split_plane.jpg
 0.9036 0.7737
 0.6816 0.8052
 0.6061 0.8068
@@ -642,7 +642,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 1 1
 0.9156 0.7361
 27
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures15/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures15/split_plane.jpg
 0.005444 0.01611
 0.02317 0.006727
 0.0673 0.004388
@@ -671,7 +671,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 0 0.7879
 0 0.02347
 12
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures16/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures16/split_plane.jpg
 0.02137 0.9693
 0 0.07598
 0.1342 0.1225
@@ -685,7 +685,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 1 1
 0.02137 0.9693
 17
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures17/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures17/split_plane.jpg
 0.08601 0.3973
 0 0.4345
 0 0
@@ -704,7 +704,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 0.2032 0.5208
 0.1111 0.4037
 9
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures18/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures18/split_plane.jpg
 0.06899 0.9805
 0.7832 1
 0.7642 0.6721
@@ -715,13 +715,13 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov2220
 0 0
 0 0.8912
 4
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures19/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures19/split_plane.jpg
 1 0
 0.9817 1
 0.106 0.9442
 0 0
 4
-C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures20/dynprog.jpg
+C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit/output/textures20/split_plane.jpg
 0 1
 0.98 0.2817
 1 0

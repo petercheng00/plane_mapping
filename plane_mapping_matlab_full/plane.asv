@@ -29,14 +29,14 @@ classdef plane < handle
         function obj = load_images(obj)
             n = 1;
             for imgnum = 1:size(obj.image_filenames,1)
-            %for imgnum = 1:10:size(obj.image_filenames,1)
-                fprintf('Loading img number %d\tn=%d\n', imgnum,n);
+            %for imgnum = 1:5
+                fprintf('Loading img number %d\tn=%d\tout of %d\n', imgnum,n,size(obj.image_filenames,1));
                 r = obj.image_rotations{imgnum};
                 t = obj.t_cam2world(imgnum,:)';
                 plane_to_cam = t - obj.base;
                 if(plane_to_cam' * obj.normal) < 0.5
-                    fprintf('Ignoring Bad Image\n');
-                    continue
+                    fprintf('Not Ignoring Bad Image\n');
+                    %continue
                 end
                 
                 obj.images = [obj.images plane_img()];
@@ -58,10 +58,19 @@ classdef plane < handle
             end
         end
         
-        function obj = set_tiles(obj)
+        function obj = set_tiles_and_rotate(obj)
             for idx = 1:size(obj.images,2)
                 fprintf('Projecting image %d\n', idx);
                 obj.images(idx) = obj.images(idx).set_tile_and_rotate(obj);
+                imshow(uint8(obj.images(idx).mytile.orig_data));
+                drawnow
+            end
+        end
+        
+        function obj = set_tiles_no_rotate(obj)
+            for idx = 1:size(obj.images,2)
+                fprintf('Projecting image %d\n', idx);
+                obj.images(idx) = obj.images(idx).set_tile_no_rotate(obj);
                 imshow(uint8(obj.images(idx).mytile.orig_data));
                 drawnow
             end
@@ -115,6 +124,23 @@ classdef plane < handle
                 end
             end
             obj.images = useful;
+        end
+        
+        
+        function obj = fix_intensities(obj)
+            avgIntensities = zeros(1,size(obj.images,2));
+            for idx = 1:size(obj.images,2)
+                gray_img = rgb2gray(uint8(obj.images(idx).mytile_on_plane.orig_data));
+                gray_img_linear = reshape(gray_img,[1,numel(gray_img)]);
+                gray_img_linear = gray_img_linear(gray_img_linear~=0);
+                avgIntensities(idx) = median(double(gray_img_linear));
+            end
+            avg_overall_intensity = median(avgIntensities);
+            for idx = 1:size(obj.images,2)
+                gain = avg_overall_intensity/avgIntensities(idx);
+                obj.images(idx).mytile_on_plane.orig_data = obj.images(idx).mytile_on_plane.orig_data * gain;
+                obj.images(idx).mytile_on_plane.cropped_data = obj.images(idx).mytile_on_plane.cropped_data * gain;
+            end
         end
         
         function obj = print_images(obj)
@@ -393,18 +419,31 @@ classdef plane < handle
                 if imageIndices(i) == 0
                     continue
                 end
-                box = obj.images(imageIndices(i)).mytile_on_plane.orig_box;
+                currImage = obj.images(imageIndices(i));
+                box = currImage.mytile_on_plane.orig_box;
                 if section.row_max > box.row_max || section.row_min < box.row_min || ...
                         section.col_max > box.col_max || section.col_min < box.col_min
                     continue
                 end
-                data = obj.images(imageIndices(i)).mytile_on_plane.orig_data;
+                data = currImage.mytile_on_plane.orig_data;
                 y_min = section.row_min - box.row_min + 1;
                 y_max = section.row_max - box.row_min + 1;
                 x_min = section.col_min - box.col_min + 1;
                 x_max = section.col_max - box.col_min + 1;
                 if sum(data(y_min,x_min,:)) == 0 || sum(data(y_min,x_max,:)) == 0 || ...
                         sum(data(y_max,x_min,:)) == 0 || sum(data(y_max,x_max,:)) == 0
+                    continue
+                end
+                section_center_world = obj.get_world_pts([(section.row_max+section.row_min)/2;(section.col_max+section.col_min)/2]);
+                cam_to_section_center = section_center_world - currImage.t;
+                cam_to_section_center = cam_to_section_center/norm(cam_to_section_center);
+                cameraDirection = currImage.r * [0;0;1];
+                cameraDirection = cameraDirection/norm(cameraDirection);
+                angleBetween = acos(dot(cameraDirection, cam_to_section_center)) * (180/pi);
+                if angleBetween > 180
+                    keyboard
+                end
+                if angleBetween > maxAngle
                     continue
                 end
                 candidateImages = [candidateImages imageIndices(i)];
@@ -421,7 +460,7 @@ classdef plane < handle
             bestScore = 0;
             for i = 1:size(imageIndices,2)
                 currImage = obj.images(imageIndices(i));
-                cameraDirection = -1 * ((currImage.r * [0;0;1])/norm(currImage.r * [0;0;1]));
+                cameraDirection = -1 * (currImage.r * [0;0;1]);
                 cosineValue = dot(cameraDirection,obj.normal);
                 section_center_world = obj.get_world_pts([(section.row_max+section.row_min)/2;(section.col_max+section.col_min)/2]);
                 distToCamera = norm(currImage.t - section_center_world);
@@ -444,24 +483,24 @@ classdef plane < handle
             %obj.outimg(section.row_min:section.row_max, section.col_min:section.col_max,:) = ...
                 %data(y_min:y_max,x_min:x_max,:);
             temp_tile = tile();
-            temp_tile.box = section;
-            temp_tile.data = data(y_min:y_max,x_min:x_max,:);
+            temp_tile.cropped_box = section;
+            temp_tile.cropped_data = data(y_min:y_max,x_min:x_max,:);
             obj = obj.blend_tile(temp_tile);
         end
         
         %Approximation of Stewart's method
-        function obj = split_plane_texturing(obj)
+        function obj = split_plane_texturing(obj, step, blend, maxCacheAngle, maxAngle)
             %first create lots of rectangular sections
             sections = [];
-            step = 50;
             for col_min = 1:step:obj.width-step
+                disp(['first ', num2str(col_min), ' out of ', num2str(obj.width)]);
                 col_max = min(col_min+step, obj.width);
                 for row_min = 1:step:obj.height-step
                     row_max = min(row_min+step,obj.height);
-                    newSection.row_min = max(1,row_min-round(step/10));
-                    newSection.row_max = min(obj.height,row_max+round(step/10));
-                    newSection.col_min = max(1,col_min-round(step/10));
-                    newSection.col_max = min(obj.width,col_max+round(step/10));
+                    newSection.row_min = max(1,row_min-blend);
+                    newSection.row_max = min(obj.height,row_max+blend);
+                    newSection.col_min = max(1,col_min-blend);
+                    newSection.col_max = min(obj.width,col_max+blend);
                     newSection.bestImage = 0;
                     sections = [sections newSection];
                 end
@@ -471,10 +510,12 @@ classdef plane < handle
             %spatial index of where each section is
             sectionGrid = reshape((1:size(sections,2)),numSectionsY,numSectionsX);
             for i = 1:size(sectionGrid,1)
+                disp([num2str(i), ' out of ', num2str(size(sectionGrid,1))]);
                 for j = 1:size(sectionGrid,2)
                     UImage = 0;
                     LImage = 0;
                     ULImage = 0;
+                    URImage = 0;
                     if i > 1
                         UImage = sections(sectionGrid(i-1,j)).bestImage;
                     end
@@ -484,10 +525,13 @@ classdef plane < handle
                     if (i > 1) && (j > 1)
                         ULImage = sections(sectionGrid(i-1,j-1)).bestImage;
                     end
-                    cacheCandidates = obj.getCandidateImages(sections(sectionGrid(i,j)), [UImage,LImage,ULImage]);
+                    if (i > 1) && (j < size(sectionGrid,2))
+                        URImage = sections(sectionGrid(i-1,j+1)).bestImage;
+                    end
+                    cacheCandidates = obj.getCandidateImages(sections(sectionGrid(i,j)), [UImage,LImage,ULImage], maxCacheAngle);
                     [obj, newSection] = obj.textureWithBestImage(sections(sectionGrid(i,j)), cacheCandidates);
                     if newSection.bestImage == 0
-                        allCandidates = obj.getCandidateImages(sections(sectionGrid(i,j)), (1:size(obj.images,2)));
+                        allCandidates = obj.getCandidateImages(sections(sectionGrid(i,j)), (1:size(obj.images,2)), maxAngle);
                         [obj, newSection] = obj.textureWithBestImage(sections(sectionGrid(i,j)), allCandidates);
                     end
                     if newSection.bestImage == 0
@@ -497,8 +541,146 @@ classdef plane < handle
                     end
                 end
             end
-            keyboard
         end
+        
+        function MST_prim(obj)
+            %create nodes, covering nodes ~= covering the plane
+            nodes = [];
+            for i = 1:10:obj.height
+                for j = 1:10:obj.width
+                    currNode.row = i;
+                    currNode.col = j;
+                    currNode.images = [];
+                    currNode.covered = false;
+                    for im = 1:size(obj.images,2)
+                        data = obj.images(im).mytile_on_plane.orig_data;
+                        box = obj.images(im).mytile_on_plane.orig_box;
+                        dataY = (i-box.row_min+1);
+                        dataX = (j-box.col_min+1);
+                        if dataY >= 1 && dataY <= (box.row_max-box.row_min+1) && ...
+                           dataX >= 1 && dataX <= (box.col_max-box.col_min+1) && ...
+                               sum(data(dataY,dataX,:)) ~= 0
+                            currNode.images = [currNode.images, im];
+                            obj.images(im).nodes = [obj.images(im).nodes, currNode];
+                        end
+                    end
+                    if size(currNode.images,2) ~= 0
+                      nodes = [nodes currNode];
+                    end
+                end
+            end
+            %get starting image, also list of images to work with
+            candidateImages = ones(size(obj.images,2));
+            obj = obj.set_overlap(size(obj.images,2));
+            
+            % Generate cost DAG
+            node_total_cost = zeros(1,size(obj.images,2));
+            node_cost_count = zeros(1,size(obj.images,2));
+            node_avg_cost = zeros(1,size(obj.images,2));
+            % For each starting image
+            for idx1 = 1:size(obj.images,2)
+                i1 = obj.images(idx1);
+                for idx2_i = 1:size(i1.overlap,2)
+                    idx2 = i1.overlap(idx2_i);
+                    i2 = obj.images(idx2);
+                    obj.outimg = zeros(obj.height,obj.width,3);
+                    obj = obj.print_tile(i1.mytile_on_plane);
+                    cost = obj.cost_of_tile(i2.mytile_on_plane);
+
+                    % End loop if it no longer overlaps
+                    if(cost == Inf )
+                        keyboard
+                        fprintf('\n');
+                        break
+                    else
+                        fprintf('Images %d to %d, cost=%f\n', idx1, idx2, cost)
+                        node_total_cost(idx1) = node_total_cost(idx1) + cost;
+                        node_total_cost(idx2) = node_total_cost(idx2) + cost;
+                        node_cost_count(idx1) = node_cost_count(idx1)+1;
+                        node_cost_count(idx2) = node_cost_count(idx2)+1;
+                    end
+                end
+            end
+            
+            for idx = 1:size(obj.images,2)
+                if (node_cost_count(idx) ~= 0)
+                    node_avg_cost(idx) = node_total_cost(idx)/node_cost_count(idx);
+                else
+                    candidateImages(idx) = 0;
+                    node_avg_cost(idx) = Inf;
+                    obj.blend_uncropped_tile(obj.images(idx).mytile_on_plane);
+                    for n = 1:size(obj.images(idx).nodes,2)
+                        obj.images(idx).nodes(n).covered = true;
+                    end
+                end
+            end
+            
+            %candidateImages is now 1 for each image that is still worth
+            %looking at.
+            [minAvg, startInd] = min(node_avg_cost);
+            
+            candidateImages(startInd) = 0;
+            obj.blend_uncropped_tile(obj.images(startInd).mytile_on_plane);
+            for n = 1:size(obj.images(startInd).nodes,2)
+                obj.images(startInd).nodes(n).covered = true;
+            end
+            
+            %now we can start main loop
+            %not written yet
+            prevSum = 0;
+            while sum(candidateImages) ~= 0
+                if sum(candidateImages) == prevSum
+                    keyboard
+                end
+                prevSum = sum(candidateImages);
+                overlap_costs = Inf(1,size(candidateImages,2));
+                foundOverlap = false;
+                for i = 1:size(candidateImages,2)
+                    if candidateImages(i) == 0
+                        continue
+                    end
+                    currImage = obj.images(i);
+                    has_uncovered_nodes = false;
+                    has_covered_nodes = false;
+                    for n = 1:size(currImage.nodes,2)
+                        if currImage.nodes(n).covered
+                            has_covered_nodes = true;
+                        else
+                            has_uncovered_nodes = true;
+                        end
+                        if has_covered_nodes && has_uncovered_nodes
+                            break;
+                        end
+                    end
+                    if ~has_uncovered_nodes
+                        %this image adds nothing new, discard it
+                        continue
+                    end
+                    if ~has_covered_nodes
+                        %this image is completely disjoint from current
+                        %texturing, save for later
+                        candidateImages(i) = 0;
+                        continue
+                    end
+                    foundOverlap = true;
+                    %image has some overlap, but also textures some new
+                    %area
+                    overlap_costs(i) = obj.cost_of_tile(currImage.mytile_on_plane);    
+                end
+                
+                if ~foundOverlap
+                    keyboard
+                end
+                [minCost, minInd] = min(overlap_costs);
+                obj.blend_uncropped_tile(obj.images(minInd).mytile_on_plane);
+                for n = 1:size(obj.images(minInd).nodes,2)
+                    obj.images(minInd).nodes(n).covered = true;
+                end
+                candidateImages(minInd) = 0;
+            end
+        end        
+        
+        
         
         function obj = native_blending(obj, images)
             for i = 1:size(images,2)
@@ -522,12 +704,40 @@ classdef plane < handle
                 obj = obj.blend_tile_painter(obj.images(idx).mytile_on_plane);
             end
         end
+
+        function obj = print_selected_images(obj, images)
+            for i = 1:size(images,2)
+                idx = images(i);
+                obj = obj.print_tile(obj.images(idx).mytile_on_plane);
+                imshow(uint8(obj.outimg));
+                drawnow
+            end
+        end
         
+        function obj = print_selected_images_crop(obj, images)
+            for i = 1:size(images,2)
+                idx = images(i);
+                obj = obj.print_tile_crop(obj.images(idx).mytile_on_plane);
+                imshow(uint8(obj.outimg));
+                drawnow
+            end
+        end
+
         function obj = minimum_blending(obj, images)
             for i = 1:size(images,2)
                 idx = images(i);
-                disp(['min blending tile ', num2str(i)]);
-                 obj = obj.blend_minimum_tile(obj.images(idx).mytile_on_plane);
+                filled = sum(obj.outimg,3) ~= 0;
+                keyboard
+                if (sum(sum(filled)) == (size(obj.outimg,1) * size(obj.outimg,2)))
+                    return
+                end
+                disp(['min blending tile ', num2str(idx)]);
+                obj = obj.blend_minimum_tile(obj.images(idx).mytile_on_plane);
+            end
+            filled = sum(obj.outimg,3) ~= 0;
+            keyboard
+            if (sum(sum(filled)) == (size(obj.outimg,1) * size(obj.outimg,2)))
+                return
             end
             obj = obj.blend_uncropped_pieces(images);
         end
@@ -715,27 +925,44 @@ classdef plane < handle
         
         function obj = print_tile(obj, t)
             box = t.orig_box;
-            [h w c] = size(obj.outimg);
-            for chan = 1:c
-                tmp_outimg = obj.outimg(box.row_min:box.row_max, ...
-                    box.col_min:box.col_max,chan);
-                tmp_tile = t.orig_data(:,:,chan);
-                tmp_outimg(t.orig_valid) = ...
-                    tmp_tile(t.orig_valid);
-                obj.outimg(box.row_min:box.row_max, ...
-                    box.col_min:box.col_max,chan) = tmp_outimg;
+            ii = 1;
+            for i=box.row_min:box.row_max
+                jj =1;
+                for j=box.col_min:box.col_max
+                    if(sum(obj.outimg(i,j,:),3)==0 && ...
+                       sum(t.orig_data(ii,jj,:))~=0);
+                        obj.outimg(i,j,:) = t.orig_data(ii,jj,:);
+                    end
+                    jj = jj+1;
+                end
+                ii = ii+1;
             end
         end
-        
-        function obj = print_uncropped_tile(obj, t, grid)
-            box = t.origbox;
+        function obj = print_tile_crop(obj, t)
+            box = t.cropped_box;
             ii = 1;
             for i=box.row_min:box.row_max-1
                 jj =1;
                 for j=box.col_min:box.col_max-1
                     if(sum(obj.outimg(i,j,:),3)==0 && ...
-                       sum(t.origdata(ii,jj,:))~=0 && sum(t.origdata(ii+1,jj+1,:)) ~= 0);
-                        obj.outimg(i,j,:) = t.origdata(ii,jj,:);
+                       sum(t.cropped_data(ii,jj,:))~=0 && sum(t.cropped_data(ii+1,jj+1,:)) ~= 0);
+                        obj.outimg(i,j,:) = t.cropped_data(ii,jj,:);
+                    end
+                    jj = jj+1;
+                end
+                ii = ii+1;
+            end
+        end
+        
+        function obj = print_uncropped_tile(obj, t, grid)
+            box = t.orig_box;
+            ii = 1;
+            for i=box.row_min:box.row_max-1
+                jj =1;
+                for j=box.col_min:box.col_max-1
+                    if(sum(obj.outimg(i,j,:),3)==0 && ...
+                       sum(t.orig_data(ii,jj,:))~=0 && sum(t.orig_data(ii+1,jj+1,:)) ~= 0);
+                        obj.outimg(i,j,:) = t.orig_data(ii,jj,:);
                         grid(i,j) = 1;
                     end
                     jj = jj+1;
@@ -747,6 +974,16 @@ classdef plane < handle
         
         function obj = blend_uncropped_tile(obj, t)
             box = t.orig_box;
+            
+            fillArea
+            filled = sum(obj.outimg,3) ~= 0;
+                keyboard
+                if (sum(sum(filled)) == (size(obj.outimg,1) * size(obj.outimg,2)))
+                    return
+                end
+                
+                
+                
             % mask is one where it's empty
             mask = sum(t.orig_data,3) == 0;
             ii = 1;
@@ -782,7 +1019,7 @@ classdef plane < handle
                     
         
         function obj = blend_tile(obj, t)
-            box = t.box;
+            box = t.cropped_box;
             ii = 1;
             for i=box.row_min:box.row_max
                 jj = 1;
@@ -793,10 +1030,10 @@ classdef plane < handle
                             obj.blendpx]);
                         alpha = mindist/obj.blendpx;
                         obj.outimg(i,j,:) = ...
-                            t.data(ii,jj,:)*alpha +...
+                            t.cropped_data(ii,jj,:)*alpha +...
                             obj.outimg(i,j,:)*(1-alpha);
                     else
-                        obj.outimg(i,j,:) = t.data(ii,jj,:);
+                        obj.outimg(i,j,:) = t.cropped_data(ii,jj,:);
                     end
                     jj = jj+1;
                 end

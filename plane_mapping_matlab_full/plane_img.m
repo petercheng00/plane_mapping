@@ -100,6 +100,18 @@
                    obj.useful = false;
                end
            end
+           
+           function obj = set_tile_no_rotate(obj, p)
+               box = p.get_camera_box(obj.t, 5000);
+               obj = obj.set_tile(box, p);
+               if (sum(sum(obj.mytile.orig_valid)) > 0)
+                   obj.useful = true;
+                   obj.mytile = obj.mytile.crop();
+                   obj = obj.set_tile_on_plane(p);
+               else
+                   obj.useful = false;
+               end
+           end
       
            function obj = set_tile(obj, box, p)
                obj.mytile = tile();
@@ -140,6 +152,13 @@
                % don't think this is needed anymore
                %obj.mytile_on_plane = ...
                %    obj.mytile_on_plane.set_border_mask(p.blendpx);
+           end
+           
+           function obj = doImageGain(obj, gain)
+               keyboard
+               obj.mytile_on_plane.orig_data = obj.mytile_on_plane.orig_data * gain;
+               obj.mytile_on_plane.cropped_data = obj.mytile_on_plane.cropped_data * gain;
+               keyboard
            end
            
            function contribution = get_contribution(obj, grid)

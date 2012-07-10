@@ -328,9 +328,10 @@ function occluded = isoccluded(dest, source, planes, plane_to_ignore)
         end
         p = planes(i);
         if sum(p.normal == [0;0;1])==3 || sum(p.normal == [0;0;-1])==3
-            % don't do intersection test with floors/ceilings, since often
-            % we have weird cases with multiple ceilings
-            continue;
+            % sometimes we don't do intersection test with floors/ceilings,
+            % when we have weird cases with multiple ceilings. skip such
+            % tests by uncommenting the following continue statement
+            % continue;
         end
         % find intersection between line and unbounded plane
         % n dot v = d where n is normal, d is plane offset

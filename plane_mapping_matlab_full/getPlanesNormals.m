@@ -48,7 +48,7 @@ for cplane=1:1:tot_planes
         %plot the delimited plane
         %patch('vertices',[0 6 0; 0 9 0; 1 9 0; 0 6 1; 0 9 1; 1 9 1],'faces',[1 2 5 4; 2 3 6 5],'facecolor',[.5 .5 .5])
         %view(3)
-        if counter > 14
+        if ((counter > 0 && counter < 100) || counter == 187)
             vert=[planes.p(cplane).x', planes.p(cplane).y',planes.p(cplane).z']; 
             fac=[1:1:planes.p(cplane).npoints];
             patch('vertices', vert,'faces',fac,'facecolor',[(cplane/tot_planes*.9) 0.5 (cplane/tot_planes*.7)]); hold on;

@@ -24,20 +24,23 @@ global fillHoles
 %MODIFY THESE VALUES%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-modelName = 'nov222011_set1_leftRight_kims_v2';
+
+modelName = 'aug252011_all_set3_kims_v0';
+%modelName = 'nov222011_set1_leftRight_kims_v2_heightsFixed_floorSplit';
 %name of folder in E drive
-%imgPath = 'E:\projects\indoormapping\data\2011825-3\images';
-imgPath = 'E:\projects\indoormapping\data\20111122-1\images';
+imgPath = 'E:\projects\indoormapping\data\2011825-3\images';
+%imgPath = 'E:\projects\indoormapping\data\20111122-1\images';
 
 prePath = 'C:\\Users\\pcheng\\Documents\\plane_mapping\\plane_mapping_matlab_full';
+%prePath = 'F:\projects\plane_mapping\plane_mapping_matlab_full';
 
-textureStyle = 'dynprog';
+textureStyle = 'dynprogsplit_plane';
 
 %texture extrapolation
 fillHoles = 0;
 
 %0 for all
-planesToTexture = 5;
+planesToTexture = 3;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

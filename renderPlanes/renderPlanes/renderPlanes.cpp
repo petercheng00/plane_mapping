@@ -7,6 +7,11 @@ string mapFile = "";
 string iveFile = "";
 string outputFile = "";
 
+bool textureOn = true;
+bool noTexture = false;
+bool noSave = false;
+bool showTriangles = false;
+
 //liberally borrowed from modeling.exe
 void doEarClipping( Geometry* planeGeometry, Vec2Array* planeVertices )
 {
@@ -77,6 +82,12 @@ void doEarClipping( Geometry* planeGeometry, Vec2Array* planeVertices )
 				((planeVertices->at(polyList[nextIndex]).x() ==  planeVertices->at(polyList[curIndex]).x()) &&
 				(planeVertices->at(polyList[nextIndex]).y() ==  planeVertices->at(polyList[curIndex]).y()))) {
 				cerr << "removing duplicate points" << endl;
+				DrawElementsUInt* currTriangle =
+					new DrawElementsUInt( PrimitiveSet::POLYGON, 0 );
+				currTriangle->push_back(polyList[prevIndex]);
+				currTriangle->push_back(polyList[curIndex]);
+				currTriangle->push_back(polyList[nextIndex]);
+				triangles.push_back(currTriangle);
 				polyList.erase(polyList.begin() + curIndex);
 				curIterations=0;
 				continue;
@@ -251,7 +262,10 @@ void applyTextures(Group* root, vector<string>& fileVect, vector<Vec2Array*>& co
 
 void parseMapFile(string mapFile, vector<string>& fileVect, vector<Vec2Array*>& coordVect) {
 	ifstream inFile(mapFile);
-	if(!inFile.is_open()){cerr << "error opening .map file" << endl;;}
+	if(!inFile.is_open()){
+		cerr << "error opening .map file - no textures will be applied" << endl;
+		return;
+		}
 	int numPlanes;
 	inFile >> numPlanes;
 	int i = 0;
@@ -430,9 +444,6 @@ bool RPEventHandler::handle(const osgGA::GUIEventAdapter& ea,osgGA::GUIActionAda
 
 int main(int argc, char** argv)
 {
-	bool noTexture = false;
-	bool noSave = false;
-	bool showTriangles = false;
 	if (argc > 1){
 		ifstream inputFile(argv[1]);
 		outputFile = string(argv[1]);
@@ -477,9 +488,7 @@ int main(int argc, char** argv)
     Group* root = new Group();
     vector<string> planeToImageFile;
     vector<Vec2Array*> planeToImageCoords;
-	if (!noTexture) {
-	    parseMapFile(mapFile, planeToImageFile, planeToImageCoords);
-	}
+	parseMapFile(mapFile, planeToImageFile, planeToImageCoords);
     parseModelFile(root);
 	if (noTexture){
 		applyColors(root, showTriangles);

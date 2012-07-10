@@ -1,7 +1,6 @@
  function [bbCorners,relCoords] = calculate_bounding_box(vertices,normal)
     % Rotate the plane such that it has a constant Z value (R1) and optimal
     % bounding box is axis aligned (R2)
-
     upVect = [0, 0, 1];
     if normal(1) == 0 && normal(2) == 0 && (normal(3) == 1 || normal(3) == -1)
         % plane is already flat, so R1 is just identity.
