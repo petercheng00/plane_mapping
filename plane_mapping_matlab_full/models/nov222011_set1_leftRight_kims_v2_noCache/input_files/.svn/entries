@@ -1,112 +1,0 @@
-10
-
-dir
-0
-https://svn.code.sf.net/p/pcplanefitting/code/plane_mapping_matlab_full/models/nov222011_set1_leftRight_kims_v2/input_files
-https://svn.code.sf.net/p/pcplanefitting/code
-add
-
-
-
-
-
-has-props
-has-prop-mods
-
-
-
-
-
-
-
-
-
-
-
-
-f0f584c5-50ef-4684-9186-ae2d1239deb7
-
-translations.txt
-file
-
-
-
-add
-
-rotations.txt
-file
-
-
-
-add
-
-filenames.txt
-file
-
-
-
-add
-
-nov222011_set1_leftRight_kims_v2.model
-file
-
-
-
-add
-
-nov222011_set1_leftRight_kims_v2_orig.model
-file
-
-
-
-add
-
-nov222011_set1_leftRight_kims_v2_full.model
-file
-
-
-
-add
-
-sortedAtlasImages.txt
-file
-
-
-
-add
-
-nov222011_set1_leftRight_kims_v2_flipped.model
-file
-
-
-
-add
-
-masks.txt
-file
-
-
-
-add
-
-imgplanes.txt
-file
-
-
-
-add
-
-input_files - Shortcut.lnk
-file
-
-
-
-add
-
-
-
-
-
-has-props
-has-prop-mods
-
