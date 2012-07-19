@@ -9,3 +9,6 @@
 !*.m
 !*.c
 !*.cpp
+!*.model
+!*.rpinput
+!*.map
