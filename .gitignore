@@ -1,5 +1,10 @@
-/*
+#ignore everything
+*
 
+#don't ignore directories
+!*/
+
+#don't ignore gitignore and source files
 !.gitignore
 !*.m
 !*.c
