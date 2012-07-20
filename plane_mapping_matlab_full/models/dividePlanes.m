@@ -1,5 +1,12 @@
 function dividePlanes()
 
+
+%minimum score required to add a triangle
+scoreThreshold = 0.1;
+    
+%minimum score loss allowed when adding a triangle
+diffThreshold = 0.2712;
+
 %select input .model file
 [inModelFile, inModelPath] = uigetfile('*.model', 'Select model file');
 inModelFid = fopen(strcat(inModelPath, inModelFile));
@@ -42,7 +49,11 @@ for i = 1:numPlanes
         R1 = R3D(rotationAngle, rotationAxis);
         plane.vertices = (R1 * plane.vertices')';
     end
-	outputPlanes = divide2DPlane(plane);
+    %ensure points go in clockwise order
+    if ~isClockwise(plane.vertices(:,1:2))
+        plane.vertices = flipud(plane.vertices);
+    end
+	outputPlanes = divide2DPlane(plane, scoreThreshold, diffThreshold);
 	
 	%rotate planes back into 3D space
 	for j = 1:size(outputPlanes)
@@ -72,4 +83,21 @@ end
 
 fclose(outModelFid);
 
+for i=1:size(outputPlanes,2);
+    vert = [outputPlanes(i).vertices(:,1),outputPlanes(i).vertices(:,2),outputPlanes(i).vertices(:,3)];
+    fac=1:size(outputPlanes(i).vertices,1);
+    patch('vertices', vert,'faces',fac,'facecolor',rand(1,3));
+    view(3); 
+    daspect([1 1 1]);
+    axis('tight');
+end
+
+end
+
+function c = isClockwise(v)
+    slopeSum = (v(1,1) - v(end,1)) * (v(1,2) + v(end,2));
+    for j = 2:size(v,1)
+        slopeSum = slopeSum + ((v(j,1) - v(j-1,1))*(v(j,2) + v(j-1,2)));
+    end
+    c = slopeSum >= 0;
 end

@@ -1,8 +1,11 @@
 function triangles = earClipping(plane)
+    %we want a plane with vertices in clockwise order. If following
+    %convention, normal should be pointing upwards as well.
     vertices = plane.vertices;
     triangles = [];
     curIndex = 0;
     curIterations = 1;
+    
     
     while(size(vertices,1) > 0)
         if size(vertices,1) == 3
@@ -21,18 +24,18 @@ function triangles = earClipping(plane)
             
             
             curIndex = mod((curIndex + 1), size(vertices, 1));
+            if curIndex == 0
+                curIndex = size(vertices,1);
+            end
             prevIndex = curIndex - 1;
-            if prevIndex < 0
-                prevIndex = size(vertices,1) - 1;
+            if prevIndex == 0
+                prevIndex = size(vertices,1);
             end
             nextIndex = curIndex + 1;
-            if nextIndex > size(vertices, 1) - 1
-                nextIndex = 0;
+            if nextIndex == size(vertices, 1) + 1;
+                nextIndex = 1;
             end
             
-            curIndex = curIndex + 1;
-            prevIndex = prevIndex + 1;
-            nextIndex = nextIndex+ 1;
             
             
             numInside = 0;
@@ -49,9 +52,7 @@ function triangles = earClipping(plane)
             v1 = vertices(curIndex,:) - vertices(prevIndex,:);
             v2 = vertices(nextIndex,:) - vertices(curIndex,:);
             crossV = cross(v1,v2);
-            %compareCross = (crossV(3) * plane.equation(3)) > 0;
-            compareCross = crossV(3) > 0;
-            if numInside == 0 && compareCross
+            if numInside == 0 && crossV(3) < 0
                 t.vertices = [vertices(prevIndex,:); vertices(curIndex,:); vertices(nextIndex,:)];
                 triangles = [triangles, t];
                 vertices = [vertices(1:curIndex-1,:); vertices(curIndex+1:end,:)];

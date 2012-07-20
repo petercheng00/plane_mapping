@@ -1,7 +1,6 @@
-function newPlanes = divide2DPlane(plane)
+function newPlanes = divide2DPlane(plane, scoreThreshold, diffThreshold)
 %input vertices are in 3D, but the zVals should all be the same, aka a horizontal plane
-
-	threshold = 0.5;
+    
     triangles = earClipping(plane);
     %sort the triangles biggest to smallest
     triangleAreas = zeros(1,size(triangles,2));
@@ -11,13 +10,13 @@ function newPlanes = divide2DPlane(plane)
     [~, I] = sort(triangleAreas);
     triangles = triangles(I);
 
-    %this is for just doing triangulation
-    newPlanes = triangles;
-    for i = 1:size(newPlanes,2)
-        newPlanes(i).numVertices = 3;
-        newPlanes(i).equation = [1,2,3,4];
-    end
-    return
+    %this is for just doing triangulation and debugging ear clipping
+    %newPlanes = triangles;
+    %for i = 1:size(newPlanes,2)
+    %    newPlanes(i).numVertices = 3;
+    %    newPlanes(i).equation = [0,0,0,1];
+    %end
+    %return
 
     
     newPlanes = [];
@@ -33,6 +32,7 @@ function newPlanes = divide2DPlane(plane)
         %pick a triangle to start with
         currId = find(triangleIds == 1);
         triangleIds(currId(1)) = 2;
+        oldScore = 0;
         while(true)
             candidateIds = find(triangleIds == 1 | triangleIds == 3);
             if size(candidateIds,2) == 0
@@ -50,9 +50,15 @@ function newPlanes = divide2DPlane(plane)
                     end
                 end
             end
-            if bestScore > threshold
+            if bestScore > scoreThreshold && (oldScore == 0 || oldScore - bestScore < diffThreshold)
                 triangleIds(bestAdjacent) = 2;
+                oldScore = bestScore;
             else
+                if bestScore < scoreThreshold
+                    disp('did not meet score Thresh');
+                else
+                    disp('did not meet diff Thresh');
+                end
                 break;
             end
             
