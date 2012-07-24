@@ -29,9 +29,10 @@ classdef plane < handle
         function obj = load_images(obj)
             n = 1;
             step = 1;
-            %if size(obj.image_filenames,1) > 100
-            %    step = round(size(obj.image_filenames,1) / 100);
-            %end
+            if size(obj.image_filenames,1) > 500
+                %step = round(size(obj.image_filenames,1) / 100);
+                step = 2;
+            end
             for imgnum = 1:step:size(obj.image_filenames,1)
             %for imgnum = 1:5
                 fprintf('Loading img number %d\tn=%d\tout of %d\n', imgnum,n,size(obj.image_filenames,1));
@@ -326,9 +327,8 @@ classdef plane < handle
                     end
                     i2 = obj.images(idx2);
                     obj.outimg = zeros(obj.height,obj.width,3);
-                    obj = obj.print_tile(i1.mytile_on_plane);
-                    cost = obj.cost_of_tile(i2.mytile_on_plane);
-
+                    cost = obj.cost_of_tiles(i1.mytile_on_plane, i2.mytile_on_plane);
+                    
                     % End loop if it no longer overlaps
                     if(cost == Inf )
                         fprintf('\n');
@@ -411,7 +411,7 @@ classdef plane < handle
             end
             obj.images = obj.images(2:size(obj.images,2)-1);
             obj.outimg = zeros(obj.height,obj.width,3);
-            images = find(imageIndices);
+            images = (find(imageIndices))';
         end
         
         
@@ -772,7 +772,7 @@ classdef plane < handle
         function obj = blend_uncropped_pieces(obj, images)
             for i = 1:size(images,2)
                 idx = images(i);
-                disp(['uncropped blending tile ', num2str(i)]);
+                disp(['uncropped blending tile ', num2str(idx)]);
                 obj = obj.blend_uncropped_tile(obj.images(idx).mytile_on_plane);
             end
         end
@@ -929,6 +929,27 @@ classdef plane < handle
         end
        
         
+        function cost = cost_of_tiles(obj, t1, t2)
+            box = t1.orig_box;
+            tempImg = obj.outimg;
+            tempImg(:,:,:) = 0;
+            tempImg(box.row_min:box.row_max,box.col_min:box.col_max,:) = t1.orig_data;            
+            [~,~, c] = size(tempImg);
+            box = t2.orig_box;
+            existing_tile = tempImg(box.row_min:box.row_max,...
+                                        box.col_min:box.col_max,:);
+            existing_mask = sum(existing_tile,3) > 0;
+            added_tile = t2.orig_data;
+            %added_mask = t.border_mask;
+            ssd = 0;
+            for chan = 1:c
+                ssd = ssd + sum(sum((existing_tile(:,:,chan) - ...
+                                    added_tile(:,:,chan)).^2 .* ...
+                                    existing_mask));
+            end
+            cost = ssd;
+        end
+        
         function cost = cost_of_tile(obj, t)
             [~,~, c] = size(obj.outimg);
             box = t.orig_box;
@@ -945,6 +966,7 @@ classdef plane < handle
             end
             cost = ssd;
         end
+        
         
         function obj = print_tile(obj, t)
             box = t.orig_box;

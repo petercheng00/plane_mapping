@@ -80,6 +80,7 @@ elseif (strcmp(myTextureStyle, 'dynprog'))
     disp(['plane ', num2str(pnum), ': doing minimum blending'])
     p = p.minimum_blending(images);
     p = p.minimum_blending(1:size(p.images,2));
+    keyboard
 elseif (strcmp(myTextureStyle, 'split_plane'))
     disp(['plane ', num2str(pnum), ': texturing using split_plane method (stewarts)'])
     step = 5;

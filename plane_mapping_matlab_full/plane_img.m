@@ -91,10 +91,13 @@
                    obj.mytile_on_plane = obj.mytile_on_plane.crop();
                    if (numel(obj.mytile_on_plane.cropped_valid) > 0)
                        angle = rectify_image(uint8(obj.mytile_on_plane.cropped_data));
-                       obj.mytile = obj.mytile.rotate(angle);
-                       obj = obj.set_tile_on_plane(p);
+                       %obj.mytile = obj.mytile.rotate(angle);
+                       %obj = obj.set_tile_on_plane(p);
+                       %obj.mytile_on_plane = obj.mytile_on_plane.crop();
+                       obj.mytile_on_plane = obj.mytile_on_plane.rotate(angle);
                        obj.mytile_on_plane = obj.mytile_on_plane.crop();
                        obj.useful = (numel(obj.mytile_on_plane.cropped_valid) > 0);
+
                    else
                        obj.useful = false;
                    end
