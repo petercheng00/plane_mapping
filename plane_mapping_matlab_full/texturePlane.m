@@ -1,13 +1,22 @@
-function texturePlane(planes,pnum, outputPath, textureStyle, fillHoles)
+function texturePlane(planes,pnum, outputPath, textureStyle, fillHoles, usePreProcessed)
 
 
 addpath('sift');
 addpath('ransac');
 
-usePreProcessed = false;
-
 
 p = planes(pnum);
+
+myTextureStyle = textureStyle;
+if (strcmp(textureStyle, 'dynprogsplit_plane'))
+    if (p.normal(3) == 1 || p.normal(3) == -1)
+        myTextureStyle = 'split_plane';
+    else
+        myTextureStyle = 'dynprog';
+        return
+    end
+end
+
 
 p.outimg = zeros(p.height, p.width, 3);
 
@@ -28,7 +37,7 @@ if ~usePreProcessed || ~exist(preProcessedFile, 'file')
         return
     end
     p = p.sort_images();
-    disp(['plane ', num2str(pnum), ': tiles set, num planes = ', num2str(size(p.images,2))]);
+    disp(['plane ', num2str(pnum), ': tiles set, num images = ', num2str(size(p.images,2))]);
     
     % not sure why, but images with diagonal sections get antialiased, which
     % messes up our blending. We need to remove these antialiased pixels
@@ -37,10 +46,10 @@ if ~usePreProcessed || ~exist(preProcessedFile, 'file')
     p = p.set_sift();
     p = p.fix_locations();
     p = p.filter_useless();
-    disp(['plane ', num2str(pnum), ': sift adjustment done, num planes = ', num2str(size(p.images,2))]);
+    disp(['plane ', num2str(pnum), ': sift adjustment done, num images = ', num2str(size(p.images,2))]);
     checkOcclusion(planes,pnum);
     p = p.filter_useless();
-    disp(['plane ', num2str(pnum), ': occlusion checks complete, num planes = ', num2str(size(p.images,2))]);
+    disp(['plane ', num2str(pnum), ': occlusion checks complete, num images = ', num2str(size(p.images,2))]);
     
     %disp('averaging image intensities');
     %p = p.fix_intensities();
@@ -58,15 +67,6 @@ else
     p.images = preProcessed.preProcessedImages;
 end
 
-myTextureStyle = textureStyle;
-if (strcmp(textureStyle, 'dynprogsplit_plane'))
-    if (p.normal(3) == 1 || p.normal(3) == -1)
-        myTextureStyle = 'split_plane';
-    else
-        myTextureStyle = 'dynprog';
-    end
-end
-
 if (strcmp(myTextureStyle, 'naive'))
     p = p.print_images();
 elseif (strcmp(myTextureStyle,'greedy_area'))
@@ -80,7 +80,6 @@ elseif (strcmp(myTextureStyle, 'dynprog'))
     disp(['plane ', num2str(pnum), ': doing minimum blending'])
     p = p.minimum_blending(images);
     p = p.minimum_blending(1:size(p.images,2));
-    keyboard
 elseif (strcmp(myTextureStyle, 'split_plane'))
     disp(['plane ', num2str(pnum), ': texturing using split_plane method (stewarts)'])
     step = 5;

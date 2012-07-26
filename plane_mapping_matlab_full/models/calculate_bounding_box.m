@@ -95,11 +95,17 @@
         if flipHoriz
             relX = 1 - relX;
         end
-        if relX < 0.0001
+        if relX < 0.001
             relX = 0;
         end
-        if relY < 0.0001
+        if relY < 0.001
             relY = 0;
+        end
+        if relX > 0.999
+            relX = 1;
+        end
+        if relY > 0.999
+            relY = 1;
         end
         relCoords(i,:) = [relX, relY];
     end
