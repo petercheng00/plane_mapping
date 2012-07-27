@@ -1,14 +1,4 @@
 addpath models
-% Run this on all the big planes
-
-% The first argument is the plane number, assuming you start counting at 1
-% In the files they are listed as planes 0,1,2,3, etc. I count 1,2,3 etc.
-
-% The second argument is 1 if you want to generate the images and SIFT features
-% from scratch, and zero if you want to use the previously generated images and
-% SIFT features. If you run it with '1', from that point forward you can run it
-% with '0' and it will skip all the slow stuff. The images and SIFT features
-% are saved in the plane folder as 'distmats.mat'
 
 %name of folder in matlab directory
 global modelName
@@ -35,12 +25,14 @@ prePath = 'C:\\Users\\pcheng\\Documents\\plane_mapping\\plane_mapping_matlab_ful
 %prePath = 'F:\projects\plane_mapping\plane_mapping_matlab_full';
 
 textureStyle = 'dynprogsplit_plane';
-
 %texture extrapolation
-fillHoles = 0;
+fillHoles = false;
+
+%use saved intermediate images if available
+usePreProcessed = true;
 
 %0 for all
-planesToTexture = 198;
+planesToTexture = 78;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -86,7 +78,7 @@ if runParallel
     matlabpool
     parfor planeInd = 1:size(planesToTexture, 2)
         planeNum = planesToTexture(planeInd);
-        texturePlane(planes,planeNum, outputPath, textureStyle, fillHoles);
+        texturePlane(planes,planeNum, outputPath, textureStyle, fillHoles, usePreProcessed);
         %hopefully matlab frees this memory
         %planes(planeNum).images = [];
     end
@@ -96,7 +88,7 @@ else
     for planeInd = 1:size(planesToTexture, 2)
         planeNum = planesToTexture(planeInd);
         disp(['texturing planes ', num2str(planeNum)]);
-        texturePlane(planes,planeNum, outputPath, textureStyle, fillHoles);
+        texturePlane(planes,planeNum, outputPath, textureStyle, fillHoles, usePreProcessed);
         %hopefully matlab frees this memory
         %planes(planeNum).images = [];
     end

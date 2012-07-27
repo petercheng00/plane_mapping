@@ -415,25 +415,32 @@ classdef plane < handle
         end
         
         
-        function candidateImages = getCandidateImages(obj, section, imageIndices, maxAngle)
-            candidateIndices = false(size(imageIndices,2));
+        function [fullCandidates, partialCandidates] = getCandidateImages(obj, section, imageIndices, maxAngle)
+            fullIndices = false(1,size(imageIndices,2));
+            partialIndices = false(1,size(imageIndices,2));
+            %if we have no candidates, use partials, which only partially
+            %fill the section
             for i = 1:size(imageIndices,2)
                 if imageIndices(i) == 0
                     continue
                 end
                 currImage = obj.images(imageIndices(i));
                 box = currImage.mytile_on_plane.orig_box;
-                if section.row_max > box.row_max || section.row_min < box.row_min || ...
-                        section.col_max > box.col_max || section.col_min < box.col_min
+                data = currImage.mytile_on_plane.orig_data;
+                if section.row_max < box.row_min || section.row_min > box.row_max || ...
+                        section.col_max < box.col_min || section.col_min > box.col_max
                     continue
                 end
-                data = currImage.mytile_on_plane.orig_data;
-                y_min = section.row_min - box.row_min + 1;
-                y_max = section.row_max - box.row_min + 1;
-                x_min = section.col_min - box.col_min + 1;
-                x_max = section.col_max - box.col_min + 1;
-                if sum(data(y_min,x_min,:)) == 0 || sum(data(y_min,x_max,:)) == 0 || ...
-                        sum(data(y_max,x_min,:)) == 0 || sum(data(y_max,x_max,:)) == 0
+                y_min_offset = section.row_min - box.row_min;
+                y_max_offset = section.row_max - box.row_min;
+                x_min_offset = section.col_min - box.col_min;
+                x_max_offset = section.col_max - box.col_min;
+                y_min_source = max(1,min(box.row_max-box.row_min+1, y_min_offset + 1));
+                y_max_source = max(1,min(box.row_max-box.row_min+1, y_max_offset + 1));
+                x_min_source = max(1,min(box.col_max-box.col_min+1, x_min_offset + 1));
+                x_max_source = max(1,min(box.col_max-box.col_min+1, x_max_offset + 1));
+                
+                if sum(data(y_min_source:y_max_source,x_min_source:x_max_source,:)) == 0
                     continue
                 end
                 section_center_world = obj.get_world_pts([(section.row_max+section.row_min)/2;(section.col_max+section.col_min)/2]);
@@ -448,17 +455,18 @@ classdef plane < handle
                 if angleBetween > maxAngle
                     continue
                 end
-                candidateIndices(i) = 1;
-                %candidateImages = [candidateImages imageIndices(i)];
+                
+               if sum(data(y_min_source,x_min_source,:)) == 0 || sum(data(y_min_source,x_max_source,:)) == 0 || ... 
+                       sum(data(y_max_source,x_min_source,:)) == 0 || sum(data(y_max_source,x_max_source,:)) == 0;
+                   partialIndices(i) = 1;
+               else
+                   fullIndices(i) = 1;
+               end
             end
-            candidateImages = imageIndices(candidateIndices);
+            fullCandidates = imageIndices(fullIndices);
+            partialCandidates = imageIndices(partialIndices);
         end
         
-        
-        %Score calculated:
-        %cameraDirection = -1 * normalized(rotMatrix * [0,0,1])
-        %cosineValue = cameraDirection * plane Normal
-        %score = (1/distToCamera) * cosineValue
         function [obj, section] = textureWithBestImage(obj, origSection, imageIndices)
             section = origSection;
             bestScore = 0;
@@ -474,39 +482,95 @@ classdef plane < handle
                     section.bestImage = imageIndices(i);
                 end
             end
-            if section.bestImage == 0
+            if section.bestImage <= 0
                 return
             end
             bestImage = obj.images(section.bestImage);
             box = bestImage.mytile_on_plane.orig_box;
-            data = bestImage.mytile_on_plane.orig_data;
-            y_min = section.row_min - box.row_min + 1;
-            y_max = section.row_max - box.row_min + 1;
-            x_min = section.col_min - box.col_min + 1;
-            x_max = section.col_max - box.col_min + 1;
-            %obj.outimg(section.row_min:section.row_max, section.col_min:section.col_max,:) = ...
-                %data(y_min:y_max,x_min:x_max,:);
-            temp_tile = tile();
-            temp_tile.cropped_box = section;
-            temp_tile.cropped_data = data(y_min:y_max,x_min:x_max,:);
-            obj = obj.blend_tile(temp_tile);
+            sourceData = bestImage.mytile_on_plane.orig_data;
+            newData = zeros(section.row_max-section.row_min+1,...
+                section.col_max-section.col_min+1,3);
+            
+            y_min_offset = section.row_min - box.row_min;
+            y_max_offset = section.row_max - box.row_min;
+            x_min_offset = section.col_min - box.col_min;
+            x_max_offset = section.col_max - box.col_min;
+            y_min_source = max(1,min(box.row_max-box.row_min+1, y_min_offset + 1));
+            y_max_source = max(1,min(box.row_max-box.row_min+1, y_max_offset + 1));
+            x_min_source = max(1,min(box.col_max-box.col_min+1, x_min_offset + 1));
+            x_max_source = max(1,min(box.col_max-box.col_min+1, x_max_offset + 1));
+            y_min_new = 1 + (-1 * min(0, y_min_offset));
+            y_max_new = 1 + (section.row_max-section.row_min) - max(0, section.row_max - box.row_max);
+            x_min_new = 1 + (-1 * min(0, x_min_offset));
+            x_max_new = 1 + (section.col_max-section.col_min) - max(0, section.col_max - box.col_max);
+            newData(y_min_new:y_max_new,x_min_new:x_max_new,:) = ...
+                sourceData(y_min_source:y_max_source,x_min_source:x_max_source,:);
+            section_tile = tile();
+            section_tile.cropped_box = section;
+            section_tile.cropped_data = newData;
+            obj = obj.blend_tile(section_tile);
+        end
+        
+        function [obj, section] = textureWithSelectedImages(obj, origSection, imageIndices)
+            section = origSection;
+            for i = 1:size(imageIndices,2)
+                newData = zeros(section.row_max-section.row_min+1,...
+                    section.col_max-section.col_min+1,3);
+
+                currImage = obj.images(imageIndices(i));
+                box = currImage.mytile_on_plane.orig_box;
+                sourceData = currImage.mytile_on_plane.orig_data;
+
+                
+                y_min_offset = section.row_min - box.row_min;
+                y_max_offset = section.row_max - box.row_min;
+                x_min_offset = section.col_min - box.col_min;
+                x_max_offset = section.col_max - box.col_min;
+                y_min_source = max(1,min(box.row_max-box.row_min+1, y_min_offset + 1));
+                y_max_source = max(1,min(box.row_max-box.row_min+1, y_max_offset + 1));
+                x_min_source = max(1,min(box.col_max-box.col_min+1, x_min_offset + 1));
+                x_max_source = max(1,min(box.col_max-box.col_min+1, x_max_offset + 1));
+                y_min_new = 1 + (-1 * min(0, y_min_offset));
+                y_max_new = 1 + (section.row_max-section.row_min) - max(0, section.row_max - box.row_max);
+                x_min_new = 1 + (-1 * min(0, x_min_offset));
+                x_max_new = 1 + (section.col_max-section.col_min) - max(0, section.col_max - box.col_max);
+                newData(y_min_new:y_max_new,x_min_new:x_max_new,:) = ...
+                    sourceData(y_min_source:y_max_source,x_min_source:x_max_source,:);
+                section_tile = tile();
+                section_tile.cropped_box = section;
+                section_tile.cropped_data = newData;
+                obj = obj.blend_tile(section_tile);
+                
+                
+            end
         end
         
         %Approximation of Stewart's method
         function obj = split_plane_texturing(obj, step, blend, maxCacheAngle, maxAngle)
+            step = step-1;
+            numSectionsX = ceil(obj.width/step);
+            numSectionsY = ceil(obj.height/step);
             %first create lots of rectangular sections
             s.row_min = -1;
             s.row_max = -1;
             s.col_min = -1;
             s.col_max = -1;
             s.bestImage = -1;
-            sections = repmat(s, 1, ((ceil(obj.width/step)-1) * (ceil(obj.height/step)-1)));
+            sections = repmat(s, 1, ((numSectionsX) * (numSectionsY)));
+            stepEndRow = obj.height;
+            if mod(obj.height,step) ~= 0
+                stepEndRow = stepEndRow + step - mod(obj.height,step);
+            end
+            stepEndCol = obj.width;
+            if mod(obj.width,step) ~= 0
+                stepEndCol = stepEndCol + step - mod(obj.width,step);
+            end
             i = 1;
-            for col_min = 1:step:obj.width-step
-                disp(['first ', num2str(col_min), ' out of ', num2str(obj.width)]);
-                col_max = min(col_min+step, obj.width);
-                for row_min = 1:step:obj.height-step
-                    row_max = min(row_min+step,obj.height);
+            for row_min = 1:step:stepEndRow
+                disp(['creating tile row ', num2str(row_min), ' out of ', num2str(obj.height)]);
+                row_max = min(row_min+step,obj.height);
+                for col_min = 1:step:stepEndCol
+                    col_max = min(col_min+step, obj.width);
                     sections(i).row_min = max(1,row_min-blend);
                     sections(i).row_max = min(obj.height,row_max+blend);
                     sections(i).col_min = max(1,col_min-blend);
@@ -515,12 +579,10 @@ classdef plane < handle
                     i = i + 1;
                 end
             end
-            numSectionsX = ceil(obj.width/step) - 1;
-            numSectionsY = ceil(obj.height/step) - 1;
             %spatial index of where each section is
             sectionGrid = reshape((1:size(sections,2)),numSectionsY,numSectionsX);
             for i = 1:size(sectionGrid,1)
-                disp([num2str(i), ' out of ', num2str(size(sectionGrid,1))]);
+                disp(['texturing tile row ', num2str(i), ' out of ', num2str(size(sectionGrid,1))]);
                 for j = 1:size(sectionGrid,2)
                     UImage = 0;
                     LImage = 0;
@@ -535,14 +597,21 @@ classdef plane < handle
                     if (i > 1) && (j > 1)
                         ULImage = sections(sectionGrid(i-1,j-1)).bestImage;
                     end
+                    %in testing this seemed to not help or be worse - but
+                    %don't have a good reason
                     %if (i > 1) && (j < size(sectionGrid,2))
                     %    URImage = sections(sectionGrid(i-1,j+1)).bestImage;
                     %end
-                    cacheCandidates = obj.getCandidateImages(sections(sectionGrid(i,j)), [UImage,LImage,ULImage], maxCacheAngle);
-                    [obj, s] = obj.textureWithBestImage(sections(sectionGrid(i,j)), cacheCandidates);
-                    if s.bestImage == 0
-                        allCandidates = obj.getCandidateImages(sections(sectionGrid(i,j)), (1:size(obj.images,2)), maxAngle);
-                        [obj, s] = obj.textureWithBestImage(sections(sectionGrid(i,j)), allCandidates);
+                    [fullCacheCandidates,~] = obj.getCandidateImages(sections(sectionGrid(i,j)), [UImage,LImage,ULImage], maxCacheAngle);
+                    if ~isempty(fullCacheCandidates)
+                        [obj, s] = obj.textureWithBestImage(sections(sectionGrid(i,j)), fullCacheCandidates);
+                    else
+                        [fullCandidates, partialCandidates] = obj.getCandidateImages(sections(sectionGrid(i,j)), (1:size(obj.images,2)), maxAngle);
+                        if ~isempty(fullCandidates)
+                            [obj, s] = obj.textureWithBestImage(sections(sectionGrid(i,j)), fullCandidates);
+                        else
+                            [obj, s] = obj.textureWithSelectedImages(sections(sectionGrid(i,j)), partialCandidates);
+                        end
                     end
                     if s.bestImage == 0
                         continue
@@ -983,6 +1052,21 @@ classdef plane < handle
                 ii = ii+1;
             end
         end
+        
+        function obj = print_tile_over_crop(obj, t)
+            box = t.cropped_box;
+            ii = 1;
+            for i=box.row_min:box.row_max-1
+                jj =1;
+                for j=box.col_min:box.col_max-1
+                    if sum(t.cropped_data(ii,jj,:))~=0
+                        obj.outimg(i,j,:) = t.cropped_data(ii,jj,:);
+                    end
+                    jj = jj+1;
+                end
+                ii = ii+1;
+            end
+        end        
         function obj = print_tile_crop(obj, t)
             box = t.cropped_box;
             ii = 1;
@@ -1062,13 +1146,47 @@ classdef plane < handle
             end
         end
                     
-        
         function obj = blend_tile(obj, t)
+            box = t.cropped_box;
+            newData = t.cropped_data;
+            LR_half_increase = 1:floor((box.col_max-box.col_min+1)/2);
+            if (mod(box.col_max-box.col_min+1,2))==1;
+                distRow = [LR_half_increase,LR_half_increase(end)+1,fliplr(LR_half_increase)];
+            else
+                distRow = [LR_half_increase, fliplr(LR_half_increase)];
+            end;
+            LR_distMat = repmat(distRow,[box.row_max-box.row_min+1,1]);
+            UD_half_increase= (1:floor((box.row_max-box.row_min+1)/2))';
+            if (mod(box.row_max-box.row_min+1,2))==1;
+                distCol = [UD_half_increase;UD_half_increase(end)+1;flipud(UD_half_increase)];
+            else
+                distCol = [UD_half_increase; flipud(UD_half_increase)];
+            end;
+            UD_distMat = repmat(distCol, [1, box.col_max-box.col_min+1]);
+            maxBlendpx = repmat(obj.blendpx, [box.row_max-box.row_min+1, box.col_max-box.col_min+1]);
+            minDistMat = min(LR_distMat,UD_distMat);
+            alphaMat = min((minDistMat ./ maxBlendpx),1);
+            oldData = obj.outimg(box.row_min:box.row_max,box.col_min:box.col_max,:);
+            oldDataEmpty = sum(oldData,3) == 0;
+            alphaMat(oldDataEmpty) = 1;
+            newDataEmpty = sum(newData,3) == 0;
+            alphaMat(newDataEmpty) = 0;
+            alphaMat = repmat(alphaMat, [1,1,3]);
+            obj.outimg(box.row_min:box.row_max,box.col_min:box.col_max,:) = ((1-alphaMat) .* oldData) + (alphaMat .* newData);
+        end
+        
+        %slow way of doing it, but more readable. Same thing happens in new
+        %way
+        function obj = blend_tile_old(obj, t)
             box = t.cropped_box;
             ii = 1;
             for i=box.row_min:box.row_max
                 jj = 1;
                 for j=box.col_min:box.col_max
+                    if(sum(t.cropped_data(ii,jj,:)) == 0)
+                        jj = jj+1;
+                        continue
+                    end
                     if(sum(obj.outimg(i,j,:),3)~=0)
                         mindist = min([ii,box.row_max-i,...
                             jj,box.col_max-j,...

@@ -2,6 +2,7 @@ function checkOcclusion(planes, plane_index)
   target_plane = planes(plane_index);
   images = target_plane.images;
   for i = 1:size(images,2)
+  %for i = 11:11
       disp(['Checking occlusion for image ', num2str(i)]);
       curr_box = images(i).mytile_on_plane.orig_box;
       gridStepY = 40;
@@ -9,7 +10,6 @@ function checkOcclusion(planes, plane_index)
       maxSubDivs = 4;
       numSectionsY = ceil((curr_box.row_max - curr_box.row_min + 1)/gridStepY);
       numSectionsX = ceil((curr_box.col_max - curr_box.col_min + 1)/gridStepX);
-      
       for j = 1:numSectionsY
           for k = 1:numSectionsX
               row_min = curr_box.row_min + (j-1) * gridStepY;
@@ -64,15 +64,19 @@ function subdivideForOcclusion(planes, plane_index, imgnum, depth, maxDepth, ...
   UR_result = occludedOrOffPlane(planes, plane_index, UR_pt_world, camera_pt_world);
   LR_result = occludedOrOffPlane(planes, plane_index, LR_pt_world, camera_pt_world);
   if LL_result && UL_result && UR_result && LR_result
+      %plot(planes(plane_index).vertices(1,:),planes(plane_index).vertices(2,:))
+      %hold on
+      %verts = [LL_pt_world,LR_pt_world,UR_pt_world,UL_pt_world];
+      %scatter(verts(1,:),verts(2,:))
+      %keyboard
       occludeRectangle(target_plane, imgnum, row_min, row_max, col_min, col_max);
       return
-  end     
-  
-  if ~LL_result && ~UL_result && ~UR_result && ~LR_result
+  end
+  if ~(LL_result || UL_result || UR_result || LR_result)
       return
   end
   if 1
-      if depth == maxDepth
+      if (depth == maxDepth)
           % this does color-based occlusion, but not very well.
           if 0
               [rows columns, channels] = size(data_in_section);
@@ -183,17 +187,17 @@ end
 
 function invalid = occludedOrOffPlane(planes, plane_index, plane_pt, source_pt)
   [center_2d, vertices_2d] = project_2d(planes(plane_index), plane_pt);
+  
   onPlane = polygonCheck(center_2d, vertices_2d);
   invalid = (~onPlane) || (isoccluded(plane_pt, source_pt, planes, plane_index));
 end
 
 function occludeRectangle(target_plane, imgnum, row_min, row_max, col_min, col_max)
   curr_box = target_plane.images(imgnum).mytile_on_plane.orig_box;
-  empty_patch = zeros(row_max-row_min+1,col_max-col_min+1);
   target_plane.images(imgnum).mytile_on_plane.orig_valid(row_min-curr_box.row_min+1:row_max-curr_box.row_min+1, ... 
-      col_min-curr_box.col_min+1:col_max-curr_box.col_min+1) = empty_patch;
+      col_min-curr_box.col_min+1:col_max-curr_box.col_min+1) = 0;
   target_plane.images(imgnum).mytile_on_plane.orig_data(row_min-curr_box.row_min+1:row_max-curr_box.row_min+1, ... 
-      col_min-curr_box.col_min+1:col_max-curr_box.col_min+1,:) = repmat(empty_patch,[1,1,3]);
+      col_min-curr_box.col_min+1:col_max-curr_box.col_min+1,:) = 0;
 
 
   cropped_box = target_plane.images(imgnum).mytile_on_plane.cropped_box;
@@ -201,11 +205,10 @@ function occludeRectangle(target_plane, imgnum, row_min, row_max, col_min, col_m
   cropped_row_max = min(max(1, row_max - cropped_box.row_min+1),cropped_box.row_max-cropped_box.row_min+1);
   cropped_col_min = min(max(1, col_min - cropped_box.col_min+1),cropped_box.col_max-cropped_box.col_min+1);
   cropped_col_max = min(max(1, col_max - cropped_box.col_min+1),cropped_box.col_max-cropped_box.col_min+1);
-  empty_patch = zeros(cropped_row_max-cropped_row_min+1,cropped_col_max-cropped_col_min+1);
   target_plane.images(imgnum).mytile_on_plane.cropped_valid(cropped_row_min:cropped_row_max, ... 
-      cropped_col_min:cropped_col_max) = empty_patch;
+      cropped_col_min:cropped_col_max) = 0;
   target_plane.images(imgnum).mytile_on_plane.cropped_data(cropped_row_min:cropped_row_max, ... 
-      cropped_col_min:cropped_col_max,:) = repmat(empty_patch,[1,1,3]);
+      cropped_col_min:cropped_col_max,:) = 0;
 end
 
 function fillRectangleWithData(target_plane, imgnum, row_min, row_max, col_min, col_max, data)

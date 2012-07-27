@@ -10,7 +10,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 1
 0 1
 0 0
-0.9999 0.0007781
+1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures3/dynprog.jpg
 0 0
@@ -22,7 +22,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 1
 0 1
 0 0
-0.9999 0
+1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures5/dynprog.jpg
 0 0
@@ -33,8 +33,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures6/split_plane.jpg
 1 1
 0 1
-0.0001123 0
-0.9999 0.0001641
+0 0
+1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures7/dynprog.jpg
 0 0
@@ -45,8 +45,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures8/split_plane.jpg
 1 1
 0 1
-0 0.0001052
-0.9999 0
+0 0
+1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures9/dynprog.jpg
 0 0
@@ -58,7 +58,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 1
 0 1
 0 0
-0.9999 0
+1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures11/dynprog.jpg
 0 0
@@ -69,8 +69,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures12/split_plane.jpg
 1 1
 0 1
-0.0001105 0
-0.9999 0.0001641
+0 0
+1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures13/dynprog.jpg
 0 0
@@ -82,7 +82,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 1
 0 1
 0 0
-0.9999 0
+1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures15/dynprog.jpg
 0 0
@@ -92,7 +92,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures16/split_plane.jpg
 0 0
-0.9999 0.0002694
+1 0
 1 1
 0 1
 4
@@ -105,8 +105,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures18/split_plane.jpg
 1 1
 0 1
-0.0001005 0
-0.9999 0.0001642
+0 0
+1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures19/dynprog.jpg
 0 0
@@ -124,7 +124,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 1
 0 1
 0 0
-0.9999 0
+1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures22/dynprog.jpg
 1 1
@@ -135,8 +135,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures23/split_plane.jpg
 1 1
 0 1
-0 0.0003364
-0.9999 0
+0 0
+1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures24/dynprog.jpg
 1 1
@@ -148,7 +148,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 1
 0 1
 0 0
-0.9999 0
+1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures26/dynprog.jpg
 1 1
@@ -158,7 +158,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures27/split_plane.jpg
 0 0
-0.9999 0
+1 0
 1 1
 0 1
 4
@@ -169,8 +169,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures29/split_plane.jpg
-0.0001203 0
-0.9999 0.0003364
+0 0
+1 0
 1 1
 0 1
 4
@@ -181,8 +181,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures31/split_plane.jpg
-0.0001127 0
-0.9999 0
+0 0
+1 0
 1 1
 0 1
 4
@@ -193,8 +193,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures33/split_plane.jpg
-0.0001133 0
-0.9999 0.0003365
+0 0
+1 0
 1 1
 0 1
 4
@@ -206,7 +206,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures35/split_plane.jpg
 0 0
-0.9999 0
+1 0
 1 1
 0 1
 4
@@ -223,8 +223,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures38/split_plane.jpg
-0.9996 1
-0.00195 0.9993
+1 1
+0.00195 1
 0 0
 1 0
 4
@@ -235,7 +235,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures40/split_plane.jpg
-0.9997 1
+1 1
 0.001933 0.9987
 0 0
 1 0
@@ -247,7 +247,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures42/split_plane.jpg
-0.9997 1
+1 1
 0.001966 0.9988
 0 0
 1 0
@@ -259,7 +259,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures44/split_plane.jpg
-0.9998 1
+1 1
 0.002068 0.9984
 0 0
 1 0
@@ -272,7 +272,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures46/split_plane.jpg
 0.998 0.9988
-0.0002686 1
+0 1
 0 0
 1 0
 4
@@ -286,7 +286,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 0
 1 0
 0.9979 0.9988
-0.0001892 1
+0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures49/dynprog.jpg
 0 0
@@ -296,7 +296,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures50/split_plane.jpg
 0.9979 0.9988
-0.0002182 1
+0 1
 0 0
 1 0
 4
@@ -307,7 +307,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures52/split_plane.jpg
-0.9998 1
+1 1
 0.00218 0.9989
 0 0
 1 0
@@ -321,7 +321,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures54/split_plane.jpg
 0 0
 1 0
-0.9999 1
+1 1
 0.002154 0.9986
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures55/dynprog.jpg
@@ -340,7 +340,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 0
 1 0
 0.9978 1
-0.0001703 0.9986
+0 0.9986
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures58/dynprog.jpg
 1 0
@@ -352,7 +352,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 0
 1 0
 0.9979 1
-0.0001645 0.9987
+0 0.9987
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures60/dynprog.jpg
 0 0
@@ -364,7 +364,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 0
 1 0
 0.9979 1
-0.0002452 0.9986
+0 0.9986
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures62/dynprog.jpg
 1 0
@@ -376,7 +376,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 0
 1 0
 0.9979 1
-0.0002937 0.999
+0 0.999
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures64/dynprog.jpg
 1 1
@@ -388,7 +388,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 0
 1 0
 0.998 1
-0.0002251 0.9984
+0 0.9984
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures66/dynprog.jpg
 1 1
@@ -400,7 +400,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 0
 1 0
 0.998 1
-0.0003333 0.999
+0 0.999
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures68/dynprog.jpg
 1 1
@@ -412,7 +412,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 0
 1 0
 0.998 1
-0.000302 0.9987
+0 0.9987
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures70/dynprog.jpg
 1 1
@@ -422,7 +422,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures71/split_plane.jpg
 0.998 1
-0.0003845 0.9986
+0 0.9986
 0 0
 1 0
 4
@@ -436,7 +436,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 0
 1 0
 0.998 1
-0.0004158 0.9986
+0 0.9986
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures74/dynprog.jpg
 0 0
@@ -454,7 +454,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0.9889 0.7656
 0.9979 0.7892
 1 0.7979
-0.999 0.8156
+1 0.8156
 0.9936 0.8266
 0.9904 0.8286
 0.9683 0.8517
@@ -602,8 +602,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0.1449 0.9861
 0.1426 0.9922
 0.1365 0.9965
-0.1199 0.9999
-0.1113 0.9991
+0.1199 1
+0.1113 1
 0.1007 1
 0.09228 0.9903
 0.09332 0.9745
@@ -628,7 +628,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0.9795 0.01292
 0.9847 0.02302
 1 0.03357
-0.9998 0.08055
+1 0.08055
 0.9878 0.08828
 0.9887 0.2017
 0.9971 0.2017
@@ -759,8 +759,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures89/split_plane.jpg
-0.0005563 0.0002724
-0.9999 0
+0 0
+1 0
 1 1
 0 1
 4
@@ -771,8 +771,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures91/split_plane.jpg
-0.0005582 0
-0.9999 0
+0 0
+1 0
 1 1
 0 1
 4
@@ -783,8 +783,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures93/split_plane.jpg
-0.00062 0
-0.9999 0.0002205
+0 0
+1 0
 1 1
 0 1
 4
@@ -795,7 +795,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures95/split_plane.jpg
-0.0005622 0
+0 0
 1 0
 1 1
 0 1
@@ -807,8 +807,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures97/split_plane.jpg
-0.0006064 0.0005222
-0.9999 0
+0 0
+1 0
 1 1
 0 1
 4
@@ -819,7 +819,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures99/split_plane.jpg
-0.0005487 0
+0 0
 1 0
 1 1
 0 1
@@ -831,8 +831,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures101/split_plane.jpg
-0.0005507 0
-0.9999 0
+0 0
+1 0
 1 1
 0 1
 4
@@ -845,8 +845,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures103/split_plane.jpg
 1 1
 0 1
-0.000544 0.0002721
-0.9999 0
+0 0
+1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures104/dynprog.jpg
 1 0
@@ -855,7 +855,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures105/split_plane.jpg
-0.0006027 0
+0 0
 1 0
 1 1
 0 1
@@ -869,8 +869,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures107/split_plane.jpg
 1 1
 0 1
-0.0005578 0.0002721
-0.9999 0
+0 0
+1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures108/dynprog.jpg
 1 0
@@ -879,8 +879,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures109/split_plane.jpg
-0.0005326 0.0002718
-0.9999 0
+0 0
+1 0
 1 1
 0 1
 4
@@ -893,7 +893,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures111/split_plane.jpg
 1 1
 0 1
-0.0005318 0
+0 0
 1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures112/dynprog.jpg
@@ -903,8 +903,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures113/split_plane.jpg
-0.0005932 0
-0.9999 0.0002211
+0 0
+1 0
 1 1
 0 1
 4
@@ -917,8 +917,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures115/split_plane.jpg
 1 1
 0 1
-0.0005386 0
-0.9999 0
+0 0
+1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures116/dynprog.jpg
 0 0
@@ -927,8 +927,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures117/split_plane.jpg
-0.0005418 0.0006432
-0.9999 0
+0 0
+1 0
 1 1
 0 1
 4
@@ -945,8 +945,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures120/split_plane.jpg
-0.9983 0.9998
-0.0004494 1
+0.9983 1
+0 1
 0 0
 1 0
 4
@@ -957,8 +957,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures122/split_plane.jpg
-0.9983 0.9992
-0.0004286 1
+0.9983 1
+0 1
 0 0
 1 0
 4
@@ -969,8 +969,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures124/split_plane.jpg
-0.9983 0.999
-0.0004852 1
+0.9983 1
+0 1
 0 0
 1 0
 4
@@ -981,8 +981,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures126/split_plane.jpg
-0.9984 0.9996
-0.000439 1
+0.9984 1
+0 1
 0 0
 1 0
 4
@@ -993,8 +993,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 0
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures128/split_plane.jpg
-0.9983 0.9994
-0.000522 1
+0.9983 1
+0 1
 0 0
 1 0
 4
@@ -1005,8 +1005,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures130/split_plane.jpg
-0.9984 0.9992
-0.0004664 1
+0.9984 1
+0 1
 0 0
 1 0
 4
@@ -1017,8 +1017,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures132/split_plane.jpg
-0.9984 0.9994
-0.0005488 1
+0.9984 1
+0 1
 0 0
 1 0
 4
@@ -1029,8 +1029,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures134/split_plane.jpg
-0.9984 0.9997
-0.000483 1
+0.9984 1
+0 1
 0 0
 1 0
 4
@@ -1041,8 +1041,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures136/split_plane.jpg
-0.9985 0.9993
-0.0005674 1
+0.9985 1
+0 1
 0 0
 1 0
 4
@@ -1053,8 +1053,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures138/split_plane.jpg
-0.9984 0.9997
-0.0004847 1
+0.9984 1
+0 1
 0 0
 1 0
 4
@@ -1065,8 +1065,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures140/split_plane.jpg
-0.9984 0.9994
-0.0005833 1
+0.9984 1
+0 1
 0 0
 1 0
 4
@@ -1079,8 +1079,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures142/split_plane.jpg
 0 0
 1 0
-0.9985 0.9996
-0.0005203 1
+0.9985 1
+0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures143/dynprog.jpg
 0 0
@@ -1089,8 +1089,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures144/split_plane.jpg
-0.9984 0.9994
-0.0005842 1
+0.9984 1
+0 1
 0 0
 1 0
 4
@@ -1103,8 +1103,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures146/split_plane.jpg
 0 0
 1 0
-0.9985 0.9992
-0.000563 1
+0.9985 1
+0 1
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures147/dynprog.jpg
 0 0
@@ -1154,7 +1154,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0.3395 0.9627
 0.3426 0.9812
 0.3294 0.9929
-0.3282 0.999
+0.3282 1
 0.3013 1
 0.2695 0.9968
 0.2417 0.9906
@@ -1185,7 +1185,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 4
 C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug252011_all_set3_kims_v0/output/textures149/split_plane.jpg
 1 1
-0.0211 0.9991
+0.0211 1
 0 0
 1 0.02746
 11
@@ -1307,7 +1307,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0.002928 0.2017
 0.01125 0.2017
 0.01222 0.08828
-0.0002259 0.08055
+0 0.08055
 0 0.03357
 0.01531 0.02302
 0.0205 0.01292
@@ -1332,8 +1332,8 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0.9067 0.9745
 0.9077 0.9903
 0.8993 1
-0.8887 0.9991
-0.8801 0.9999
+0.8887 1
+0.8801 1
 0.8635 0.9965
 0.8574 0.9922
 0.8551 0.9861
@@ -1571,7 +1571,7 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 0.03174 0.8517
 0.009601 0.8286
 0.006445 0.8266
-0.0009818 0.8156
+0 0.8156
 0 0.7979
 0.002143 0.7892
 0.0111 0.7656
@@ -1731,4 +1731,3 @@ C:\Users\pcheng\Documents\plane_mapping\plane_mapping_matlab_full/models/aug2520
 1 0
 0 0
 0 1
-SKIP_TO END

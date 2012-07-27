@@ -124,7 +124,7 @@ function loadedPlanes = loadPlanes(inputPath, modelPath, outputPath, mapFile, pr
     end
     % Ratio is the number of pixels per centemeter or something. I'm not entirely sure. Just make
     % it larger if you want higher-resolution planes
-    newPlane.ratio = 0.10;
+    newPlane.ratio = 0.20;
     % Width and height of the plane in pixels
     newPlane.width = round(newPlane.ratio*norm(newPlane.side));
     newPlane.height = round(newPlane.ratio*norm(newPlane.down));
