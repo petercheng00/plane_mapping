@@ -6,7 +6,7 @@ function fillCorners2(th, th2)
 %th - threshold to find adjacent walls in X,Y direction
 %th2 - threshold to find adjacent walls in Z direction
 
-[filename, pathname] = uigetfile('*.model', 'Select *.model file', 'C:\cygwin\tmp\pcl-0.9.0\bin\');
+[filename, pathname] = uigetfile('*.model', 'Select *.model file');
 fid = fopen([pathname filename]);
 A = fscanf(fid, '%f', [inf]);
 fclose(fid);

@@ -5,7 +5,7 @@ function fillCorners3(th, th2)
 %planes together in T-junctions.
 
 %This functions takes a *.model file as input and returns a *.model file
-%with all walls touching each other at the corners
+%with all walls touching each other at corners or T-junctions
 
 %th - threshold to find adjacent walls in X,Y direction
 %th2 - threshold to find adjacent walls in Z direction
@@ -19,37 +19,34 @@ tot_planes = A(1,1);
 pointer=2;
 planes.tot=tot_planes;
 
-for currPlaneX=1:1:tot_planes
 
-    planes.p(currPlaneX).npoints= A(pointer,1); %Get number of points delimiting current plane
+wallsX = [];
+wallsY = [];
+
+for currPlane=1:1:tot_planes
+
+    planes.p(currPlane).npoints= A(pointer,1); %Get number of points delimiting current plane
     pointer=pointer+1;
 
-    planes.p(currPlaneX).eq=A(pointer:pointer+3,1); %Get equation describing current plane
+    planes.p(currPlane).eq=A(pointer:pointer+3,1); %Get equation describing current plane
     pointer=pointer+4;
 
-    cpoint=1;
-    for intersectX=1:1:planes.p(currPlaneX).npoints %Get the points delimiting plane
-        planes.p(currPlaneX).x(cpoint)=A(pointer,1);
-        planes.p(currPlaneX).y(cpoint)=A(pointer+1,1);
-        planes.p(currPlaneX).z(cpoint)=A(pointer+2,1);
-        cpoint=cpoint+1;
+    for cpoint=1:planes.p(currPlane).npoints %Get the points delimiting plane
+        planes.p(currPlane).x(cpoint)=A(pointer,1);
+        planes.p(currPlane).y(cpoint)=A(pointer+1,1);
+        planes.p(currPlane).z(cpoint)=A(pointer+2,1);
         pointer=pointer+3;
     end
- 
-end
-%Divide walls into two sets 
-wallsX=[];
-wallsY=[];
-for currPlaneX=1:1:tot_planes
-    
-    if (abs(planes.p(currPlaneX).eq(1))>abs(planes.p(currPlaneX).eq(2))) && (abs(planes.p(currPlaneX).eq(1))>abs(planes.p(currPlaneX).eq(3))) %A wall with stron X-normal component
-        wallsX=[wallsX; currPlaneX];
+	
+	if (abs(planes.p(currPlane).eq(1))>abs(planes.p(currPlane).eq(2))) && (abs(planes.p(currPlane).eq(1))>abs(planes.p(currPlane).eq(3))) %A wall with stron X-normal component
+        wallsX=[wallsX; currPlane];
     end
     
-    if (abs(planes.p(currPlaneX).eq(2))>abs(planes.p(currPlaneX).eq(1))) && (abs(planes.p(currPlaneX).eq(2))>abs(planes.p(currPlaneX).eq(3))) %A wall with stron Y-normal component
-        wallsY=[wallsY; currPlaneX];
+    if (abs(planes.p(currPlane).eq(2))>abs(planes.p(currPlane).eq(1))) && (abs(planes.p(currPlane).eq(2))>abs(planes.p(currPlane).eq(3))) %A wall with stron Y-normal component
+        wallsY=[wallsY; currPlane];
     end
 
+ 
 end
 
 
