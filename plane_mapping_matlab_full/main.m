@@ -8,8 +8,6 @@ global modelPath
 global mapFile
 global prePath
 
-global runParallel
-
 %MODIFY THESE VALUES%%%%%%%%%%%%%%%%%%%%%%%%%%%
 runParallel = false;
 
@@ -29,10 +27,10 @@ textureStyle = 'dynprogsplit_plane';
 fillHoles = false;
 
 %use saved intermediate images if available
-usePreProcessed = true;
+usePreProcessed = false;
 
 %0 for all
-planesToTexture = 78;
+planesToTexture = [163,177];
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -56,16 +54,6 @@ end
 fid = fopen(mapFile, 'w');
 fprintf(fid, strcat(num2str(modelNumPlanes), '\n'));
 fclose(fid);
-%prevLoaded = 0;
-%for planeInd = 1:str2double(modelNumPlanes)
-%    if planeInd ~= prevLoaded + 1
-%        fid = fopen(mapFile, 'a');
-%        fprintf(fid, ['SKIP_TO ', num2str(planeInd - 1), '\n']);
-%        fclose(fid);
-%    end
-%    disp(['loading plane ', num2str(planeInd)])
-%    prevLoaded = planeInd;
-%end
 
 planes = loadPlanes(inputPath, modelPath, outputPath, mapFile, prePath, textureStyle);
 if size(planesToTexture) < str2double(modelNumPlanes)
