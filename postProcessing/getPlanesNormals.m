@@ -5,7 +5,7 @@ function getPlanesNormals( )
 %file='\\arbadil\modeling_data_new\20100825_set3\out_nodes_ive\plane\icpimuplannar_mad_results\20100825_set3_3scan_leftcam_noibr.model';
 %20100504_set3_1scan_3cam_noibr (may data set)
 %close all;
-[filename, pathname] = uigetfile('*.model', 'Select *.model file', 'C:\cygwin\tmp\pcl-0.9.0\bin\');
+[filename, pathname] = uigetfile('*.model', 'Select *.model file');
 fid = fopen([pathname filename]);
 A = fscanf(fid, '%f', [inf]);
 fclose(fid);

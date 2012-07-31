@@ -5,7 +5,7 @@ function getPlanes( )
 %file='\\arbadil\modeling_data_new\20100825_set3\out_nodes_ive\plane\icpimuplannar_mad_results\20100825_set3_3scan_leftcam_noibr.model';
 %20100504_set3_1scan_3cam_noibr (may data set)
 %close all;
-[filename, pathname] = uigetfile('*.model', 'Select *.model file', 'C:\cygwin\tmp\pcl-0.9.0\bin\');
+[filename, pathname] = uigetfile('*.model', 'Select *.model file');
 fid = fopen([pathname filename]);
 A = fscanf(fid, '%f', [inf]);
 fclose(fid);
@@ -49,7 +49,7 @@ for cplane=1:1:tot_planes
         %view(3)
         vert=[planes.p(cplane).x', planes.p(cplane).y',planes.p(cplane).z']; 
         fac=[1:1:planes.p(cplane).npoints];
-        if (counter > 15)
+        if (counter > 0)
             patch('vertices', vert,'faces',fac,'facecolor',rand(1,3)); hold on;
             %patch('vertices', vert,'faces',fac,'facecolor',[(cplane/tot_planes*.9) 0.5 (cplane/tot_planes*.7)]); hold on;
                 %patch('vertices', vert,'faces',fac,'facecolor',[0 .8 0]); hold on;

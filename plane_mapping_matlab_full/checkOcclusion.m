@@ -2,12 +2,11 @@ function checkOcclusion(planes, plane_index)
   target_plane = planes(plane_index);
   images = target_plane.images;
   for i = 1:size(images,2)
-  %for i = 11:11
       disp(['Checking occlusion for image ', num2str(i)]);
       curr_box = images(i).mytile_on_plane.orig_box;
-      gridStepY = 400;
-      gridStepX = 400;
-      maxSubDivs = 4;
+      gridStepY = ceil((curr_box.row_max - curr_box.row_min)/4);
+      gridStepX = ceil((curr_box.col_max - curr_box.col_min)/4);
+      maxSubDivs = 2;
       numSectionsY = ceil((curr_box.row_max - curr_box.row_min + 1)/gridStepY);
       numSectionsX = ceil((curr_box.col_max - curr_box.col_min + 1)/gridStepX);
       for j = 1:numSectionsY

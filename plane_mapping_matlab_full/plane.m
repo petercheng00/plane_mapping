@@ -37,8 +37,16 @@ classdef plane < handle
                 fprintf('Loading img number %d\tn=%d\tout of %d\n', imgnum,n,size(obj.image_filenames,1));
                 r = obj.image_rotations{imgnum};
                 t = obj.t_cam2world(imgnum,:)';
-                plane_to_cam = t - obj.base;
-                if(plane_to_cam' * obj.normal) < 0.5
+                %plane_to_cam = t - obj.base;
+                %if(plane_to_cam' * obj.normal) < 0.5
+                %    fprintf('Ignoring Bad Image\n');
+                %    continue
+                %end
+                
+                rotNorm = -1 * (r * [0;0;1]);
+                cam_angle = acosd(dot(rotNorm,obj.normal)/(norm(rotNorm)*norm(obj.normal)));
+                
+                if cam_angle > 45
                     fprintf('Not Ignoring Bad Image\n');
                     %continue
                 end
@@ -58,6 +66,8 @@ classdef plane < handle
                 obj.images(n).r = r;
                 obj.images(n).t = t;
                 obj.images(n).K = obj.K;
+                
+                obj.images(n).cam_angle = cam_angle;
                 n = n + 1;
             end
         end
@@ -305,15 +315,15 @@ classdef plane < handle
         end
         
         function images = repeated_shortest_path(obj)
-            imageIndices = zeros(size(obj.images,2));
+            images = zeros(1,size(obj.images,2));
+            images_count = 0;
             obj = obj.setup_DAG();
             obj = obj.set_overlap(size(obj.images,2));
-            
             % Generate cost DAG
             edge_cost = sparse(eye(size(obj.images,2)));
             node_total_cost = zeros(1,size(obj.images,2));
             node_cost_count = zeros(1,size(obj.images,2));
-            node_avg_cost = zeros(1,size(obj.images,2));
+            node_cost = zeros(1,size(obj.images,2));
             % For each starting image
             for idx1 = 1:size(obj.images,2)
                 i1 = obj.images(idx1);
@@ -342,12 +352,11 @@ classdef plane < handle
                     end
                 end
             end
-            
             for idx = 1:size(obj.images,2)
                 if (node_cost_count(idx) ~= 0)
-                    node_avg_cost(idx) = node_total_cost(idx)/node_cost_count(idx);
+                    node_cost(idx) = obj.images(idx).cam_angle^2 * (node_total_cost(idx)/node_cost_count(idx));
                 else
-                    node_avg_cost(idx) = 0;
+                    node_cost(idx) = 0;
                 end
             end
             % Ensure graph is connected
@@ -363,6 +372,7 @@ classdef plane < handle
             change_made = 1;
             iter = 0;
             while(change_made)
+                begin_count = images_count;
                 iter = iter + 1;
                 change_made = 0;
                 % Solve shortest path
@@ -375,7 +385,7 @@ classdef plane < handle
                     % For each node coming in
                     for innode = 1:node-1
                         if(edge_cost(innode,node) ~= 0.0)
-                            optimal_cost_in = memo(innode) + edge_cost(innode,node) + node_avg_cost(node);
+                            optimal_cost_in = memo(innode) + edge_cost(innode,node) + node_cost(node);
                             if(optimal_cost_in < memo(node))
                                 memo(node) = optimal_cost_in;
                                 path(node) = innode;
@@ -396,7 +406,8 @@ classdef plane < handle
                                 %adjust for "fake" nodes created by
                                 %setup_DAG()
                                 if (node ~= 1 && node ~= size(obj.images,2))
-                                    imageIndices(node-1) = 1;
+                                    images_count = images_count+1;
+                                    images(images_count) = node-1;
                                 end
                             end
                         end
@@ -407,10 +418,13 @@ classdef plane < handle
                         end
                     end
                 end
+                if images_count > begin_count+1
+                    images(begin_count+1:images_count) = sort(images(begin_count+1:images_count));
+                end
             end
             obj.images = obj.images(2:size(obj.images,2)-1);
             obj.outimg = zeros(obj.height,obj.width,3);
-            images = (find(imageIndices))';
+            images = images(1:images_count);
         end
         
         
@@ -1416,6 +1430,10 @@ classdef plane < handle
                 start_node.mytile_on_plane.orig_data = zeros(obj.height,2,3);
                 end_node.mytile_on_plane.orig_data = zeros(obj.height,2,3);
             end
+            start_node.cam_dist = 0;
+            end_node.cam_dist = 0;
+            start_node.cam_angle = 0;
+            end_node.cam_angle = 0;
             obj.images = [start_node obj.images end_node];
         end
         

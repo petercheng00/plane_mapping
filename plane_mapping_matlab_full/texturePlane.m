@@ -11,9 +11,9 @@ myTextureStyle = textureStyle;
 if (strcmp(textureStyle, 'dynprogsplit_plane'))
     if (p.normal(3) == 1 || p.normal(3) == -1)
         myTextureStyle = 'split_plane';
+        return
     else
         myTextureStyle = 'dynprog';
-        return
     end
 end
 
@@ -24,14 +24,11 @@ preProcessedFile = strcat(outputPath, '/textures', num2str(pnum), '/preProcessed
 if ~usePreProcessed || ~exist(preProcessedFile, 'file')
     
     p = p.load_images();
-    
     if (p.normal(3) == 1 || p.normal(3) == -1)
         p = p.set_tiles_no_rotate();
     else
         p = p.set_tiles_and_rotate();
     end
-    
-    
     p = p.filter_useless();
     if size(p.images,2) == 0
         return
@@ -67,6 +64,7 @@ else
     p.images = preProcessed.preProcessedImages;
 end
 
+
 if (strcmp(myTextureStyle, 'naive'))
     p = p.print_images();
 elseif (strcmp(myTextureStyle,'greedy_area'))
@@ -75,7 +73,7 @@ elseif (strcmp(myTextureStyle,'greedy_cost'))
     p = p.print_greedy_cost();
 elseif (strcmp(myTextureStyle, 'dynprog'))
     disp(['plane ', num2str(pnum), ': dynprog image selection...'])
-    images = sort(p.repeated_shortest_path());
+    images = p.repeated_shortest_path();
     %images = p.greedy_overlap_camera_cost();
     disp(['plane ', num2str(pnum), ': doing minimum blending'])
     p = p.minimum_blending(images);
@@ -116,6 +114,7 @@ imwrite(uint8(p.outimg), [myTextureStyle, '.jpg']);
 cd ('../../../..')
 disp(['plane ', num2str(pnum), ': Done!'])
 p.images = [];
+planes(pnum).images = [];
 end
 
 

@@ -7,14 +7,14 @@ function projPt = point2Line3D(p,p1,p2)
 
 lenght=sqrt( (p1(1)-p2(1))^2 +  (p1(2)-p2(2))^2 +  (p1(3)-p2(3))^2 );
 
-unity=p2-p1;
+lineVec=p2-p1;
+lineVec = lineVec/norm(lineVec);
 
-unity=unity/lenght;
+pointVec=p-p1;
 
-w=p-p1;
+dotP = (lineVec(1)*pointVec(1))+(lineVec(2)*pointVec(2))+(lineVec(3)*pointVec(3));
 
-dotP = (unity(1)*w(1))+(unity(2)*w(2))+(unity(3)*w(3));
-
-projV=(abs(dotP))*unity;
-
+projV=(dotP)*lineVec;
 projPt=p1+projV;
+
+end
