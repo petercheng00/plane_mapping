@@ -2,6 +2,9 @@ function fillCorners3D(th, th2)
 
 %PeterC's attempt to unify scripts by just rotating ceilings and floors so
 %that they become walls. Doesn't quite work well yet.
+%so don't use this
+
+error 'dont use this'
 
 [filename, pathname] = uigetfile('*.model', 'Select *.model file');
 fid = fopen([pathname filename]);

@@ -118,10 +118,10 @@ for wallInd = 1:size(walls)
             B=-1;
             C=wallEQ_b;
             d=abs(( A*currCF.x(CFvertInd)) + (B*currCF.y(CFvertInd)) + C)/sqrt((A^2)+(B^2));
-            if isCeiling && withinRange(currCF.x(CFvertInd),currCF.y(CFvertInd),currWall.x(maxZInds),currWall.y(maxZInds),th2) && d <= th2
+            if isCeiling && withinRange(currCF.x(CFvertInd),currCF.y(CFvertInd),currWall.x(maxZInds),currWall.y(maxZInds)) && d <= th2
                 nearCFVertInds(CFvertInd) = 1;
             end
-            if ~isCeiling && withinRange(currCF.x(CFvertInd),currCF.y(CFvertInd),currWall.x(minZInds),currWall.y(minZInds),th2) && d <= th2
+            if ~isCeiling && withinRange(currCF.x(CFvertInd),currCF.y(CFvertInd),currWall.x(minZInds),currWall.y(minZInds)) && d <= th2
                 nearCFVertInds(CFvertInd) = 1;
             end
         end
@@ -193,7 +193,22 @@ for wallInd = 1:size(walls)
     planes.p(walls(wallInd)) = currWall;
 end
 
+fid2 = fopen([pathname  'CF_' filename ], 'wt');
+fprintf(fid, '%i\n',planes.tot); %Total number of planes
+tot_planes=planes.tot;
 
+for currPlaneX=1:1:tot_planes
+
+    fprintf(fid, '%i\n',planes.p(currPlaneX).npoints); %Save number of points delimiting current plane
+    fprintf(fid, '%f %f %f %f\n', planes.p(currPlaneX).eq(1,1), planes.p(currPlaneX).eq(2,1),planes.p(currPlaneX).eq(3,1),planes.p(currPlaneX).eq(4,1)); %Save equation describing current plane
+
+    for cpoint=1:1:planes.p(currPlaneX).npoints %Save the points delimiting plane
+        fprintf(fid, '%f %f %f\n',planes.p(currPlaneX).x(cpoint), planes.p(currPlaneX).y(cpoint),planes.p(currPlaneX).z(cpoint));
+    end
+    
+end
+
+fclose(fid2);
 
 figure;
 
@@ -215,9 +230,9 @@ end
 
 
 
-function within = withinRange(testX, testY, vertsX, vertsY, th)
-    within = ~(testX > (max(vertsX)+th) || testX < (min(vertsX)-th) || ...
-            testY > (max(vertsY)+th) || testY < (min(vertsY)-th));
+function within = withinRange(testX, testY, vertsX, vertsY)
+    within = ~(testX > max(vertsX) || testX < min(vertsX) || ...
+            testY > max(vertsY) || testY < min(vertsY));
 end
 
 

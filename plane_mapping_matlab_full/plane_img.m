@@ -91,11 +91,11 @@
                    obj.mytile_on_plane = obj.mytile_on_plane.crop();
                    if (numel(obj.mytile_on_plane.cropped_valid) > 0)
                        angle = rectify_image(uint8(obj.mytile_on_plane.cropped_data));
-                       %obj.mytile = obj.mytile.rotate(angle);
-                       %obj = obj.set_tile_on_plane(p);
-                       %obj.mytile_on_plane = obj.mytile_on_plane.crop();
-                       obj.mytile_on_plane = obj.mytile_on_plane.rotate(angle);
+                       obj.mytile = obj.mytile.rotate(angle);
+                       obj = obj.set_tile_on_plane(p);
                        obj.mytile_on_plane = obj.mytile_on_plane.crop();
+                       %obj.mytile_on_plane = obj.mytile_on_plane.rotate(angle);
+                       %obj.mytile_on_plane = obj.mytile_on_plane.crop();
                        obj.useful = (numel(obj.mytile_on_plane.cropped_valid) > 0);
 
                    else
@@ -146,9 +146,9 @@
                
                plane_center_world = p.get_world_pts([(box.row_max+box.row_min)/2;(box.col_max+box.col_min)/2]);
                obj.cam_dist = norm(obj.t - plane_center_world);
-               rotNorm = -1 * (obj.r * [0;0;1]);
-               obj.cam_angle = acos(dot(rotNorm,p.normal)/(norm(rotNorm)*norm(p.normal)));
-               obj.cam_angle = (180/pi) * obj.cam_angle;
+               %rotNorm = -1 * (obj.r * [0;0;1]);
+               %obj.cam_angle = acos(dot(rotNorm,p.normal)/(norm(rotNorm)*norm(p.normal)));
+               %obj.cam_angle = (180/pi) * obj.cam_angle;
            end
 
            function obj = set_tile_on_plane(obj, p)

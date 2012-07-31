@@ -17,9 +17,4 @@ dotP = (lineVec(1)*pointVec(1))+(lineVec(2)*pointVec(2))+(lineVec(3)*pointVec(3)
 projV=(dotP)*lineVec;
 projPt=p1+projV;
 
-
-if projPt(1) <= -100 || projPt(2) <= -100 || projPt(3) <= -100
-    keyboard
-end
-
 end

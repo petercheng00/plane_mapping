@@ -176,9 +176,8 @@ end
 
     
 
-fid2 = fopen([pathname  'F_' filename ], 'wt');
+fid2 = fopen([pathname  'W_' filename ], 'wt');
 fprintf(fid, '%i\n',planes.tot); %Total number of planes
-pointer=2;
 tot_planes=planes.tot;
 
 for currPlaneX=1:1:tot_planes
