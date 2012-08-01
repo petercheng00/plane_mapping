@@ -97,7 +97,6 @@
                        %obj.mytile_on_plane = obj.mytile_on_plane.rotate(angle);
                        %obj.mytile_on_plane = obj.mytile_on_plane.crop();
                        obj.useful = (numel(obj.mytile_on_plane.cropped_valid) > 0);
-
                    else
                        obj.useful = false;
                    end

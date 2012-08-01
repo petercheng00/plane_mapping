@@ -1,9 +1,10 @@
 function angle = rectify_image(im)
-
   % Figure out the angle that we should rotate by
   % in order to have vertical lines
   imbw = rgb2gray(im);
-  imbw = imrotate(imbw,-90);
+  %removing this seems to cause big improvements. Don't understand why it was
+  %even added in the first place
+  %imbw = imrotate(imbw,-90);
   h = fspecial('gaussian', 9, 4);
   imbw = imfilter(imbw, h, 'replicate');
   BW = edge(imbw,'canny');

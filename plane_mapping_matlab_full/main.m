@@ -32,7 +32,7 @@ fillHoles = false;
 usePreProcessed = false;
 
 %0 for all
-planesToTexture = [70,65];
+planesToTexture = [46,49,51,102];
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
