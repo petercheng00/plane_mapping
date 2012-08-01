@@ -8,8 +8,6 @@ global modelPath
 global mapFile
 global prePath
 
-global runParallel
-
 %MODIFY THESE VALUES%%%%%%%%%%%%%%%%%%%%%%%%%%%
 runParallel = false;
 
@@ -21,8 +19,8 @@ modelName = 'nov222011_set1_leftRight_kims_v2_peter';
 %imgPath = 'E:\projects\indoormapping\data\20110825-3\images';
 imgPath = 'F:\projects\indoormapping\data\20111122-1\images';
 
-%prePath = 'C:\\Users\\pcheng\\Documents\\plane_mapping\\plane_mapping_matlab_full';
-prePath = 'F:\projects\plane_mapping\plane_mapping_matlab_full';
+prePath = 'C:\\Users\\pcheng\\Documents\\plane_mapping\\plane_mapping_matlab_full';
+%prePath = 'F:\projects\plane_mapping\plane_mapping_matlab_full';
 
 textureStyle = 'dynprogsplit_plane';
 %texture extrapolation
@@ -32,8 +30,7 @@ fillHoles = false;
 usePreProcessed = false;
 
 %0 for all
-planesToTexture = [46,49,51,102];
-
+planesToTexture = [163,177];
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 inputPath = strcat('models/', modelName, '/input_files');
@@ -56,16 +53,6 @@ end
 fid = fopen(mapFile, 'w');
 fprintf(fid, strcat(num2str(modelNumPlanes), '\n'));
 fclose(fid);
-%prevLoaded = 0;
-%for planeInd = 1:str2double(modelNumPlanes)
-%    if planeInd ~= prevLoaded + 1
-%        fid = fopen(mapFile, 'a');
-%        fprintf(fid, ['SKIP_TO ', num2str(planeInd - 1), '\n']);
-%        fclose(fid);
-%    end
-%    disp(['loading plane ', num2str(planeInd)])
-%    prevLoaded = planeInd;
-%end
 
 planes = loadPlanes(inputPath, modelPath, outputPath, mapFile, prePath, textureStyle);
 if size(planesToTexture) < str2double(modelNumPlanes)

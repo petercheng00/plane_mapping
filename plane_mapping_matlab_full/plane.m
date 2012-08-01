@@ -29,9 +29,8 @@ classdef plane < handle
         function obj = load_images(obj)
             n = 1;
             step = 1;
-            if size(obj.image_filenames,1) > 500
-                %step = round(size(obj.image_filenames,1) / 100);
-                step = 10;
+            if size(obj.image_filenames,1) > 200
+                step = ceil(size(obj.image_filenames,1) / 200);
             end
             for imgnum = 1:step:size(obj.image_filenames,1)
             %for imgnum = 1:5
