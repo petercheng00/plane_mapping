@@ -21,6 +21,8 @@
     yDist = optimalBB(2,2) - optimalBB(1,2);
     rotationAngle = atand(xDist/yDist);
 
+    %in hindsight this second transformation is not needed.
+    
     %now rotate so optimal bounding box is axis-aligned
     R2 = R3D(rotationAngle, upVect);
 
@@ -35,7 +37,6 @@
     UL = [minX, maxY,z];
     UR = [maxX, maxY,z];
     LR = [maxX, minY,z];
-
 
     % Go back to original coordinates
     bbRestored = (R1' * (R2' * [LL;UL;UR;LR]'))';
@@ -77,7 +78,6 @@
         bbRestored(3,:) = temp;
     end
     bbCorners = bbRestored;
-
 
     % Store the relative coords
     relCoords = zeros(size(rotatedVertices,1), 2);

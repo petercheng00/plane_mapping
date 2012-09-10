@@ -7,18 +7,17 @@ addpath('ransac');
 
 p = planes(pnum);
 
+
 myTextureStyle = textureStyle;
 if (strcmp(textureStyle, 'dynprogsplit_plane'))
     if (p.normal(3) == 1 || p.normal(3) == -1)
         myTextureStyle = 'split_plane';
-        return
     else
         myTextureStyle = 'dynprog';
     end
 end
-
-
 p.outimg = zeros(p.height, p.width, 3);
+
 
 preProcessedFile = strcat(outputPath, '/textures', num2str(pnum), '/preProcessed.mat');
 if ~usePreProcessed || ~exist(preProcessedFile, 'file')
@@ -80,7 +79,7 @@ elseif (strcmp(myTextureStyle, 'dynprog'))
     p = p.minimum_blending(1:size(p.images,2));
 elseif (strcmp(myTextureStyle, 'split_plane'))
     disp(['plane ', num2str(pnum), ': texturing using split_plane method (stewarts)'])
-    step = 5;
+    step = 200;
     blend = max(10,round(step/10));
     maxCacheAngle = 45;
     maxAngle = 180;

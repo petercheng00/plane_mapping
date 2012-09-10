@@ -29,11 +29,11 @@ classdef plane < handle
         function obj = load_images(obj)
             n = 1;
             step = 1;
-            if size(obj.image_filenames,1) > 200
-                step = ceil(size(obj.image_filenames,1) / 200);
-            end
-            for imgnum = 1:step:size(obj.image_filenames,1)
-            %for imgnum = 1:5
+            %if size(obj.image_filenames,1) > 200
+            %    step = ceil(size(obj.image_filenames,1) / 200);
+            %end
+            %for imgnum = 1:step:size(obj.image_filenames,1)
+            for imgnum = 1:20
                 fprintf('Loading img number %d\tn=%d\tout of %d\n', imgnum,n,size(obj.image_filenames,1));
                 r = obj.image_rotations{imgnum};
                 t = obj.t_cam2world(imgnum,:)';
