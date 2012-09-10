@@ -30,8 +30,12 @@ fillHoles = false;
 usePreProcessed = false;
 
 %0 for all
+<<<<<<< HEAD
 planesToTexture = 6;
 
+=======
+planesToTexture = [163,177];
+>>>>>>> d3373537d2ce35414d71c14ee2c1fa741c77b231
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 inputPath = strcat('models/', modelName, '/input_files');
